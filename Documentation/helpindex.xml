@@ -1,0 +1,1701 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<index version="1.0">
+<indexitem target="f0-12994.html#f0-38522">! function
+    <indexitem target="f0-12994.html#zmw57dd0e7455">argument length restrictions</indexitem>
+</indexitem>
+<indexitem>%
+    <indexitem target="f2-53314.html#f2-53527">comment symbol</indexitem>
+    <indexitem target="f2-53314.html#f2-53528">create comment</indexitem>
+</indexitem>
+<indexitem target="f9-11863.html#zmw57dd0e27760">%#ok indicator to suppress M-Lint message</indexitem>
+<indexitem target="f2-46018.html#f2-73525">%%</indexitem>
+<indexitem target="f0-36861.html#f0-36866">, after functions</indexitem>
+<indexitem target="f0-5789.html#f0-5857">... in statements</indexitem>
+<indexitem target="f0-36861.html#f0-36866">; after functions</indexitem>
+<indexitem target="f3-21973.html#f3-46855">&lt;CR&gt;</indexitem>
+<indexitem target="f0-10486.html#bq56psc-1">&gt;&gt; prompt in Command Window</indexitem>
+<indexitem target="bq37a39-1.html">accelerators, keyboard</indexitem>
+<indexitem target="bqwp009-1.html#bqwp009-12">Access Bridge</indexitem>
+<indexitem target="bqwp009-1.html">accessibility
+    <indexitem target="bqwp009-1.html#bqwp009-3">documentation</indexitem>
+    <indexitem target="bqwp009-1.html#bqwp009-12">installation</indexitem>
+    <indexitem target="bqwp009-1.html#bqwp009-33">troubleshooting</indexitem>
+</indexitem>
+<indexitem>account
+    <indexitem target="f1-32896.html#zmw57dd0e4665">MathWorks products</indexitem>
+</indexitem>
+<indexitem target="f10-26235.html#f10-26809">addpath</indexitem>
+<indexitem>antialiasing
+    <indexitem target="f1-70353.html#f1-146660">desktop fonts</indexitem>
+</indexitem>
+<indexitem>AppleScript
+    <indexitem target="f0-12994.html#zmw57dd0e7504">running from MATLAB</indexitem>
+</indexitem>
+<indexitem target="f10-42271.html">Array Editor
+    <indexitem target="f10-42271.html#f10-11810">cut, copy, paste, clear</indexitem>
+    <indexitem target="f10-42271.html#f10-58086">decimal separator</indexitem>
+    <indexitem target="f10-42271.html#bq51ogd-1">delete</indexitem>
+    <indexitem target="f10-42271.html#bq51ogd-1">insert</indexitem>
+    <indexitem target="f10-42271.html#f10-36981">preferences</indexitem>
+    <indexitem target="f10-42271.html#zmw57dd0e15541">size limitations</indexitem>
+    <indexitem target="f10-42271.html#bq51oyx-1">undo and redo</indexitem>
+</indexitem>
+<indexitem>arrays
+    <indexitem target="f10-42271.html">editing</indexitem>
+    <indexitem target="f10-51778.html">workspace</indexitem>
+</indexitem>
+<indexitem>arrow keys
+    <indexitem target="f0-5789.html#f0-32270">Command Window usage</indexitem>
+    <indexitem target="f2-99262.html">Editor/Debugger</indexitem>
+</indexitem>
+<indexitem>ASCII files
+    <indexitem target="f10-14803.html#zmw57dd0e18064">viewing contents of</indexitem>
+</indexitem>
+<indexitem target="bqwp009-1.html">assistive technology</indexitem>
+<indexitem target="f2-37175.html#f2-31475">asv</indexitem>
+<indexitem>auto-fix
+    <indexitem target="bq4grlt-1.html#zmw57dd0e24254">M-Lint</indexitem>
+</indexitem>
+<indexitem>autoinit cells
+    <indexitem target="f6-14601.html#f6-14622">converting input cells to</indexitem>
+    <indexitem target="f6-14601.html#f6-14658">converting to input cells</indexitem>
+    <indexitem target="f6-6951.html#f6-15772">defining</indexitem>
+</indexitem>
+<indexitem>AutoInit style
+    <indexitem target="f6-11644.html#zmw57dd0e32161">definition of</indexitem>
+</indexitem>
+<indexitem>automatic completion of statement
+    <indexitem target="f0-5789.html#f0-14742">Command Window</indexitem>
+    <indexitem target="f2-53314.html#f2-105451">Editor/Debugger</indexitem>
+</indexitem>
+<indexitem target="f2-37175.html#f2-31475">autosave</indexitem>
+<indexitem target="bq4gouj-1.html#bq4gouj-6">Back and Forward navigation</indexitem>
+<indexitem>backup
+    <indexitem target="f2-37175.html#f2-31475">Editor/Debugger autosave</indexitem>
+</indexitem>
+<indexitem target="f0-12994.html#f0-38522">bang (!) function</indexitem>
+<indexitem target="f0-12994.html#f0-38522">bang function</indexitem>
+<indexitem target="f10-51778.html#f10-10558">base workspace</indexitem>
+<indexitem target="f8-4994.html#zmw57dd0e1283">batch mode for starting MATLAB</indexitem>
+<indexitem>beep
+    <indexitem target="f0-22072.html#f0-44557">preferences</indexitem>
+</indexitem>
+<indexitem target="f3-21973.html#f3-46855">blank line</indexitem>
+<indexitem target="f0-5789.html#f0-30533">blank spaces in MATLAB commands</indexitem>
+<indexitem>block
+    <indexitem target="f6-30186.html#bq4cx9c-1">within cell</indexitem>
+</indexitem>
+<indexitem target="f2-53314.html#zmw57dd0e19671">block comments
+    <indexitem target="f2-53314.html#zmw57dd0e19726">extending</indexitem>
+</indexitem>
+<indexitem target="f2-58922.html#f2-103364">block indenting</indexitem>
+<indexitem target="bq4hw4g-1.html#bq4hw5o-64">blue breakpoint icon</indexitem>
+<indexitem>bold text
+    <indexitem target="f6-30186.html#bq3ryud">within cell</indexitem>
+</indexitem>
+<indexitem>bookmarks
+    <indexitem target="bq4gouj-1.html#bq4gouj-5">in files in Editor/Debugger</indexitem>
+    <indexitem target="f4-18155.html#f4-57002">in Help browser</indexitem>
+</indexitem>
+<indexitem target="f4-18155.html#f4-51256">Boolean searching in Help browser</indexitem>
+<indexitem target="f0-5789.html#f0-5857">breaking long lines</indexitem>
+<indexitem target="f0-12994.html#f0-38516">breaking out of a running program</indexitem>
+<indexitem>breakpoints
+    <indexitem target="bq4hw4g-1.html#bq4hw5o-64">anonymous functions</indexitem>
+    <indexitem target="bq4hw4g-1.html#bq4hw5o-64">blue icon</indexitem>
+    <indexitem target="bq4hw4g-1.html#zmw57dd0e25679">clearing (removing)</indexitem>
+    <indexitem target="bq4hw4g-1.html#zmw57dd0e25725">clearing, automatically</indexitem>
+    <indexitem target="bq4hw4g-1.html#bq4hw5o-57">conditional</indexitem>
+    <indexitem target="bq4hw4g-1.html#bq4hw5o-36">disabling and enabling</indexitem>
+    <indexitem target="bq4hw4g-1.html#bq4hw5o-64">multiple per line</indexitem>
+    <indexitem target="bq4hw4g-1.html#bq4hw5o-13">running file</indexitem>
+    <indexitem target="bq4hw4g-1.html#bq4hw5o-6">setting</indexitem>
+    <indexitem target="bq4hw4g-1.html#bq4hw5o-6">types</indexitem>
+</indexitem>
+<indexitem target="f6-14601.html#f6-14618">Bring MATLAB to Front</indexitem>
+<indexitem>browser
+    <indexitem target="f4-55195.html">Help</indexitem>
+    <indexitem target="f1-32896.html#bq37bb3-1">Web, in MATLAB</indexitem>
+</indexitem>
+<indexitem target="f4-57893.html#zmw57dd0e14469">bugs, reporting to The MathWorks</indexitem>
+<indexitem target="f2-55126.html#zmw57dd0e18824">built-in editor</indexitem>
+<indexitem>C/C++
+    <indexitem target="f2-53230.html#f2-55690">editing files in Editor/Debugger</indexitem>
+</indexitem>
+<indexitem>caching
+    <indexitem target="f2-37175.html#zmw57dd0e22961">M-files</indexitem>
+    <indexitem target="f10-26235.html#f10-48823">search path</indexitem>
+</indexitem>
+<indexitem>calc zones
+    <indexitem target="f6-6951.html#f6-17121">defining</indexitem>
+    <indexitem target="f6-36687.html#zmw57dd0e31303">ensuring workspace consistency in M-books</indexitem>
+    <indexitem target="f6-12159.html#f6-17183">evaluating</indexitem>
+    <indexitem target="f6-12159.html#zmw57dd0e31785">output from</indexitem>
+</indexitem>
+<indexitem>callbacks
+    <indexitem target="bq37azl-1.html">in shortcuts</indexitem>
+</indexitem>
+<indexitem target="f0-12994.html#f0-38522">calling from MATLAB</indexitem>
+<indexitem target="f0-5789.html#f0-30533">capitalization in MATLAB</indexitem>
+<indexitem target="f0-5789.html#f0-30533">case sensitivity in MATLAB</indexitem>
+<indexitem>cell arrays
+    <indexitem target="f10-42271.html#f10-56169">editing</indexitem>
+</indexitem>
+<indexitem target="f6-30186.html#bq3ryhc">cell breaks</indexitem>
+<indexitem>cell groups
+    <indexitem target="f6-14601.html#f6-14877">converting to input cells</indexitem>
+    <indexitem target="f6-6951.html#f6-12276">creating</indexitem>
+    <indexitem target="f6-6951.html#f6-12299">definition of</indexitem>
+    <indexitem target="f6-12159.html#f6-19561">evaluating</indexitem>
+    <indexitem target="f6-12159.html#zmw57dd0e31710">output from</indexitem>
+</indexitem>
+<indexitem target="f3-21973.html#f3-58895">cell indicator in Editor/Debugger</indexitem>
+<indexitem>cell markers
+    <indexitem target="f6-6951.html#zmw57dd0e31373">defined</indexitem>
+    <indexitem target="f6-14601.html#f6-14759">hiding</indexitem>
+    <indexitem target="f6-11644.html#zmw57dd0e32046">printing</indexitem>
+</indexitem>
+<indexitem target="f2-46018.html">cell mode</indexitem>
+<indexitem target="f2-46018.html">cell scripts</indexitem>
+<indexitem>cells
+    <indexitem target="f2-46018.html#f2-73525">defining in M-files</indexitem>
+</indexitem>
+<indexitem target="f2-46018.html">cells in M-File Editor/Debugger</indexitem>
+<indexitem>cells in M-files
+    <indexitem target="f2-46018.html#zmw57dd0e26966">beep</indexitem>
+    <indexitem target="f2-46018.html#f2-47112">evaluating</indexitem>
+    <indexitem target="f2-46018.html#f2-47215">evaluating</indexitem>
+    <indexitem target="f2-46018.html#f2-47087">removing</indexitem>
+    <indexitem target="f2-46018.html#zmw57dd0e26516">toolbar</indexitem>
+</indexitem>
+<indexitem>character set
+    <indexitem target="f1-94809.html#f1-112595">preference for MAT-files</indexitem>
+</indexitem>
+<indexitem>checkin
+    <indexitem target="f7-40932.html#f7-40907">on UNIX platforms</indexitem>
+</indexitem>
+<indexitem>checking in files
+    <indexitem target="f7-40932.html">on UNIX platforms</indexitem>
+</indexitem>
+<indexitem>checking out files
+    <indexitem target="f7-34759.html">on UNIX platforms</indexitem>
+    <indexitem target="f7-40362.html#f7-40831">on Windows platforms</indexitem>
+    <indexitem target="f7-15175.html">undoing on UNIX platforms</indexitem>
+    <indexitem target="f7-40362.html#f7-40876">undoing on Windows platforms</indexitem>
+</indexitem>
+<indexitem>checkout
+    <indexitem target="f7-34759.html#f7-15159">on UNIX platforms</indexitem>
+</indexitem>
+<indexitem target="f0-36861.html#f0-36876">clc</indexitem>
+<indexitem target="f10-51778.html#f10-37251">clear</indexitem>
+<indexitem>ClearCase source control system
+    <indexitem target="f7-15075.html#f7-15104">configuring on UNIX platforms</indexitem>
+</indexitem>
+<indexitem>clearing
+    <indexitem target="f0-36861.html#f0-36876">Command Window</indexitem>
+    <indexitem target="f10-51778.html#f10-37251">variables</indexitem>
+</indexitem>
+<indexitem target="f1-32896.html#f1-32969">clicking on multiple items</indexitem>
+<indexitem target="f1-32896.html#f1-134750">clipboard</indexitem>
+<indexitem>closing
+    <indexitem target="f1-43281.html#zmw57dd0e2118">desktop tools</indexitem>
+    <indexitem target="f2-37175.html#f2-11027">M-files</indexitem>
+    <indexitem target="f8-25321.html">MATLAB</indexitem>
+</indexitem>
+<indexitem target="bq4grlt-1.html">code analyzer</indexitem>
+<indexitem>Code check report
+    <indexitem target="f9-11863.html">checking M-files code</indexitem>
+</indexitem>
+<indexitem target="f2-7771.html">code examples</indexitem>
+<indexitem target="f2-58922.html#brazeg3-1">code folding in M-files</indexitem>
+<indexitem target="f3-21973.html#brazer7-1">code folding preferences in M-files</indexitem>
+<indexitem target="f2-46018.html">code iteration</indexitem>
+<indexitem target="f2-7771.html">code resources</indexitem>
+<indexitem>code samples
+    <indexitem target="f2-7771.html">sample code</indexitem>
+</indexitem>
+<indexitem>collapsing
+    <indexitem target="f2-58922.html#brazeg3-1">code in M-files</indexitem>
+    <indexitem target="f3-21973.html#brazer7-1">code in M-files</indexitem>
+</indexitem>
+<indexitem target="bq4hw4g-1.html#zmw57dd0e24581">Collatz problem</indexitem>
+<indexitem>color
+    <indexitem target="f1-113060.html#f1-143582">general preferences</indexitem>
+    <indexitem target="f0-5789.html#f0-36518">indicators for syntax</indexitem>
+    <indexitem target="f6-11644.html#f6-2318">printing M-book</indexitem>
+</indexitem>
+<indexitem>colors
+    <indexitem target="f4-50602.html#f4-56721">Help browser</indexitem>
+    <indexitem target="f2-58922.html#f2-20662">in M-files</indexitem>
+    <indexitem target="f1-113060.html">preferences in MATLAB</indexitem>
+</indexitem>
+<indexitem target="f2-58922.html#f2-30550">column numbers</indexitem>
+<indexitem target="f8-4994.html">command flags</indexitem>
+<indexitem>Command History
+    <indexitem target="f0-17420.html">about</indexitem>
+    <indexitem target="f0-17420.html#f0-35433">deleting entries in window</indexitem>
+    <indexitem target="f0-17420.html#zmw57dd0e10744">file</indexitem>
+    <indexitem target="f0-17420.html#f0-35629">find entry by letter</indexitem>
+    <indexitem target="f0-23185.html">preferences</indexitem>
+    <indexitem target="f0-17420.html#f0-26053">printing window contents</indexitem>
+    <indexitem target="f0-17420.html#zmw57dd0e10800">running functions from window</indexitem>
+</indexitem>
+<indexitem>command line
+    <indexitem target="f0-10486.html#bq56psc-1">defined</indexitem>
+    <indexitem target="f0-5789.html#f0-44292">editing</indexitem>
+</indexitem>
+<indexitem>command name completion
+    <indexitem target="f0-5789.html#f0-14742">Command Window</indexitem>
+    <indexitem target="f2-53314.html#f2-105451">Editor/Debugger</indexitem>
+</indexitem>
+<indexitem target="f8-4994.html">command switches</indexitem>
+<indexitem>Command Window
+    <indexitem target="f6-14601.html#f6-14618">bringing to front in Notebook</indexitem>
+    <indexitem target="f0-36861.html#f0-36876">clearing</indexitem>
+    <indexitem target="f0-5789.html#f0-44292">editing in</indexitem>
+    <indexitem target="f0-22072.html#bq56ple-1">getting started message bar</indexitem>
+    <indexitem target="f4-55195.html#zmw57dd0e11687">help</indexitem>
+    <indexitem target="f0-36861.html#f0-5117">paging of output in</indexitem>
+    <indexitem target="f0-22072.html#f0-17190">preferences</indexitem>
+    <indexitem target="f0-22072.html#f0-18112">preferences, keyboard</indexitem>
+    <indexitem target="f0-36861.html#f0-11340">printing contents of</indexitem>
+    <indexitem target="f0-10486.html#zmw57dd0e7065">prompt</indexitem>
+    <indexitem target="f0-22072.html#f0-18015">width</indexitem>
+</indexitem>
+<indexitem target="f0-22072.html#f0-18057">Command Window scroll buffer</indexitem>
+<indexitem>commands
+    <indexitem target="bq37azl-1.html">executing a group of</indexitem>
+    <indexitem target="f0-5789.html#f0-5857">on multiple lines</indexitem>
+    <indexitem target="f0-12994.html#f0-38522">to operating system</indexitem>
+</indexitem>
+<indexitem>comments
+    <indexitem target="f2-53314.html#f2-53528">adding/removing with any text editor</indexitem>
+    <indexitem target="f2-53314.html#f2-53527">adding/removing with Editor/Debugger</indexitem>
+    <indexitem target="f2-53314.html#zmw57dd0e19675">block</indexitem>
+    <indexitem target="f1-113060.html#f1-143582">color indicators</indexitem>
+    <indexitem target="f2-53314.html#f2-62740">creating in Editor/Debugger</indexitem>
+    <indexitem target="f2-53314.html#f2-59836">multiline statements</indexitem>
+    <indexitem target="f2-53314.html#f2-62740">purpose</indexitem>
+    <indexitem target="f2-53314.html#f2-59836">using ... (ellipsis)</indexitem>
+    <indexitem target="f2-53314.html#f2-59836">within a line</indexitem>
+</indexitem>
+<indexitem target="f4-57893.html#f4-48613">comp.soft-sys.matlab</indexitem>
+<indexitem>comparing
+    <indexitem target="bq4go15-1.html">files</indexitem>
+</indexitem>
+<indexitem target="f7-39221.html#f7-18462">comparing working copy to source control version on Windows platforms</indexitem>
+<indexitem>completing statements automatically
+    <indexitem target="f0-5789.html#f0-14742">Command Window</indexitem>
+    <indexitem target="f2-53314.html#f2-105451">Editor/Debugger</indexitem>
+</indexitem>
+<indexitem>compression
+    <indexitem target="f1-94809.html#f1-112595">MAT-files and Fig-Files</indexitem>
+</indexitem>
+<indexitem target="bq4hw4g-1.html#bq4hw5o-57">conditional breakpoints</indexitem>
+<indexitem>configuration management
+    <indexitem target="f7-5297.html">See source control system interface</indexitem>
+</indexitem>
+<indexitem target="f1-43281.html">configuration, desktop</indexitem>
+<indexitem>configurations
+    <indexitem target="brbiuez-1.html#brbmk4a-1">for M-files in Editor/Debugger</indexitem>
+</indexitem>
+<indexitem target="f6-13865.html">configuring Notebook</indexitem>
+<indexitem>confirmation dialog boxes
+    <indexitem target="f1-94809.html#f1-112398">preferences</indexitem>
+</indexitem>
+<indexitem target="f0-22072.html#f0-15728">console mode</indexitem>
+<indexitem target="f10-14803.html#f10-7498">content of M-files, searching</indexitem>
+<indexitem>Contents in Help browser
+    <indexitem target="f4-50602.html#zmw57dd0e13618">synchronizing preference</indexitem>
+</indexitem>
+<indexitem>Contents tab in Help browser
+    <indexitem target="f4-18155.html#f4-7003">description</indexitem>
+    <indexitem target="f4-18155.html#f4-9577">synchronizing with display</indexitem>
+</indexitem>
+<indexitem target="f1-32896.html#f1-55947">context menus</indexitem>
+<indexitem>continuation
+    <indexitem target="f0-5789.html#f0-5857">long lines</indexitem>
+</indexitem>
+<indexitem target="f0-5789.html#f0-5857">continuing long statements</indexitem>
+<indexitem>control keys
+    <indexitem target="f0-5789.html#f0-32270">editing commands</indexitem>
+    <indexitem target="f2-99262.html">Editor/Debugger</indexitem>
+</indexitem>
+<indexitem>conversion
+    <indexitem target="f6-36687.html#f6-47791">Word document to M-book</indexitem>
+</indexitem>
+<indexitem target="f8-25321.html#f8-29456">crash</indexitem>
+<indexitem>cropping graphics
+    <indexitem target="f6-11644.html#f6-7586">in M-books</indexitem>
+</indexitem>
+<indexitem target="f4-57893.html#f4-48613">cssm</indexitem>
+<indexitem>current directory
+    <indexitem target="f8-10506.html">at startup for MATLAB</indexitem>
+    <indexitem target="f10-14803.html#f10-7346">changing</indexitem>
+    <indexitem target="f10-14803.html#f10-7346">contents of</indexitem>
+    <indexitem target="f10-14803.html#f10-33442">field in toolbar</indexitem>
+    <indexitem target="f10-14803.html">relevance to MATLAB</indexitem>
+    <indexitem target="f10-14803.html#f10-34675">tool</indexitem>
+</indexitem>
+<indexitem target="f10-14803.html#zmw57dd0e17101">Current Directory browser
+    <indexitem target="f10-14803.html#f10-30318">preferences</indexitem>
+    <indexitem target="f10-14803.html#zmw57dd0e17877">running Windows shortcuts</indexitem>
+</indexitem>
+<indexitem>data consistency
+    <indexitem target="f6-36687.html#zmw57dd0e31298">calc zones in M-books</indexitem>
+    <indexitem target="f6-36687.html#zmw57dd0e31288">evaluating M-books</indexitem>
+    <indexitem target="f6-36687.html#f6-18753">in M-book</indexitem>
+</indexitem>
+<indexitem>datatips
+    <indexitem target="bq4hw4g-1.html#bq4hw5o-26">example</indexitem>
+</indexitem>
+<indexitem target="bq4hw4g-1.html#zmw57dd0e25707">dbclear</indexitem>
+<indexitem>dbstop
+    <indexitem target="bq4hw4g-1.html#bq4hw5o-12">example</indexitem>
+</indexitem>
+<indexitem target="f2-4931.html">Debugger</indexitem>
+<indexitem>debugging
+    <indexitem target="bq4hw4g-1.html#bq4hw5o-35">ending</indexitem>
+    <indexitem target="bq4hw4g-1.html#bq4hx_2-1">example</indexitem>
+    <indexitem target="bq4hw4g-1.html">features</indexitem>
+    <indexitem target="bq4hw72-1.html#zmw57dd0e23781">M-files
+        <indexitem target="f2-55126.html">options</indexitem>
+</indexitem>
+    <indexitem target="f6-36687.html#f6-41146">Notebook</indexitem>
+    <indexitem target="bq4hw4g-1.html#zmw57dd0e24984">prompt</indexitem>
+    <indexitem target="bq4hw4g-1.html#bq4hw5o-16">stepping</indexitem>
+    <indexitem target="bq4hw72-1.html#zmw57dd0e23836">techniques</indexitem>
+    <indexitem target="bq4hw4g-1.html#bq4hw5o-56">with unsaved changes</indexitem>
+</indexitem>
+<indexitem target="f0-36861.html#f0-13289">decimal places in output</indexitem>
+<indexitem>defaults
+    <indexitem target="bq37czj-1.html#zmw57dd0e4770">preferences for MATLAB</indexitem>
+    <indexitem target="f8-4994.html#f8-4998">setting in startup file for MATLAB</indexitem>
+</indexitem>
+<indexitem target="f6-14601.html#f6-14622">Define Autoinit Cell</indexitem>
+<indexitem target="f6-14601.html#f6-14615">Define Calc Zone</indexitem>
+<indexitem target="f6-14601.html#f6-14658">Define Input Cell</indexitem>
+<indexitem target="f10-14803.html#f10-17951">delete</indexitem>
+<indexitem>delete function
+    <indexitem target="f1-94809.html#f1-112437">preference for recycling</indexitem>
+</indexitem>
+<indexitem>deleting
+    <indexitem target="f10-14803.html#f10-17951">files</indexitem>
+    <indexitem target="f10-51778.html#f10-37251">variables</indexitem>
+</indexitem>
+<indexitem target="f1-94809.html#f1-112437">deleting files</indexitem>
+<indexitem>delimiter
+    <indexitem target="f0-22072.html#f0-44557">matching in Editor/Debugger</indexitem>
+</indexitem>
+<indexitem>delimiter matching
+    <indexitem target="f0-22072.html#f0-44557">preferences</indexitem>
+</indexitem>
+<indexitem>Demos
+    <indexitem target="f4-18155.html#f4-41758">searching</indexitem>
+</indexitem>
+<indexitem>demos
+    <indexitem target="f4-46533.html">using</indexitem>
+</indexitem>
+<indexitem>desktop
+    <indexitem target="f3-12599.html#zmw57dd0e34993">active window</indexitem>
+    <indexitem target="f1-113060.html">color preferences</indexitem>
+    <indexitem target="f1-43281.html">configuration</indexitem>
+    <indexitem target="f1-137804.html">description</indexitem>
+    <indexitem target="f3-12599.html#zmw57dd0e34988">focus</indexitem>
+    <indexitem target="f1-70353.html">font preferences for</indexitem>
+    <indexitem>layout
+        <indexitem target="f3-12599.html#f3-56361">saving</indexitem>
+</indexitem>
+    <indexitem target="f3-12599.html#f3-13039">layout, predefined options</indexitem>
+    <indexitem target="f8-4994.html#zmw57dd0e1159">starting without</indexitem>
+    <indexitem>tools
+        <indexitem target="f1-43281.html#zmw57dd0e2111">closing</indexitem>
+        <indexitem target="f1-137804.html#zmw57dd0e1885">opening</indexitem>
+</indexitem>
+    <indexitem>windows
+        <indexitem target="f1-43281.html#zmw57dd0e2128">closing</indexitem>
+        <indexitem target="f3-12599.html#zmw57dd0e35167">docking</indexitem>
+        <indexitem target="f3-12599.html#zmw57dd0e35338">grouping together</indexitem>
+        <indexitem target="f3-12599.html#f3-13358">moving</indexitem>
+        <indexitem target="f1-137804.html#zmw57dd0e1892">opening</indexitem>
+        <indexitem target="f3-12599.html#f3-13322">sizing</indexitem>
+        <indexitem target="f3-12599.html#zmw57dd0e35160">sizing using keyboard</indexitem>
+        <indexitem target="f3-12599.html#zmw57dd0e35241">sizing using keyboard</indexitem>
+        <indexitem target="f3-12599.html#zmw57dd0e35290">undocking</indexitem>
+</indexitem>
+</indexitem>
+<indexitem>desktop layout
+    <indexitem target="f1-43281.html">saving</indexitem>
+</indexitem>
+<indexitem target="f1-43281.html#zmw57dd0e2208">desktop, docking</indexitem>
+<indexitem target="f1-43281.html#zmw57dd0e2234">desktop, grouping tools</indexitem>
+<indexitem target="f1-43281.html#zmw57dd0e2251">desktop, maximizing tools</indexitem>
+<indexitem target="f1-43281.html#zmw57dd0e2288">desktop, minimizing tools</indexitem>
+<indexitem target="f1-43281.html#zmw57dd0e2177">desktop, undocking</indexitem>
+<indexitem target="f1-137804.html">development environment for MATLAB</indexitem>
+<indexitem target="f0-36861.html#f0-26884">diary</indexitem>
+<indexitem target="bq4go15-1.html">difference reporting for files</indexitem>
+<indexitem target="f10-14803.html#f10-17391">dir</indexitem>
+<indexitem target="f10-14803.html#f10-7498">directories
+    <indexitem target="f10-14803.html#f10-16026">copying</indexitem>
+    <indexitem target="f10-14803.html#zmw57dd0e17519">creating</indexitem>
+    <indexitem target="f10-14803.html#zmw57dd0e17632">deleting</indexitem>
+    <indexitem>MATLAB
+        <indexitem target="f2-37175.html#zmw57dd0e22961">caching</indexitem>
+</indexitem>
+    <indexitem target="f10-14803.html#f10-16522">renaming</indexitem>
+    <indexitem target="f10-14803.html#zmw57dd0e17104">searching contents of</indexitem>
+    <indexitem target="f10-14803.html#f10-7498">See also current directory, search path</indexitem>
+</indexitem>
+<indexitem>disabling
+    <indexitem target="bq4hw4g-1.html#bq4hw5o-36">breakpoints</indexitem>
+</indexitem>
+<indexitem target="f4-5234.html">display pane in Help browser</indexitem>
+<indexitem>displaying
+    <indexitem target="f0-36861.html#f0-36866">output</indexitem>
+</indexitem>
+<indexitem target="f7-39221.html#f7-18479">displaying source control properties of a file</indexitem>
+<indexitem target="f2-46018.html#f2-73525">dividers for cells</indexitem>
+<indexitem>do not show again
+    <indexitem target="f1-94809.html#f1-112398">preferences</indexitem>
+</indexitem>
+<indexitem target="f1-43281.html#zmw57dd0e2211">docking tools in desktop</indexitem>
+<indexitem target="f3-12599.html#zmw57dd0e35179">docking windows in desktop</indexitem>
+<indexitem>document bar
+    <indexitem target="f3-12599.html#zmw57dd0e35536">document name</indexitem>
+    <indexitem target="f3-12599.html#zmw57dd0e35531">width</indexitem>
+</indexitem>
+<indexitem>documentation
+    <indexitem target="bqwp009-1.html#bqwp009-3">accessibility</indexitem>
+    <indexitem target="f4-55195.html#zmw57dd0e11727">all products</indexitem>
+    <indexitem target="f4-55195.html#zmw57dd0e11734">most current version</indexitem>
+    <indexitem target="f4-19137.html">printing</indexitem>
+    <indexitem target="f4-19137.html">printing</indexitem>
+    <indexitem target="f4-55195.html#zmw57dd0e11746">prior version</indexitem>
+    <indexitem target="f4-57893.html#f4-51420">problems, reporting</indexitem>
+    <indexitem target="f4-18155.html#f4-41758">searching</indexitem>
+    <indexitem target="f4-5234.html">viewing</indexitem>
+    <indexitem target="f4-55195.html#f4-55075">Web site</indexitem>
+    <indexitem target="f4-55195.html#zmw57dd0e11767">without running MATLAB</indexitem>
+</indexitem>
+<indexitem target="f0-5789.html#f0-5857">dots (...)</indexitem>
+<indexitem>downloading
+    <indexitem target="f4-57893.html#f4-23047">M-files</indexitem>
+</indexitem>
+<indexitem target="f1-32896.html#f1-34722">dragging in the desktop</indexitem>
+<indexitem target="f0-36861.html#f0-44820">echo execution</indexitem>
+<indexitem>edit
+    <indexitem target="f2-53230.html#f2-55317">creating new M-file in Editor/Debugger</indexitem>
+</indexitem>
+<indexitem>editing
+    <indexitem target="f0-5789.html#f0-44292">in Command Window</indexitem>
+    <indexitem target="f2-4931.html">M-files
+        <indexitem target="f2-55126.html#zmw57dd0e18843">outside of MATLAB</indexitem>
+</indexitem>
+</indexitem>
+<indexitem>Editor
+    <indexitem target="f2-53230.html#f2-72333">see Editor/Debugger</indexitem>
+</indexitem>
+<indexitem>editor
+    <indexitem target="f2-55126.html#zmw57dd0e18818">built-in</indexitem>
+    <indexitem target="f3-21973.html#f3-22014">external to MATLAB</indexitem>
+    <indexitem target="f3-21973.html#f3-22014">setting as default</indexitem>
+</indexitem>
+<indexitem target="f2-4931.html">Editor/Debugger
+    <indexitem target="f2-53230.html#f2-72333">arranging documents</indexitem>
+    <indexitem target="f2-53230.html#f2-57262">closing</indexitem>
+    <indexitem target="f2-37175.html#f2-11027">closing files</indexitem>
+    <indexitem target="f2-53230.html#brbs0o3-1">description</indexitem>
+    <indexitem target="bq4hw4g-1.html#bq4hx_2-1">example</indexitem>
+    <indexitem target="f3-21973.html#f3-22023">files in File menu</indexitem>
+    <indexitem>go to
+        <indexitem target="bq4gouj-1.html#bq4gouj-5">bookmark</indexitem>
+        <indexitem target="bq4gouj-1.html#bq4gouj-3">function</indexitem>
+        <indexitem target="bq4gouj-1.html#bq4gouj-2">line number</indexitem>
+</indexitem>
+    <indexitem target="f2-46018.html#zmw57dd0e26633">horizontal lines</indexitem>
+    <indexitem target="f2-53230.html#brbs0o3-1">indenting</indexitem>
+    <indexitem target="f2-46018.html#f2-47112">modifying values</indexitem>
+    <indexitem target="bq4gouj-1.html">navigating</indexitem>
+    <indexitem target="bq4gouj-1.html#bq4gouj-6">navigating back and forward</indexitem>
+    <indexitem target="f2-99262.html">navigation keys</indexitem>
+    <indexitem target="f2-53230.html#f2-9443">opening files</indexitem>
+    <indexitem target="f2-53230.html#f2-55690">other text files</indexitem>
+    <indexitem target="f2-53230.html#f2-53553">preferences</indexitem>
+    <indexitem target="f2-58922.html#f2-72353">rule displayed</indexitem>
+    <indexitem target="brbiuez-1.html">running M-files</indexitem>
+    <indexitem target="bq4hw4g-1.html#bq4hw5o-56">running with unsaved changes</indexitem>
+    <indexitem>status bar
+        <indexitem target="f2-58922.html#f2-104179">function</indexitem>
+</indexitem>
+</indexitem>
+<indexitem target="f0-10486.html#zmw57dd0e7119">EDU&gt;&gt; prompt in Command Window</indexitem>
+<indexitem target="f0-5789.html#f0-5857">ellipses (...) in statements</indexitem>
+<indexitem target="f2-99262.html">Emacs key bindings in Editor/Debugger</indexitem>
+<indexitem target="f6-11644.html#zmw57dd0e32392">Embed Figures in M-book</indexitem>
+<indexitem>embedding graphics
+    <indexitem target="f6-11644.html#f6-1949">in M-book</indexitem>
+</indexitem>
+<indexitem>encoding
+    <indexitem target="f1-94809.html#f1-112595">preference when saving</indexitem>
+</indexitem>
+<indexitem target="f3-21973.html#f3-46855">end of file</indexitem>
+<indexitem target="f8-25321.html">ending MATLAB</indexitem>
+<indexitem target="f8-4994.html#f8-4998">environment settings at startup</indexitem>
+<indexitem target="f0-12994.html#zmw57dd0e7472">environment variables</indexitem>
+<indexitem>error breakpoints
+    <indexitem target="bq4hw4g-1.html#bq4hw5o-65">stop for errors</indexitem>
+</indexitem>
+<indexitem target="f8-25321.html#f8-29456">error logs</indexitem>
+<indexitem target="bq4hw4g-1.html#bq4hw5o-73">error message identifiers</indexitem>
+<indexitem>error messages
+    <indexitem target="f0-12994.html#f0-44929">in Command Window</indexitem>
+</indexitem>
+<indexitem>error style
+    <indexitem target="f6-11644.html#zmw57dd0e32182">definition</indexitem>
+</indexitem>
+<indexitem>errors
+    <indexitem target="f1-113060.html#f1-143582">color indicators</indexitem>
+    <indexitem target="bq4hw72-1.html#zmw57dd0e23830">finding in M-files</indexitem>
+    <indexitem target="bq4hw72-1.html#zmw57dd0e23815">run-time</indexitem>
+    <indexitem target="f7-35189.html">source control</indexitem>
+    <indexitem target="bq4hw72-1.html#zmw57dd0e23799">syntax</indexitem>
+</indexitem>
+<indexitem target="f6-14601.html#f6-14659">Evaluate Calc Zone</indexitem>
+<indexitem target="f6-14601.html#f6-14684">Evaluate Cell</indexitem>
+<indexitem target="f6-14601.html#f6-14692">Evaluate Loop</indexitem>
+<indexitem target="f6-12159.html#zmw57dd0e31867">Evaluate Loop dialog box</indexitem>
+<indexitem target="f6-14601.html#f6-15284">Evaluate M-Book</indexitem>
+<indexitem>evaluating
+    <indexitem target="f6-36687.html#zmw57dd0e31283">M-books, ensuring data consistency</indexitem>
+    <indexitem target="f0-17420.html#zmw57dd0e10805">selection in Command History window</indexitem>
+    <indexitem target="f0-12994.html#zmw57dd0e7627">selection in Command Window</indexitem>
+</indexitem>
+<indexitem target="f2-46018.html#f2-47215">evaluating sections of M-file</indexitem>
+<indexitem>exact phrase
+    <indexitem target="f4-18155.html#bqxlisn-1">Help browser search</indexitem>
+</indexitem>
+<indexitem target="f2-7771.html">example code</indexitem>
+<indexitem>examples
+    <indexitem target="f4-18155.html#zmw57dd0e11873">in documentation, index of</indexitem>
+    <indexitem target="f4-5234.html#f4-9702">running from Help browser</indexitem>
+</indexitem>
+<indexitem target="f0-12994.html#f0-38522">exe</indexitem>
+<indexitem>executables
+    <indexitem target="f0-12994.html#f0-38522">running from MATLAB</indexitem>
+</indexitem>
+<indexitem>executing
+    <indexitem target="bq37azl-1.html">group of statements</indexitem>
+    <indexitem target="brbiuez-1.html#zmw57dd0e23198">M-files in Editor/Debugger</indexitem>
+</indexitem>
+<indexitem>execution
+    <indexitem target="f0-36861.html#f0-44820">displaying functions during</indexitem>
+</indexitem>
+<indexitem target="f2-7771.html">existing code</indexitem>
+<indexitem target="f8-25321.html">exiting MATLAB</indexitem>
+<indexitem>expanding
+    <indexitem target="f2-58922.html#brazeg3-1">code in M-files</indexitem>
+    <indexitem target="f3-21973.html#brazer7-1">code in M-files</indexitem>
+</indexitem>
+<indexitem target="bq4gouj-1.html#bq4gouj-3">f button</indexitem>
+<indexitem target="bq4gox5-1.html#bq4gox5-12">F Inc Search field</indexitem>
+<indexitem target="f8-25321.html#f8-29456">fatal error</indexitem>
+<indexitem target="f4-18155.html#f4-57002">favorites in Help browser</indexitem>
+<indexitem target="f4-57893.html#f4-51420">feedback to The MathWorks</indexitem>
+<indexitem>Fig-files
+    <indexitem target="f1-94809.html#f1-112595">compatibility</indexitem>
+    <indexitem target="f1-94809.html#f1-112595">save options</indexitem>
+</indexitem>
+<indexitem>file exchange
+    <indexitem target="f4-57893.html#f4-23047">for M-files</indexitem>
+</indexitem>
+<indexitem>file management system
+    <indexitem target="f7-5297.html">See source control system interface</indexitem>
+</indexitem>
+<indexitem target="f10-14803.html#zmw57dd0e17112">filebrowser</indexitem>
+<indexitem>files
+    <indexitem target="bq4go15-1.html">comparing</indexitem>
+    <indexitem target="f10-14803.html#zmw57dd0e18069">contents, viewing</indexitem>
+    <indexitem target="f10-14803.html#f10-16026">copying</indexitem>
+    <indexitem target="f10-14803.html#f10-28707">creating in the Current Directory browser</indexitem>
+    <indexitem target="f10-14803.html#zmw57dd0e17637">deleting</indexitem>
+    <indexitem target="f2-53230.html#brbs0o3-1">editing M-files</indexitem>
+    <indexitem target="f8-4994.html#zmw57dd0e1127">log</indexitem>
+    <indexitem target="f10-14803.html#zmw57dd0e17212">MATLAB related, listing</indexitem>
+    <indexitem target="f10-26235.html#f10-26295">naming</indexitem>
+    <indexitem target="f10-14803.html#f10-7440">opening</indexitem>
+    <indexitem target="f10-14803.html">operations in MATLAB</indexitem>
+    <indexitem target="f10-14803.html#f10-16522">renaming</indexitem>
+    <indexitem target="f10-14803.html#f10-34215">running</indexitem>
+    <indexitem target="f10-14803.html#zmw57dd0e18059">viewing contents of</indexitem>
+</indexitem>
+<indexitem target="f10-14803.html#f10-7498">Find Files dialog box</indexitem>
+<indexitem>finding
+    <indexitem target="f10-14803.html#f10-7498">files using Current Directory browser</indexitem>
+    <indexitem target="f10-14803.html#f10-7498">M-files</indexitem>
+    <indexitem target="f10-14803.html#f10-7498">string in M-files</indexitem>
+    <indexitem target="f0-17420.html#f0-45383">text in Command History window</indexitem>
+    <indexitem target="f0-23163.html">text in Command Window</indexitem>
+    <indexitem target="bq4gox5-1.html#bq4gox5-2">text in current file</indexitem>
+    <indexitem target="bq4gox5-1.html#bq4gox5-3">text in M-files</indexitem>
+    <indexitem target="f4-5234.html#f4-8851">text in page of Help browser</indexitem>
+</indexitem>
+<indexitem target="f8-25321.html#f8-8304">finish.m file running when quitting</indexitem>
+<indexitem target="f1-32896.html#bq37bb3-3">firewall</indexitem>
+<indexitem>flags
+    <indexitem target="f8-4994.html">for startup</indexitem>
+</indexitem>
+<indexitem target="f3-12599.html#zmw57dd0e34980">focus</indexitem>
+<indexitem target="f10-14803.html#f10-16522">folders.. See directories
+</indexitem>
+<indexitem>font
+    <indexitem target="f1-70353.html#f1-146834">adding new family for MATLAB</indexitem>
+    <indexitem target="f1-70353.html#f1-146660">antialiasing in desktop</indexitem>
+    <indexitem target="f4-50602.html#f4-56668">Help browser</indexitem>
+    <indexitem target="f1-70353.html">preferences in MATLAB</indexitem>
+    <indexitem target="f1-70353.html#zmw57dd0e5065">size, additional values</indexitem>
+    <indexitem target="f1-70353.html#f1-146660">smoothing in desktop</indexitem>
+</indexitem>
+<indexitem target="f0-36861.html#f0-13289">format
+    <indexitem target="f6-11644.html#f6-1442">controlling numeric format in M-book</indexitem>
+    <indexitem target="f6-11644.html#zmw57dd0e32318">in M-book</indexitem>
+    <indexitem target="f0-22072.html#f0-8883">preferences</indexitem>
+</indexitem>
+<indexitem>formatted comments
+    <indexitem target="f6-30186.html#bq3ryhc">within cell</indexitem>
+</indexitem>
+<indexitem>FTP
+    <indexitem target="f0-12994.html#bq2s5yd">transferring files via link</indexitem>
+</indexitem>
+<indexitem>function name
+    <indexitem>automatic completion
+        <indexitem target="f0-5789.html#f0-14742">Command Window</indexitem>
+        <indexitem target="f2-53314.html#f2-105451">Editor/Debugger</indexitem>
+</indexitem>
+</indexitem>
+<indexitem target="f10-51778.html#f10-10558">function workspace</indexitem>
+<indexitem>functions
+    <indexitem target="f1-113060.html#f1-143582">color indicators</indexitem>
+    <indexitem target="f0-36861.html#f0-44820">displaying during execution</indexitem>
+    <indexitem target="bq37azl-1.html">executing a group of</indexitem>
+    <indexitem target="f4-50632.html#zmw57dd0e13966">help for
+        <indexitem target="f4-55195.html#zmw57dd0e11612">reference page</indexitem>
+</indexitem>
+    <indexitem target="f0-5789.html#f0-5857">long (on multiple lines)</indexitem>
+    <indexitem target="f0-5789.html#f0-10117">multiple in one line</indexitem>
+    <indexitem target="f10-26235.html#f10-26295">naming</indexitem>
+</indexitem>
+<indexitem target="f7-39221.html#f7-21336">get latest version of file on Windows platforms</indexitem>
+<indexitem target="f7-34759.html#zmw57dd0e34631">getting files</indexitem>
+<indexitem target="f2-4931.html">graphical debugger</indexitem>
+<indexitem>graphics
+    <indexitem target="f6-11644.html#f6-8580">controlling output in M-book</indexitem>
+    <indexitem target="f6-11644.html#f6-1949">embedding in M-book</indexitem>
+    <indexitem target="f6-11644.html#f6-1443">in M-books</indexitem>
+    <indexitem target="f6-30186.html#bq4cx9c-1">within cell</indexitem>
+</indexitem>
+<indexitem target="f1-113060.html#f1-146286">gray background color in desktop</indexitem>
+<indexitem target="bq4hw4g-1.html#bq4hw5o-10">gray breakpoint icons</indexitem>
+<indexitem target="f3-21973.html#f3-58895">gray line in Editor/Debugger</indexitem>
+<indexitem target="f2-46018.html#zmw57dd0e26625">gray lines in Editor/Debugger</indexitem>
+<indexitem target="bq4grlt-1.html">green indicator in Editor/Debugger</indexitem>
+<indexitem target="f6-14601.html#f6-14741">Group Cells</indexitem>
+<indexitem>grouping
+    <indexitem target="f1-43281.html#zmw57dd0e2237">tools in desktop</indexitem>
+</indexitem>
+<indexitem>HDF
+    <indexitem target="f1-94809.html#f1-112595">preference when saving</indexitem>
+</indexitem>
+<indexitem>headings
+    <indexitem target="f6-30186.html#bq3ryhc">within cell</indexitem>
+</indexitem>
+<indexitem target="f4-50632.html#f4-12694">help</indexitem>
+<indexitem target="f4-50632.html#f4-12694">help
+    <indexitem target="f4-50632.html">functions</indexitem>
+    <indexitem target="f4-50632.html#f4-12694">in Command Window</indexitem>
+    <indexitem target="f10-14803.html#f10-31915">M-file description</indexitem>
+    <indexitem target="f4-55195.html#zmw57dd0e11697">M-files</indexitem>
+    <indexitem target="brcvi6x-1.html">pop-up</indexitem>
+</indexitem>
+<indexitem target="f4-55195.html">Help browser
+    <indexitem target="f4-50602.html#f4-56721">color preferences</indexitem>
+    <indexitem target="f4-18155.html#f4-7003">contents listing</indexitem>
+    <indexitem target="f4-5234.html">display pane</indexitem>
+    <indexitem target="f4-50602.html#f4-56668">font preferences</indexitem>
+    <indexitem target="f4-18155.html#f4-41749">index</indexitem>
+    <indexitem target="f4-5234.html#f4-8841">navigating</indexitem>
+    <indexitem target="f4-19137.html">printing help</indexitem>
+    <indexitem target="f4-19137.html">printing help</indexitem>
+    <indexitem target="f4-18155.html#f4-41758">searching</indexitem>
+    <indexitem target="f4-5234.html#bq2wmid">viewing page location</indexitem>
+</indexitem>
+<indexitem>help browser
+    <indexitem target="f4-5234.html#f4-9699">copying information from</indexitem>
+    <indexitem target="f4-5234.html#f4-9702">running examples from</indexitem>
+</indexitem>
+<indexitem target="f4-55195.html#zmw57dd0e11434">Help Navigator</indexitem>
+<indexitem target="f4-55195.html">helpbrowser</indexitem>
+<indexitem target="f6-14601.html#f6-14759">Hide Cell Markers</indexitem>
+<indexitem target="f4-18155.html#zmw57dd0e12318">highlighted search terms</indexitem>
+<indexitem>history
+    <indexitem target="f8-4994.html#zmw57dd0e1132">automatic log file</indexitem>
+    <indexitem target="f7-39221.html#f7-18449">source control on Windows platforms</indexitem>
+</indexitem>
+<indexitem target="f0-17420.html">history of statements</indexitem>
+<indexitem target="f0-17420.html#zmw57dd0e10739">history.m file</indexitem>
+<indexitem target="f0-36861.html#f0-36876">home</indexitem>
+<indexitem target="f2-46018.html#zmw57dd0e26629">horizontal lines in Editor/Debugger</indexitem>
+<indexitem target="bq37a39-1.html">hot keys
+    <indexitem target="f10-42271.html#f10-39804">Array Editor</indexitem>
+    <indexitem target="f0-5789.html#f0-32270">Command Window</indexitem>
+    <indexitem target="bq37a39-1.html">desktop</indexitem>
+    <indexitem target="f2-99262.html">Editor/Debugger</indexitem>
+</indexitem>
+<indexitem>HTML
+    <indexitem target="f2-53230.html#f2-55690">editing files in Editor/Debugger</indexitem>
+    <indexitem target="f4-5234.html#f4-10105">source, viewing in Help browser</indexitem>
+</indexitem>
+<indexitem>HTML markup
+    <indexitem target="f6-30186.html#brcpw74-1">within cell</indexitem>
+</indexitem>
+<indexitem target="f1-32896.html#bq37bb3-1">HTML viewer in MATLAB</indexitem>
+<indexitem>hyperlinks
+    <indexitem target="f0-12994.html#bq2sr9z">Command Window</indexitem>
+    <indexitem target="f0-12994.html#bq2ssd8">running functions by</indexitem>
+</indexitem>
+<indexitem>import
+    <indexitem target="f10-26235.html#zmw57dd0e16148">files for use with MATLAB</indexitem>
+</indexitem>
+<indexitem>include
+    <indexitem target="f10-26235.html#zmw57dd0e16143">files with MATLAB</indexitem>
+</indexitem>
+<indexitem>incremental searching
+    <indexitem target="bq4gox5-1.html#bq4gox5-12">in Editor/Debugger</indexitem>
+</indexitem>
+<indexitem>indented text
+    <indexitem target="f6-30186.html#bq4cx9c-1">within cell</indexitem>
+</indexitem>
+<indexitem>indenting
+    <indexitem target="f2-58922.html#f2-113254">functions and nested functions</indexitem>
+    <indexitem target="f0-5789.html#f0-36518">in Command Window</indexitem>
+    <indexitem target="f2-58922.html#f2-103364">in Editor/Debugger</indexitem>
+    <indexitem>preference in Editor
+        <indexitem target="f3-21973.html#f3-24493">C/C++</indexitem>
+        <indexitem target="f3-21973.html#f3-57563">HTML</indexitem>
+        <indexitem target="f3-21973.html#f3-25719">Java</indexitem>
+</indexitem>
+    <indexitem target="f3-21973.html#f3-24002">preference in Editor/Debugger</indexitem>
+</indexitem>
+<indexitem>index
+    <indexitem target="f4-18155.html#zmw57dd0e11878">examples in documentation</indexitem>
+    <indexitem target="f4-18155.html#f4-41749">Help browser
+        <indexitem target="f4-18155.html#zmw57dd0e12086">results</indexitem>
+        <indexitem target="f4-18155.html#f4-15111">tips</indexitem>
+</indexitem>
+</indexitem>
+<indexitem>info.xml
+    <indexitem target="f3-40358.html#zmw57dd0e36142">schema for Start button</indexitem>
+    <indexitem target="f3-40358.html#brdu1l8">Start button</indexitem>
+</indexitem>
+<indexitem target="f3-40358.html#zmw57dd0e37839">info.xml validation errors</indexitem>
+<indexitem target="f8-4994.html#f8-4998">initiation (init) file for MATLAB</indexitem>
+<indexitem>inline links
+    <indexitem target="f6-30186.html#brcpys5">within cell</indexitem>
+</indexitem>
+<indexitem>input
+    <indexitem target="f0-10486.html#zmw57dd0e7070">to MATLAB in Command Window</indexitem>
+</indexitem>
+<indexitem>input cells
+    <indexitem target="f6-12159.html#f6-15758">controlling evaluation</indexitem>
+    <indexitem target="f6-11644.html#f6-8580">controlling graphic output</indexitem>
+    <indexitem target="f6-14601.html#f6-14658">converting autoinit cell to</indexitem>
+    <indexitem target="f6-14601.html#f6-14954">converting text to</indexitem>
+    <indexitem target="f6-14601.html#f6-14622">converting to autoinit cell</indexitem>
+    <indexitem target="f6-14601.html#f6-14877">converting to cell groups</indexitem>
+    <indexitem target="f6-6951.html#f6-12561">converting to text</indexitem>
+    <indexitem target="f6-6951.html">defining in M-books</indexitem>
+    <indexitem target="f6-12159.html">evaluating</indexitem>
+    <indexitem target="f6-12159.html#f6-19561">evaluating cell groups</indexitem>
+    <indexitem target="f6-12159.html#f6-12457">evaluating in loop</indexitem>
+    <indexitem target="f6-36687.html#f6-18746">maintaining consistency</indexitem>
+    <indexitem target="f6-14601.html#zmw57dd0e32841">timing out during evaluation</indexitem>
+    <indexitem target="f6-6951.html#zmw57dd0e31589">use of Word Normal style</indexitem>
+</indexitem>
+<indexitem>Input style
+    <indexitem target="f6-11644.html#zmw57dd0e32203">definition of</indexitem>
+</indexitem>
+<indexitem>Insert key
+    <indexitem target="f0-5789.html#zmw57dd0e9188">Command Window</indexitem>
+    <indexitem target="f2-99262.html#zmw57dd0e22852">Editor/Debugger</indexitem>
+</indexitem>
+<indexitem>insert mode
+    <indexitem target="f0-5789.html#zmw57dd0e9183">Command Window</indexitem>
+    <indexitem target="f2-99262.html#zmw57dd0e22846">Editor/Debugger</indexitem>
+</indexitem>
+<indexitem target="f1-32896.html#bq37bb3-3">Internet proxy server</indexitem>
+<indexitem target="f0-12994.html#f0-38516">interrupting a running program</indexitem>
+<indexitem target="bq4hw4g-1.html#bq4hw5o-10">invalid breakpoints</indexitem>
+<indexitem>italic text
+    <indexitem target="f6-30186.html#bq3ryud">within cell</indexitem>
+</indexitem>
+<indexitem target="f2-46018.html">iterative programming</indexitem>
+<indexitem>Java
+    <indexitem target="f2-53230.html#f2-55690">editing files in Editor/Debugger</indexitem>
+</indexitem>
+<indexitem>Java VM
+    <indexitem target="f8-4994.html#zmw57dd0e1227">starting without</indexitem>
+</indexitem>
+<indexitem target="bqwp009-1.html#bqwp009-9">JAWS</indexitem>
+<indexitem>K&gt;&gt;
+    <indexitem target="f0-10486.html#zmw57dd0e7113">prompt in Command Window</indexitem>
+</indexitem>
+<indexitem>K&gt;&gt; prompt in Command Window
+    <indexitem target="bq4hw4g-1.html#zmw57dd0e24990">debugging mode</indexitem>
+    <indexitem target="bq4hw72-1.html#zmw57dd0e23965">keyboard statement</indexitem>
+</indexitem>
+<indexitem target="f0-22072.html#zmw57dd0e10376">key bindings</indexitem>
+<indexitem target="bq4hw72-1.html#zmw57dd0e23954">keyboard</indexitem>
+<indexitem>keyboard shortcuts
+    <indexitem target="f10-42271.html#f10-39804">Array Editor</indexitem>
+</indexitem>
+<indexitem target="bq37a39-1.html">keyboard shortcuts and accelerators</indexitem>
+<indexitem>keys
+    <indexitem target="f0-5789.html#f0-32270">editing in Command Window</indexitem>
+    <indexitem target="f2-99262.html">Editor/Debugger</indexitem>
+</indexitem>
+<indexitem>keywords
+    <indexitem target="f1-113060.html#f1-143582">color indicators</indexitem>
+    <indexitem target="f4-18155.html#f4-41749">in documentation</indexitem>
+    <indexitem target="f0-22072.html#f0-44557">matching in Editor/Debugger</indexitem>
+</indexitem>
+<indexitem>LaTeX markup
+    <indexitem target="f6-30186.html#brcpw74-1">within cell</indexitem>
+</indexitem>
+<indexitem>layout for desktop
+    <indexitem target="f3-12599.html#f3-56361">saving</indexitem>
+</indexitem>
+<indexitem target="f4-57893.html#f4-51189">license information</indexitem>
+<indexitem target="f1-32896.html#zmw57dd0e4670">licenses</indexitem>
+<indexitem>line
+    <indexitem target="f2-58922.html#f2-72353">in Editor/Debugger</indexitem>
+</indexitem>
+<indexitem>line breaks
+    <indexitem target="f0-5789.html#f0-5857">adding for long statements</indexitem>
+</indexitem>
+<indexitem target="f0-5789.html#f0-5857">line continuation</indexitem>
+<indexitem target="f2-58922.html#f2-30550">line numbers
+    <indexitem target="bq4gouj-1.html#bq4gouj-2">going to</indexitem>
+</indexitem>
+<indexitem target="f3-21973.html#f3-46855">line termination</indexitem>
+<indexitem target="f0-22072.html#f0-15728">line wrapping</indexitem>
+<indexitem target="f2-46018.html#zmw57dd0e26643">lines (gray) Editor/Debugger</indexitem>
+<indexitem>links
+    <indexitem target="f0-12994.html#bq2sr9z">Command Window</indexitem>
+    <indexitem target="f4-5234.html#f4-22520">in Help browser</indexitem>
+</indexitem>
+<indexitem>lists
+    <indexitem target="f6-30186.html#bq4cx9c-1">within cell</indexitem>
+</indexitem>
+<indexitem target="f10-51778.html#f10-31712">load</indexitem>
+<indexitem target="f7-34759.html#zmw57dd0e34628">locking files on checkout</indexitem>
+<indexitem>log
+    <indexitem target="f8-4994.html#zmw57dd0e1117">automatic</indexitem>
+    <indexitem target="f8-4994.html#zmw57dd0e1122">file</indexitem>
+    <indexitem target="f0-36861.html#f0-26884">session</indexitem>
+    <indexitem target="f0-17420.html">statements</indexitem>
+</indexitem>
+<indexitem target="f8-4994.html#zmw57dd0e1112">logfile startup option</indexitem>
+<indexitem>login
+    <indexitem target="bq4enmq-1.html#zmw57dd0e526">remote on Macintosh</indexitem>
+</indexitem>
+<indexitem target="f0-5789.html#f0-5857">long lines</indexitem>
+<indexitem target="f10-14803.html#f10-30318">lookfor</indexitem>
+<indexitem>looping
+    <indexitem target="f6-12159.html#f6-12457">to evaluate input cells</indexitem>
+</indexitem>
+<indexitem target="f0-5789.html#f0-30533">lowercase usage in MATLAB</indexitem>
+<indexitem>M-books
+    <indexitem target="f6-36687.html">creating</indexitem>
+    <indexitem target="f6-36687.html#zmw57dd0e31293">data consistency</indexitem>
+    <indexitem target="f6-36687.html#f6-18746">data integrity</indexitem>
+    <indexitem target="f6-36687.html#f6-13554">entering text and commands</indexitem>
+    <indexitem target="f6-12159.html#f6-28279">evaluating all input cells</indexitem>
+    <indexitem target="f6-11644.html#f6-2318">modifying style template</indexitem>
+    <indexitem target="f6-36687.html#f6-16445">opening</indexitem>
+    <indexitem target="f6-11644.html#f6-2317">printing</indexitem>
+    <indexitem target="f6-11644.html#f6-15918">sizing graphic output</indexitem>
+    <indexitem target="f6-11644.html#f6-2318">styles</indexitem>
+</indexitem>
+<indexitem>M-files
+    <indexitem target="f2-58922.html">appearance</indexitem>
+    <indexitem target="f9-11863.html">checking code</indexitem>
+    <indexitem target="f2-58922.html#f2-20662">colors in</indexitem>
+    <indexitem target="bq4go15-1.html">comparing</indexitem>
+    <indexitem target="f10-14803.html#zmw57dd0e18074">content, viewing</indexitem>
+    <indexitem target="f2-55126.html">creating
+        <indexitem target="f0-17420.html#zmw57dd0e10859">from Command History window</indexitem>
+        <indexitem target="f10-26235.html#f10-48823">in MATLAB directory</indexitem>
+        <indexitem target="f2-53230.html#f2-94399">new file</indexitem>
+</indexitem>
+    <indexitem target="bq4hw72-1.html#zmw57dd0e23787">debugging
+        <indexitem target="f2-55126.html">options</indexitem>
+</indexitem>
+    <indexitem target="bq4hw72-1.html#zmw57dd0e23915">determining cyclomatic complexity of</indexitem>
+    <indexitem target="bq4hw72-1.html#zmw57dd0e23909">determining McCabe complexity of</indexitem>
+    <indexitem target="f2-4931.html">editing
+        <indexitem target="f2-55126.html">options</indexitem>
+</indexitem>
+    <indexitem target="f8-8880.html#f8-28791">file association (Windows)</indexitem>
+    <indexitem target="f10-14803.html#f10-7498">finding</indexitem>
+    <indexitem target="f4-55195.html#zmw57dd0e11692">help
+        <indexitem target="f10-14803.html#zmw57dd0e17378">viewing in Current Directory browser</indexitem>
+</indexitem>
+    <indexitem target="f10-26235.html#f10-26295">naming</indexitem>
+    <indexitem target="f2-53230.html#f2-9443">opening</indexitem>
+    <indexitem target="bq4hw72-1.html#zmw57dd0e23959">pausing</indexitem>
+    <indexitem target="f9-17018.html">performance of</indexitem>
+    <indexitem target="f2-37175.html#f2-9766">printing</indexitem>
+    <indexitem target="f9-17018.html">profiling</indexitem>
+    <indexitem target="bq4gox5-1.html#bq4gox5-3">replacing content</indexitem>
+    <indexitem>running
+        <indexitem target="f8-4994.html#zmw57dd0e1276">at startup</indexitem>
+        <indexitem target="f0-12994.html#f0-38156">from Command Window</indexitem>
+        <indexitem target="f10-14803.html#f10-34215">from Current Directory browser</indexitem>
+</indexitem>
+    <indexitem target="f2-37175.html#zmw57dd0e22891">saving</indexitem>
+    <indexitem target="f10-26235.html#f10-29294">search path</indexitem>
+    <indexitem target="f10-14803.html#f10-7498">searching contents of</indexitem>
+    <indexitem target="f8-8880.html#f8-28791">starting MATLAB from</indexitem>
+    <indexitem target="f4-57893.html#f4-23047">user-contributed</indexitem>
+</indexitem>
+<indexitem target="f9-11863.html">M-Lint
+    <indexitem target="bq4grlt-1.html#zmw57dd0e24260">auto-fix</indexitem>
+    <indexitem target="bq4grlt-1.html">Editor/Debugger access</indexitem>
+    <indexitem target="f9-11863.html#zmw57dd0e27755">suppressing messages</indexitem>
+</indexitem>
+<indexitem>Macintosh
+    <indexitem>startup
+        <indexitem target="bq4enmq-1.html#zmw57dd0e526">remote login</indexitem>
+</indexitem>
+</indexitem>
+<indexitem>MAT-files
+    <indexitem target="f1-94809.html#f1-112595">compatibility</indexitem>
+    <indexitem target="f1-94809.html#f1-112595">compression options</indexitem>
+    <indexitem target="f10-51778.html#f10-8519">creating</indexitem>
+    <indexitem target="f10-51778.html#f10-8519">defined</indexitem>
+    <indexitem target="f10-51778.html#f10-31712">loading</indexitem>
+    <indexitem target="f1-94809.html#f1-112595">preferences</indexitem>
+    <indexitem target="f8-8880.html#f8-28791">starting MATLAB from</indexitem>
+    <indexitem target="f10-14803.html#f10-57883">view without loading</indexitem>
+</indexitem>
+<indexitem>matched delimiters
+    <indexitem target="f0-22072.html#f0-44557">preferences</indexitem>
+</indexitem>
+<indexitem>matching parentheses
+    <indexitem target="f0-22072.html#f0-44557">in Editor/Debugger</indexitem>
+</indexitem>
+<indexitem target="f4-57893.html#f4-42301">Mathtools.net</indexitem>
+<indexitem>MATLAB
+    <indexitem target="f6-12159.html">commands, executing in a Word document</indexitem>
+    <indexitem target="f10-14803.html#zmw57dd0e17217">files, listing</indexitem>
+    <indexitem target="f10-26235.html#f10-29294">path</indexitem>
+    <indexitem target="f8-25321.html">quitting
+        <indexitem target="f8-25321.html#f8-28163">confirmation</indexitem>
+</indexitem>
+</indexitem>
+<indexitem target="f8-10506.html#f8-12959">matlab directory</indexitem>
+<indexitem>MATLAB functions
+    <indexitem target="f0-12994.html#bq2ssd8">running by hyperlink</indexitem>
+</indexitem>
+<indexitem target="f10-51778.html#zmw57dd0e15033">matlab.mat</indexitem>
+<indexitem target="f8-4994.html#f8-4998">matlabrc.m, startup file</indexitem>
+<indexitem>matrices
+    <indexitem target="f10-42271.html">editing</indexitem>
+</indexitem>
+<indexitem>maximizing
+    <indexitem target="f1-43281.html#zmw57dd0e2254">tools in desktop</indexitem>
+</indexitem>
+<indexitem target="f9-17018.html">measuring performance of M-files</indexitem>
+<indexitem target="f1-32896.html#f1-47244">membership Web page</indexitem>
+<indexitem target="bq4hw4g-1.html#bq4hw5o-73">message identifiers</indexitem>
+<indexitem>Microsoft Word
+    <indexitem target="f6-36687.html#f6-47791">converting document to M-book</indexitem>
+</indexitem>
+<indexitem>minimize
+    <indexitem target="f8-4994.html#zmw57dd0e1206">Windows startup option</indexitem>
+</indexitem>
+<indexitem>minimizing
+    <indexitem target="f1-43281.html#zmw57dd0e2291">tools in desktop</indexitem>
+</indexitem>
+<indexitem target="f10-14803.html#f10-34756">mkdir</indexitem>
+<indexitem>monospaced text
+    <indexitem target="f6-30186.html#bq3ryud">within cell</indexitem>
+</indexitem>
+<indexitem target="f0-36861.html#f0-5117">more</indexitem>
+<indexitem target="f1-32896.html#f1-55947">mouse, right-clicking</indexitem>
+<indexitem>multidimensional arrays
+    <indexitem target="f10-42271.html#f10-56169">editing</indexitem>
+</indexitem>
+<indexitem target="f1-32896.html#f1-32969">multiple item selection</indexitem>
+<indexitem target="f0-5789.html#f0-5857">multiple lines for statements</indexitem>
+<indexitem target="f0-12994.html#f0-38687">multiprocessing</indexitem>
+<indexitem target="f1-94809.html#bq35sqs">multithreaded computation</indexitem>
+<indexitem target="f10-26235.html#f10-26295">naming functions and variables</indexitem>
+<indexitem>navigating
+    <indexitem target="bq4gouj-1.html">M-files</indexitem>
+</indexitem>
+<indexitem target="f2-53314.html#zmw57dd0e19722">nested comments</indexitem>
+<indexitem>nested functions
+    <indexitem target="f2-58922.html#f2-113254">indenting</indexitem>
+</indexitem>
+<indexitem target="f4-57893.html#f4-48613">newsgroup for MATLAB</indexitem>
+<indexitem target="f4-57893.html#f4-42301">newsletters</indexitem>
+<indexitem target="f8-4994.html#zmw57dd0e1154">nodesktop startup option</indexitem>
+<indexitem target="f8-4994.html#zmw57dd0e1222">nojvm startup option</indexitem>
+<indexitem>Normal style (Microsoft Word)
+    <indexitem target="f6-11644.html#f6-2318">default style in M-book</indexitem>
+    <indexitem target="f6-11644.html#zmw57dd0e32140">defaults</indexitem>
+    <indexitem target="f6-6951.html#zmw57dd0e31584">used in undefined input cells</indexitem>
+</indexitem>
+<indexitem>Notebook
+    <indexitem target="f6-13865.html">configuring</indexitem>
+    <indexitem target="f6-36687.html#f6-41146">debugging</indexitem>
+    <indexitem target="f6-14601.html#f6-14780">options</indexitem>
+    <indexitem target="f6-36687.html">overview</indexitem>
+    <indexitem target="f6-36687.html#zmw57dd0e30938">platforms supported</indexitem>
+</indexitem>
+<indexitem>notebook
+    <indexitem target="f6-36687.html#f6-13530">function</indexitem>
+</indexitem>
+<indexitem>Notebook menu
+    <indexitem target="f6-36687.html#f6-13530">Word menu bar</indexitem>
+</indexitem>
+<indexitem target="f2-58922.html#f2-30550">numbering lines</indexitem>
+<indexitem>numeric format
+    <indexitem target="f6-11644.html#f6-1442">controlling in M-book</indexitem>
+    <indexitem target="f0-36861.html#f0-13289">output</indexitem>
+    <indexitem target="f0-22072.html#f0-8883">preferences</indexitem>
+</indexitem>
+<indexitem target="f10-14803.html#f10-16930">open</indexitem>
+<indexitem>opening files
+    <indexitem target="f10-14803.html#f10-7440">Current Directory browser</indexitem>
+</indexitem>
+<indexitem target="f10-42271.html#f10-18313">openvar</indexitem>
+<indexitem target="f0-12994.html#f0-38522">operating system commands</indexitem>
+<indexitem>operators
+    <indexitem target="f4-18155.html#zmw57dd0e12640">searching for</indexitem>
+</indexitem>
+<indexitem target="f9-17018.html">optimizing performance of M-files</indexitem>
+<indexitem>options
+    <indexitem target="f8-25321.html#f8-8304">shutdown</indexitem>
+    <indexitem target="f8-4994.html">startup</indexitem>
+</indexitem>
+<indexitem target="bq4grlt-1.html#zmw57dd0e24216">orange underline in M-file</indexitem>
+<indexitem>output
+    <indexitem>display
+        <indexitem target="f0-36861.html#f0-13289">format</indexitem>
+        <indexitem target="f0-36861.html#f0-36866">hidden</indexitem>
+</indexitem>
+    <indexitem target="f0-36861.html#f0-36866">hiding</indexitem>
+    <indexitem target="f0-10486.html#zmw57dd0e7075">in Command Window</indexitem>
+    <indexitem target="f0-36861.html#f0-5117">paging</indexitem>
+    <indexitem target="f0-22072.html#f0-48328">spaces per tab</indexitem>
+    <indexitem target="f0-22072.html#f0-8869">spacing of</indexitem>
+    <indexitem target="f0-36861.html#f0-36866">suppressing</indexitem>
+</indexitem>
+<indexitem>output cells
+    <indexitem target="f6-12159.html#f6-12828">converting to text</indexitem>
+    <indexitem target="f6-12159.html#f6-17020">purging</indexitem>
+</indexitem>
+<indexitem>Output style
+    <indexitem target="f6-11644.html#zmw57dd0e32224">definition</indexitem>
+</indexitem>
+<indexitem>overwrite mode
+    <indexitem target="f0-5789.html#zmw57dd0e9178">Command Window</indexitem>
+    <indexitem target="f2-99262.html#zmw57dd0e22840">Editor/Debugger</indexitem>
+</indexitem>
+<indexitem target="f0-36861.html#f0-5117">paging in the Command Window</indexitem>
+<indexitem>parentheses
+    <indexitem target="f0-22072.html#f0-44557">matching</indexitem>
+</indexitem>
+<indexitem>parentheses matching
+    <indexitem target="f0-22072.html#f0-44557">preferences</indexitem>
+</indexitem>
+<indexitem>partial word
+    <indexitem target="f4-18155.html#bqxlisl-1">Help browser search</indexitem>
+</indexitem>
+<indexitem target="f1-32896.html#zmw57dd0e4673">passcodes</indexitem>
+<indexitem>path
+    <indexitem target="f10-14803.html#f10-57983">adding directories to</indexitem>
+    <indexitem target="f10-26235.html#f10-28780">changing</indexitem>
+    <indexitem target="f10-26235.html#f10-29294">description</indexitem>
+    <indexitem target="f10-26235.html#zmw57dd0e16201">order of directories</indexitem>
+    <indexitem target="f10-26235.html#f10-47542">problems and recovering</indexitem>
+    <indexitem target="f10-26235.html#f10-13739">saving changes</indexitem>
+    <indexitem target="f10-26235.html#f10-13739">saving for future sessions</indexitem>
+    <indexitem target="f10-26235.html#f10-14012">viewing</indexitem>
+</indexitem>
+<indexitem target="f0-12994.html#f0-45606">PATH environment variable</indexitem>
+<indexitem target="f10-26235.html#f10-48104">pathdef.m
+    <indexitem target="f10-26235.html#f10-13739">location</indexitem>
+</indexitem>
+<indexitem target="f10-26235.html#f10-40176">pathtool</indexitem>
+<indexitem target="bq4hw4g-1.html#bq4hw5o-6">pausing execution of M-file</indexitem>
+<indexitem>pcode
+    <indexitem target="bq4hw72-1.html#zmw57dd0e23887">error checking</indexitem>
+</indexitem>
+<indexitem>PDF
+    <indexitem target="f4-19137.html">printing documentation files</indexitem>
+    <indexitem target="f4-19137.html">printing documentation files</indexitem>
+    <indexitem target="f4-50602.html#f4-16980">reader, preference for Help browser</indexitem>
+</indexitem>
+<indexitem>performance
+    <indexitem target="f9-17018.html">improving for M-files</indexitem>
+</indexitem>
+<indexitem target="f0-5789.html#f0-5857">periods (...)</indexitem>
+<indexitem>Perl variables
+    <indexitem>passing
+        <indexitem target="bq4evf0.html#zmw57dd0e1505">at startup</indexitem>
+</indexitem>
+</indexitem>
+<indexitem>plotting
+    <indexitem target="f10-51778.html#zmw57dd0e15336">from the Workspace browser</indexitem>
+</indexitem>
+<indexitem target="f1-32896.html#f1-55947">pop-up menus</indexitem>
+<indexitem>precision
+    <indexitem target="f0-36861.html#f0-13289">output display</indexitem>
+</indexitem>
+<indexitem>preferences
+    <indexitem target="f1-94809.html">MATLAB, general</indexitem>
+</indexitem>
+<indexitem>printing
+    <indexitem target="f0-17420.html#f0-26053">Command History window contents</indexitem>
+    <indexitem target="f0-36861.html#f0-11340">Command Window contents</indexitem>
+    <indexitem target="f4-19137.html">documentation</indexitem>
+    <indexitem target="f4-19137.html">help</indexitem>
+    <indexitem target="f2-37175.html#f2-9766">M-files</indexitem>
+</indexitem>
+<indexitem>printing an M-book
+    <indexitem target="f6-11644.html#zmw57dd0e32051">cell markers</indexitem>
+    <indexitem target="f6-11644.html#f6-2318">color</indexitem>
+    <indexitem target="f6-11644.html#f6-2317">defaults</indexitem>
+</indexitem>
+<indexitem target="f4-57893.html#zmw57dd0e14466">problems, reporting to The MathWorks</indexitem>
+<indexitem>product filter in Help browser
+    <indexitem target="f4-50602.html#f4-18710">preference</indexitem>
+</indexitem>
+<indexitem target="f1-32896.html#f1-120087">product version</indexitem>
+<indexitem target="f9-17018.html#f9-17383">profile
+    <indexitem target="f9-17018.html#f9-17475">example</indexitem>
+</indexitem>
+<indexitem target="f9-17018.html">profiling</indexitem>
+<indexitem>programs
+    <indexitem target="f0-12994.html#f0-38522">running from MATLAB</indexitem>
+    <indexitem target="f0-12994.html#f0-38516">stopping while running</indexitem>
+</indexitem>
+<indexitem>prompt
+    <indexitem target="f0-10486.html#zmw57dd0e7060">in Command Window</indexitem>
+    <indexitem target="bq4hw4g-1.html#zmw57dd0e24978">when debugging</indexitem>
+</indexitem>
+<indexitem>properties
+    <indexitem target="f7-39221.html#f7-18479">source control on Windows platforms</indexitem>
+    <indexitem>tab completion
+        <indexitem target="f0-5789.html#f0-32281">Command Window</indexitem>
+        <indexitem target="f2-53314.html#f2-105596">Editor/Debugger</indexitem>
+</indexitem>
+</indexitem>
+<indexitem>Publishing
+    <indexitem target="f6-14058.html">functions versus scripts</indexitem>
+</indexitem>
+<indexitem>publishing
+    <indexitem>cells
+        <indexitem target="f6-29198.html#zmw57dd0e30791">platforms supported</indexitem>
+</indexitem>
+</indexitem>
+<indexitem target="f6-14601.html#f6-14824">Purge Output Cells</indexitem>
+<indexitem target="f6-12159.html#f6-17020">purging output cells</indexitem>
+<indexitem>quitting
+    <indexitem target="f8-25321.html#f8-8304">saving workspace</indexitem>
+</indexitem>
+<indexitem target="f8-25321.html">quitting MATLAB
+    <indexitem target="f8-25321.html#f8-28163">confirmation</indexitem>
+</indexitem>
+<indexitem target="bq4gox5-1.html#bq4gox5-12">R Inc Search field</indexitem>
+<indexitem target="f2-46018.html">rapid development</indexitem>
+<indexitem target="f0-5789.html#f0-28699">recall previous lines</indexitem>
+<indexitem target="f1-94809.html#f1-112437">recover deleted files</indexitem>
+<indexitem>recycle function
+    <indexitem target="f1-94809.html#f1-112437">preference</indexitem>
+</indexitem>
+<indexitem target="bq4hw4g-1.html#bq4hw5o-10">red breakpoint icons</indexitem>
+<indexitem target="bq4grlt-1.html#zmw57dd0e24212">red underline in M-file</indexitem>
+<indexitem>red vertical line
+    <indexitem target="f2-58922.html#f2-72353">in Editor/Debugger</indexitem>
+</indexitem>
+<indexitem>redo
+    <indexitem target="f1-32896.html#zmw57dd0e4189">in desktop</indexitem>
+</indexitem>
+<indexitem target="f4-55195.html#zmw57dd0e11609">reference pages</indexitem>
+<indexitem>release notes
+    <indexitem target="f4-55195.html#zmw57dd0e11637">prior versions</indexitem>
+    <indexitem target="f4-55195.html#zmw57dd0e11642">prior versions</indexitem>
+    <indexitem target="f4-55195.html#zmw57dd0e11751">prior versions
+        <indexitem target="f4-55195.html#zmw57dd0e11756">more extensive</indexitem>
+</indexitem>
+</indexitem>
+<indexitem>remote login
+    <indexitem target="bq4enmq-1.html#zmw57dd0e526">Macintosh</indexitem>
+</indexitem>
+<indexitem target="f7-39221.html#f7-18436">removing files from source control system</indexitem>
+<indexitem>requirements
+    <indexitem target="f8-29401.html">MATLAB</indexitem>
+</indexitem>
+<indexitem target="f3-12599.html#f3-13322">resizing windows in the desktop</indexitem>
+<indexitem>restoring
+    <indexitem target="f1-43281.html#zmw57dd0e2296">tools in desktop</indexitem>
+</indexitem>
+<indexitem target="f10-42271.html#zmw57dd0e15570">results in MATLAB, displaying</indexitem>
+<indexitem>revision control
+    <indexitem target="f7-5297.html">See source control system interface</indexitem>
+</indexitem>
+<indexitem target="f2-58922.html#f2-72353">right-hand text limit</indexitem>
+<indexitem target="f4-18155.html#f4-43713">roadmap for documentation</indexitem>
+<indexitem>rule
+    <indexitem target="f2-58922.html#f2-72353">in Editor/Debugger</indexitem>
+</indexitem>
+<indexitem target="f3-21973.html#f3-58895">rule (horizontal) in Editor/Debugger</indexitem>
+<indexitem target="f2-46018.html#zmw57dd0e26639">rules (lines) in Editor/Debugger</indexitem>
+<indexitem target="bq4hw72-1.html#zmw57dd0e23811">run-time errors</indexitem>
+<indexitem>running
+    <indexitem target="f10-14803.html#f10-34215">M-files</indexitem>
+    <indexitem target="brbiuez-1.html#zmw57dd0e23192">M-files in Editor/Debugger</indexitem>
+</indexitem>
+<indexitem>save
+    <indexitem target="f10-51778.html#f10-8774">function</indexitem>
+</indexitem>
+<indexitem>saving
+    <indexitem target="f2-37175.html#f2-31475">automatically in Editor/Debugger</indexitem>
+    <indexitem target="f2-37175.html#zmw57dd0e22897">M-files</indexitem>
+    <indexitem>MAT-files
+        <indexitem target="f1-94809.html#f1-112595">preferences</indexitem>
+</indexitem>
+    <indexitem target="f8-25321.html#f8-8304">workspace upon quitting</indexitem>
+</indexitem>
+<indexitem>schema
+    <indexitem target="f3-40358.html#zmw57dd0e36148">for info.xml file in Start button</indexitem>
+</indexitem>
+<indexitem target="bqwp009-1.html#bqwp009-9">screen reader</indexitem>
+<indexitem target="f8-4994.html#f8-4998">script for startup</indexitem>
+<indexitem target="f0-22072.html#f0-18057">scroll buffer for Command Window</indexitem>
+<indexitem target="f0-36861.html#f0-5117">scrolling in Command Window</indexitem>
+<indexitem target="f10-26235.html#f10-29294">search path
+    <indexitem target="f10-26235.html#f10-29294">default</indexitem>
+    <indexitem target="f10-26235.html#f10-47542">problems and recovering</indexitem>
+    <indexitem target="f10-26235.html#f10-13739">saving for future sessions</indexitem>
+</indexitem>
+<indexitem>searching
+    <indexitem target="f10-14803.html#f10-7498">for M-files</indexitem>
+    <indexitem target="f4-18155.html#f4-41758">Help browser
+        <indexitem target="f4-18155.html#f4-51256">Boolean</indexitem>
+        <indexitem target="f4-18155.html#bqxlisn-1">exact phrase (" ")</indexitem>
+        <indexitem target="f4-18155.html#zmw57dd0e12290">results</indexitem>
+        <indexitem target="f4-5234.html#f4-8851">text in page</indexitem>
+        <indexitem target="f4-18155.html#bqxlisl-1">wildcard (*) or partial word</indexitem>
+</indexitem>
+    <indexitem>M-file content
+        <indexitem target="f10-14803.html#f10-7498">across files</indexitem>
+</indexitem>
+    <indexitem target="f4-18155.html#zmw57dd0e12625">special characters</indexitem>
+    <indexitem>text
+        <indexitem target="f0-17420.html#f0-45383">Command History window</indexitem>
+        <indexitem target="f0-23163.html">Command Window</indexitem>
+</indexitem>
+    <indexitem target="bq4gox5-1.html#bq4gox5-2">text in current file</indexitem>
+    <indexitem target="bq4gox5-1.html#bq4gox5-3">text in M-files</indexitem>
+    <indexitem target="bq4gox5-1.html#bq4gox5-12">text, incrementally</indexitem>
+</indexitem>
+<indexitem>section breaks
+    <indexitem target="f6-14601.html#f6-14948">in calc zones</indexitem>
+</indexitem>
+<indexitem target="f8-25321.html#f8-29456">segmentation violation</indexitem>
+<indexitem target="f8-25321.html#f8-29456">segv</indexitem>
+<indexitem target="f1-32896.html#f1-32969">selecting multiple items</indexitem>
+<indexitem>semicolon (;)
+    <indexitem target="f0-36861.html#f0-36866">after functions</indexitem>
+    <indexitem target="f0-5789.html#f0-10117">between functions</indexitem>
+</indexitem>
+<indexitem target="f0-5789.html#f0-5857">separator in functions</indexitem>
+<indexitem>session
+    <indexitem target="f8-4994.html#zmw57dd0e1137">automatic log file</indexitem>
+</indexitem>
+<indexitem>session log
+    <indexitem target="f0-17420.html">Command History</indexitem>
+    <indexitem target="f0-36861.html#f0-26884">diary</indexitem>
+</indexitem>
+<indexitem target="bq4hw4g-1.html#bq4hw5o-6">setting breakpoints</indexitem>
+<indexitem target="f10-26235.html#zmw57dd0e16219">shadowed functions</indexitem>
+<indexitem target="f0-12994.html#f0-38522">shell escape</indexitem>
+<indexitem>shortcut
+    <indexitem target="f8-8880.html">for MATLAB in Windows</indexitem>
+    <indexitem target="f0-22072.html#zmw57dd0e10379">keys in Editor/Debugger</indexitem>
+    <indexitem target="bq37a39-1.html">keys in MATLAB</indexitem>
+</indexitem>
+<indexitem>shortcut keys
+    <indexitem target="f10-42271.html#f10-39804">Array Editor</indexitem>
+    <indexitem target="f0-5789.html#f0-32270">Command Window editing</indexitem>
+    <indexitem target="f2-99262.html">Editor/Debugger</indexitem>
+</indexitem>
+<indexitem>shortcuts
+    <indexitem target="bq37azl-1.html#bq37azl-22">categories</indexitem>
+    <indexitem>creating
+        <indexitem target="f0-17420.html#zmw57dd0e10876">from Command History window</indexitem>
+</indexitem>
+    <indexitem target="bq37azl-1.html">defined</indexitem>
+    <indexitem target="bq37azl-1.html#bq37azl-22">deleting</indexitem>
+    <indexitem target="bq37azl-1.html#bq37azl-22">editing</indexitem>
+    <indexitem target="f2-99262.html">Editor/Debugger</indexitem>
+    <indexitem target="bq37azl-1.html#zmw57dd0e3120">file</indexitem>
+    <indexitem target="bq37azl-1.html#bq37azl-21">labels, hiding</indexitem>
+    <indexitem target="bq37azl-1.html#bq37azl-22">moving</indexitem>
+    <indexitem target="bq37azl-1.html#bq37azl-22">organizing</indexitem>
+    <indexitem target="bq37azl-1.html#bq37azl-13">toolbar</indexitem>
+</indexitem>
+<indexitem target="bq37azl-1.html#zmw57dd0e3116">shortcuts.xml</indexitem>
+<indexitem target="f6-14601.html#f6-14759">Show Cell Markers</indexitem>
+<indexitem target="f7-39221.html#f7-18449">show file history on Windows platforms</indexitem>
+<indexitem>shutdown
+    <indexitem target="f8-25321.html">MATLAB</indexitem>
+    <indexitem target="f8-25321.html#f8-8304">options</indexitem>
+</indexitem>
+<indexitem target="f3-12599.html#f3-13322">sizing windows in the desktop</indexitem>
+<indexitem target="f2-58922.html#f2-103364">smart indenting</indexitem>
+<indexitem target="f0-5789.html#f0-28699">smart recall</indexitem>
+<indexitem>source control on UNIX platforms
+    <indexitem target="f7-34759.html#zmw57dd0e34634">getting files</indexitem>
+    <indexitem target="f7-34759.html#zmw57dd0e34623">locking files</indexitem>
+</indexitem>
+<indexitem target="f7-5297.html">source control system interface
+    <indexitem target="brbmejb.html">UNIX platforms
+        <indexitem target="f7-15075.html">preferences</indexitem>
+        <indexitem target="f7-15075.html">selecting system</indexitem>
+        <indexitem target="brbmejb.html">supported systems</indexitem>
+</indexitem>
+    <indexitem>Windows platforms
+        <indexitem target="f7-40072.html#f7-40288">adding files</indexitem>
+        <indexitem target="f7-40072.html#f7-37366">preferences</indexitem>
+        <indexitem target="f7-40072.html#f7-37366">selecting system</indexitem>
+        <indexitem target="brbmdzd.html">supported systems</indexitem>
+</indexitem>
+</indexitem>
+<indexitem>source control system interface on UNIX platforms
+    <indexitem target="f7-40932.html">checking in files</indexitem>
+    <indexitem target="f7-34759.html">checking out files</indexitem>
+    <indexitem target="f7-15075.html#f7-15104">configuring ClearCase source control system</indexitem>
+    <indexitem target="f7-15175.html">undoing file check-out</indexitem>
+</indexitem>
+<indexitem>source control system interface on Windows platforms
+    <indexitem target="f7-40362.html#f7-40831">checking out files</indexitem>
+    <indexitem target="f7-39221.html#f7-18462">comparing working copy to source control version</indexitem>
+    <indexitem target="f7-39221.html#f7-18479">displaying file properties</indexitem>
+    <indexitem target="f7-39221.html#f7-21336">get latest version of file</indexitem>
+    <indexitem target="f7-39221.html#f7-18436">removing files</indexitem>
+    <indexitem target="f7-39221.html#f7-18449">showing file history</indexitem>
+    <indexitem target="f7-39221.html#f7-18499">starting source control system</indexitem>
+    <indexitem target="f7-35189.html">troubleshooting</indexitem>
+    <indexitem target="f7-40362.html#f7-40876">undoing file check-out</indexitem>
+</indexitem>
+<indexitem target="f0-5789.html#f0-30533">spaces in MATLAB commands</indexitem>
+<indexitem>spacing
+    <indexitem target="f0-22072.html#f0-8869">output in Command Window</indexitem>
+    <indexitem target="f0-22072.html#f0-48328">tabs in Command Window</indexitem>
+</indexitem>
+<indexitem>special characters
+    <indexitem target="f4-18155.html#zmw57dd0e12635">searching for</indexitem>
+</indexitem>
+<indexitem>splash screen
+    <indexitem target="f8-4994.html#zmw57dd0e1260">startup option</indexitem>
+</indexitem>
+<indexitem>split screen display
+    <indexitem target="f2-58922.html#bq4goxb-1">Editor/Debugger</indexitem>
+</indexitem>
+<indexitem>stack
+    <indexitem target="bq4hw4g-1.html#zmw57dd0e25021">in Editor/Debugger</indexitem>
+    <indexitem target="f10-51778.html#f10-10558">viewing</indexitem>
+</indexitem>
+<indexitem target="f1-32896.html#f1-83992">Start button
+    <indexitem target="f1-32896.html#f1-84054">adding toolboxes</indexitem>
+    <indexitem target="f3-40358.html#brdu1l8">customizing</indexitem>
+</indexitem>
+<indexitem>starting MATLAB
+    <indexitem target="f8-8880.html">DOS</indexitem>
+    <indexitem target="f8-29076.html">UNIX</indexitem>
+    <indexitem target="f8-8880.html">Windows</indexitem>
+</indexitem>
+<indexitem>startup
+    <indexitem target="f8-10506.html">directory for MATLAB</indexitem>
+    <indexitem target="f8-4994.html#f8-4998">files for MATLAB</indexitem>
+    <indexitem target="f8-8880.html#f8-28791">M-file double-click</indexitem>
+    <indexitem target="f3-21973.html#f3-22636">M-files open</indexitem>
+    <indexitem target="bq4enmq-1.html#zmw57dd0e526">Macintosh, remote login</indexitem>
+    <indexitem target="f8-4994.html">options for MATLAB</indexitem>
+    <indexitem target="f8-4994.html#f8-4998">script</indexitem>
+</indexitem>
+<indexitem>startup.m
+    <indexitem target="f8-4994.html#f8-5008">location</indexitem>
+    <indexitem target="f8-4994.html#f8-4998">startup file</indexitem>
+</indexitem>
+<indexitem>statement
+    <indexitem target="f0-12994.html#f0-44784">definition</indexitem>
+</indexitem>
+<indexitem>statements
+    <indexitem target="f0-12994.html#f0-24935">defined</indexitem>
+    <indexitem target="bq37azl-1.html">executing a group of</indexitem>
+    <indexitem target="f0-5789.html#f0-5857">long (on multiple lines)</indexitem>
+</indexitem>
+<indexitem target="bq4hw4g-1.html#bq4hw5o-16">stepping through M-file</indexitem>
+<indexitem target="f0-12994.html#f0-38516">stopping a running program</indexitem>
+<indexitem>stops
+    <indexitem target="bq4hw4g-1.html#bq4hw5o-6">in M-files</indexitem>
+</indexitem>
+<indexitem target="f0-5789.html#f0-5857">stops (...)</indexitem>
+<indexitem>strings
+    <indexitem target="f0-5789.html#zmw57dd0e8214">across multiple lines</indexitem>
+    <indexitem target="f1-113060.html#f1-143582">color indicators</indexitem>
+    <indexitem target="f1-94809.html#f1-112595">saving as Unicode</indexitem>
+</indexitem>
+<indexitem>structures
+    <indexitem target="f10-42271.html#f10-56169">editing</indexitem>
+    <indexitem target="f0-5789.html#f0-17946">tab completion</indexitem>
+    <indexitem target="f2-53314.html#f2-105587">tab completion</indexitem>
+</indexitem>
+<indexitem target="f1-70353.html">style preferences for text</indexitem>
+<indexitem>styles in M-book
+    <indexitem target="f6-11644.html#f6-2318">modifying</indexitem>
+</indexitem>
+<indexitem>subfunction
+    <indexitem target="f2-58922.html#f2-104179">displayed in Editor/Debugger status bar</indexitem>
+</indexitem>
+<indexitem>subfunctions
+    <indexitem target="bq4gouj-1.html#bq4gouj-3">going to in M-file</indexitem>
+</indexitem>
+<indexitem target="f4-57893.html#f4-51420">suggestions to The MathWorks</indexitem>
+<indexitem>support
+    <indexitem target="f4-57893.html#f4-55653">technical</indexitem>
+</indexitem>
+<indexitem target="f0-36861.html#f0-36866">suppressing output</indexitem>
+<indexitem>switches
+    <indexitem target="f8-4994.html">for startup</indexitem>
+</indexitem>
+<indexitem>symbols
+    <indexitem target="f4-18155.html#zmw57dd0e12630">searching for</indexitem>
+</indexitem>
+<indexitem>syntax
+    <indexitem target="f1-113060.html#f1-143582">color indicators</indexitem>
+    <indexitem target="f1-113060.html">color preferences in MATLAB</indexitem>
+    <indexitem target="f0-5789.html#f0-36518">coloring and indenting</indexitem>
+    <indexitem target="bq4hw72-1.html#zmw57dd0e23805">errors</indexitem>
+    <indexitem target="f2-58922.html#f2-20662">highlighting</indexitem>
+</indexitem>
+<indexitem target="f0-12994.html#zmw57dd0e7472">system environment variables</indexitem>
+<indexitem target="f0-12994.html#f0-45606">system path for UNIX</indexitem>
+<indexitem>system requirements
+    <indexitem target="f8-29401.html">MATLAB</indexitem>
+</indexitem>
+<indexitem>tab
+    <indexitem target="f2-58922.html#f2-103364">indenting in Editor/Debugger</indexitem>
+    <indexitem>preference for indenting in Editor
+        <indexitem target="f3-21973.html#f3-24493">C/C++</indexitem>
+        <indexitem target="f3-21973.html#f3-57563">HTML</indexitem>
+        <indexitem target="f3-21973.html#f3-25719">Java</indexitem>
+</indexitem>
+    <indexitem target="f3-21973.html#f3-24002">preference for indenting in Editor/Debugger</indexitem>
+    <indexitem target="f0-22072.html#f0-48328">spacing in Command Window</indexitem>
+</indexitem>
+<indexitem>tab completion
+    <indexitem target="f0-5789.html#f0-14742">Command Window</indexitem>
+    <indexitem target="f2-53314.html#f2-105451">Editor/Debugger</indexitem>
+</indexitem>
+<indexitem target="f3-12599.html#zmw57dd0e35345">tabbing desktop windows together</indexitem>
+<indexitem target="f4-18155.html#f4-7003">table of contents for help</indexitem>
+<indexitem>Technical Support
+    <indexitem target="f4-57893.html#f4-55653">contacting</indexitem>
+    <indexitem target="f1-32896.html#f1-47244">Web page</indexitem>
+</indexitem>
+<indexitem>templates
+    <indexitem target="f6-11644.html#f6-2318">M-book</indexitem>
+</indexitem>
+<indexitem>temporary directory
+    <indexitem target="f1-94809.html#f1-112437">for deleted files</indexitem>
+</indexitem>
+<indexitem target="f0-12994.html#f0-38516">terminating a running program</indexitem>
+<indexitem>TeX equation markup
+    <indexitem target="f6-30186.html#brcpw74-1">within cell</indexitem>
+</indexitem>
+<indexitem>text
+    <indexitem target="f6-14601.html#f6-14954">converting to input cells</indexitem>
+    <indexitem target="f4-5234.html#f4-8851">finding in page in Help browser</indexitem>
+    <indexitem target="f1-70353.html">preferences in MATLAB</indexitem>
+    <indexitem target="f6-11644.html#f6-2318">styles in M-book</indexitem>
+</indexitem>
+<indexitem target="f3-21973.html#f3-22014">text editor, setting as default</indexitem>
+<indexitem target="f2-55126.html#zmw57dd0e18851">text editors for M-files</indexitem>
+<indexitem>text files
+    <indexitem target="f2-53230.html#f2-55690">editing in Editor/Debugger</indexitem>
+    <indexitem target="f2-53230.html#f2-9443">opening in Editor/Debugger</indexitem>
+</indexitem>
+<indexitem>time
+    <indexitem target="f9-17018.html">measured for M-files</indexitem>
+</indexitem>
+<indexitem>time-out message
+    <indexitem target="f6-14601.html#zmw57dd0e32841">while evaluating multiple input cells in an M-book</indexitem>
+</indexitem>
+<indexitem target="f1-94809.html#f1-112437">tmp/MATLAB_Files directory</indexitem>
+<indexitem target="f6-14601.html#f6-14839">Toggle Graph Output for Cell</indexitem>
+<indexitem>token matching
+    <indexitem target="f0-22072.html#f0-44557">preferences</indexitem>
+</indexitem>
+<indexitem>toolbars
+    <indexitem target="f1-32896.html#f1-143483">desktop</indexitem>
+    <indexitem target="f2-46018.html#zmw57dd0e26522">Editor/Debugger cell mode</indexitem>
+    <indexitem target="bq37azl-1.html#bq37azl-13">shortcuts</indexitem>
+</indexitem>
+<indexitem>toolbox path cache
+    <indexitem target="f8-28521.html#zmw57dd0e1413">preferences</indexitem>
+</indexitem>
+<indexitem>toolboxes
+    <indexitem target="f3-40358.html#brdu1l8">custom, adding to Start button</indexitem>
+</indexitem>
+<indexitem>tools in desktop
+    <indexitem target="f1-137804.html">description</indexitem>
+</indexitem>
+<indexitem target="f1-32896.html#f1-143483">tooltips
+    <indexitem target="bq4hw4g-1.html#bq4hw5o-26">for data</indexitem>
+</indexitem>
+<indexitem target="f1-32896.html#zmw57dd0e4676">trial versions</indexitem>
+<indexitem>troubleshooting
+    <indexitem target="f7-35189.html">source control problems</indexitem>
+</indexitem>
+<indexitem target="f0-5789.html#f0-28699">type ahead feature</indexitem>
+<indexitem target="f9-6232.html#zmw57dd0e27247">UNC (Universal Naming Convention) pathname</indexitem>
+<indexitem target="f2-53314.html#f2-53527">uncomment</indexitem>
+<indexitem target="f6-14601.html#f6-14845">Undefine Cells</indexitem>
+<indexitem>undo
+    <indexitem target="f1-32896.html#zmw57dd0e4184">in desktop</indexitem>
+    <indexitem target="f2-53314.html#f2-62036">in Editor</indexitem>
+</indexitem>
+<indexitem target="f1-43281.html#zmw57dd0e2180">undocking tools from desktop</indexitem>
+<indexitem target="f3-12599.html#zmw57dd0e35287">undocking windows from desktop</indexitem>
+<indexitem>undoing file check-out
+    <indexitem target="f7-15175.html">on UNIX platforms</indexitem>
+    <indexitem target="f7-40362.html#f7-40876">on Windows platforms</indexitem>
+</indexitem>
+<indexitem target="f6-14601.html#f6-14877">Ungroup Cells</indexitem>
+<indexitem>Unicode
+    <indexitem target="f1-94809.html#f1-112595">preference when saving</indexitem>
+</indexitem>
+<indexitem>UNIX
+    <indexitem target="f0-12994.html#f0-45606">system path</indexitem>
+</indexitem>
+<indexitem target="f1-32896.html#f1-47244">updates to products</indexitem>
+<indexitem target="f0-5789.html#f0-30533">uppercase usage in MATLAB</indexitem>
+<indexitem>utilities
+    <indexitem target="f0-12994.html#f0-38522">running from MATLAB</indexitem>
+</indexitem>
+<indexitem>validating
+    <indexitem target="f9-11863.html">M-files</indexitem>
+</indexitem>
+<indexitem>values
+    <indexitem target="bq4hw4g-1.html#bq4hw5o-23">examining</indexitem>
+</indexitem>
+<indexitem>variables
+    <indexitem target="f10-51778.html#f10-37251">deleting or clearing</indexitem>
+    <indexitem target="f10-42271.html#zmw57dd0e15565">displaying values of</indexitem>
+    <indexitem target="f10-42271.html">editing values</indexitem>
+    <indexitem target="f10-26235.html#f10-26295">naming</indexitem>
+    <indexitem target="f10-51778.html#f10-8519">saving</indexitem>
+    <indexitem target="bq4hw4g-1.html#bq4hw5o-23">viewing during execution</indexitem>
+    <indexitem target="bq4hw4g-1.html#bq4hw5o-26">viewing values in Editor</indexitem>
+    <indexitem target="f10-51778.html">workspace</indexitem>
+</indexitem>
+<indexitem target="f1-32896.html#f1-120087">version
+    <indexitem target="f4-57893.html#f4-51189">information for MathWorks products</indexitem>
+</indexitem>
+<indexitem>version control
+    <indexitem target="f7-5297.html">See source control system interface</indexitem>
+</indexitem>
+<indexitem target="f1-43281.html#zmw57dd0e2074">viewing desktop tools</indexitem>
+<indexitem>Visible figure property
+    <indexitem target="f6-11644.html#zmw57dd0e32427">embedding graphics in M-book</indexitem>
+</indexitem>
+<indexitem target="bq4hw4g-1.html#bq4hw5o-65">warning breakpoints</indexitem>
+<indexitem target="bq4hw4g-1.html#bq4hw5o-73">warning message identifiers</indexitem>
+<indexitem>Web
+    <indexitem target="f1-32896.html#f1-47244">accessing from MATLAB</indexitem>
+    <indexitem target="f1-32896.html#zmw57dd0e4633">site for The MathWorks</indexitem>
+</indexitem>
+<indexitem>Web Browser
+    <indexitem target="f1-32896.html#bq37bb3-3">font</indexitem>
+    <indexitem target="f1-32896.html#bq37bb3-1">in MATLAB</indexitem>
+    <indexitem target="f1-32896.html#bq37bb3-3">proxy server</indexitem>
+</indexitem>
+<indexitem>Web site
+    <indexitem target="f4-55195.html#f4-55075">documentation</indexitem>
+</indexitem>
+<indexitem target="f10-14803.html#zmw57dd0e17208">what</indexitem>
+<indexitem target="f10-51778.html#f10-8673">who</indexitem>
+<indexitem target="f10-51778.html#f10-8673">whos</indexitem>
+<indexitem target="f0-22072.html#f0-18015">width of Command Window</indexitem>
+<indexitem>wildcard (*)
+    <indexitem target="f4-18155.html#bqxlisl-1">Help browser search</indexitem>
+</indexitem>
+<indexitem>window
+    <indexitem target="f3-12599.html#zmw57dd0e34975">active</indexitem>
+    <indexitem target="f3-12599.html#zmw57dd0e34983">focus</indexitem>
+</indexitem>
+<indexitem>windows in desktop
+    <indexitem target="f1-137804.html">about</indexitem>
+    <indexitem target="f1-43281.html">arrangement</indexitem>
+    <indexitem target="f1-43281.html#zmw57dd0e2123">closing</indexitem>
+    <indexitem target="f3-12599.html#zmw57dd0e35174">docking</indexitem>
+    <indexitem target="f3-12599.html#f3-13358">moving</indexitem>
+    <indexitem target="f1-43281.html#zmw57dd0e2077">opening</indexitem>
+    <indexitem target="f3-12599.html#f3-13322">sizing</indexitem>
+    <indexitem target="f3-12599.html#zmw57dd0e35297">undocking</indexitem>
+</indexitem>
+<indexitem>Word documents
+    <indexitem target="f6-36687.html#f6-47791">converting to M-book</indexitem>
+</indexitem>
+<indexitem target="f10-14803.html#zmw57dd0e17109">working directory</indexitem>
+<indexitem>workspace
+    <indexitem target="f10-51778.html#f10-10558">base</indexitem>
+    <indexitem target="f10-51778.html#f10-37251">clearing</indexitem>
+    <indexitem target="f10-51778.html">defined</indexitem>
+    <indexitem target="f10-51778.html#f10-10558">functions</indexitem>
+    <indexitem target="f6-6951.html#f6-15772">initializing in M-book</indexitem>
+    <indexitem target="f10-51778.html#f10-31712">loading</indexitem>
+    <indexitem target="f6-36687.html#f6-18746">M-book contamination</indexitem>
+    <indexitem target="f10-51778.html#f10-31712">opening</indexitem>
+    <indexitem target="f6-36687.html#f6-18746">protecting integrity</indexitem>
+    <indexitem target="f10-51778.html#f10-8519">saving</indexitem>
+    <indexitem target="f10-51778.html#brcu770">tool</indexitem>
+    <indexitem target="f10-51778.html#f10-15033">viewing</indexitem>
+    <indexitem target="bq4hw4g-1.html#bq4hw5o-23">viewing during execution</indexitem>
+</indexitem>
+<indexitem>Workspace browser
+    <indexitem target="f10-51778.html#brcu770">description</indexitem>
+    <indexitem target="f10-51778.html#zmw57dd0e15341">plotting variables from</indexitem>
+    <indexitem target="f10-51778.html#zmw57dd0e15239">preferences</indexitem>
+</indexitem>
+<indexitem>wrapping
+    <indexitem target="f0-22072.html#f0-15728">lines in Command Window</indexitem>
+    <indexitem target="f0-5789.html#f0-5857">long statements</indexitem>
+</indexitem>
+<indexitem target="f3-40358.html#zmw57dd0e37836">XML: file validation</indexitem>
+<indexitem>yellow highlighting in M-file
+    <indexitem target="f2-46018.html#zmw57dd0e26704">current cell</indexitem>
+    <indexitem target="bq4hw4g-1.html#bq4hw5o-26">datatip</indexitem>
+    <indexitem target="bq4grlt-1.html#zmw57dd0e24206">M-Lint message</indexitem>
+</indexitem>
+<indexitem target="f2-53314.html#zmw57dd0e19681">{% block comment symbol</indexitem>
+</index>

@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+t="GetCorner";
+document.write("<title>" + t + ":: Functions (DiscreteWavelets Toolbox)</title>");
+</script><link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<script language="JavaScript">
+fprev="GammaCorrection";
+fprevlink="../../html/ImageProcessing/"+fprev;
+fnext="Haar";
+fnextlink="../../html/Filters/"+fnext;
+str="<td valign=\"baseline\" align=\"right\"><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0  align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</tr></table>
+<!--END OF HEADER-->
+
+<h1 class="reftitle">GetCorner</h1>
+<!-- SYNCHTO: f16-6011.html -->
+<p>Select a corner of a matrix</p>
+<h2>Syntax</h2>
+<p class="synopsis">
+<pre class="programlisting">
+	B = GetCorner(A,n,m)
+</pre>
+</p>
+<h2>Description</h2>
+<p>
+<tt>B = GetCorner(A,n,m)</tt> takes as input a matrix <tt>A</tt> and positive integers <tt>m</tt> and <tt>n</tt> and returns the <tt>m x n</tt> submatrix
+that is the upper left-hand corner of <tt>A</tt>.
+</p>
+<h2>Remarks</h2>
+<p>
+The integers <tt>m</tt> and <tt>n</tt> must be less than or equal to the numbers of rows and columns of <tt>A</tt>, respectively.
+</p>
+<p>
+<tt>B=GetCorner(A,m,n)</tt> is equivalent to the command <tt>B=A(1:m,1:n)</tt>.
+</p>
+<a name="GetCornerExample"></a>
+<h2>Example</h2>
+<pre class="programlisting">
+A=round(10*rand(8,8)) %Create a matrix
+B=GetCorner(A,4,3) %Get the upper left 4 x 3 corner of A
+</pre>
+<p>
+<pre class="programlisting">
+A =
+
+     3     9     4     9     8     6     6     7
+     8     6     1     9     4     1     7     2
+     4     5     2     5     2     2     6     4
+     9     1     1     5     4     4     5     6
+     2     9     2     3     1     8     5     8
+     3     6     2     9     1     0     3     1
+     1     4     4     4     9     0     7     9
+     1     5     0     1    10     2     2     8
+
+
+B =
+
+     3     9     4
+     8     6     1
+     4     5     2
+     9     1     1
+</pre>
+<h2>See Also</h2>
+<p>
+<a href="PutCorner.html"><tt>PutCorner</tt></a>
+</p>
+</p><p>
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+
+<script language="JavaScript">
+fprev="GammaCorrection";
+fprevlink="../../html/ImageProcessing/"+fprev;
+
+fnext="Haar";
+fnextlink="../../html/Filters/"+fnext;
+
+str="<td align=\"left\" width=20><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0 align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;</td><td align=\"left\">" + fprev + "</td>";
+document.write(str);
+document.write("<td>&nbsp;</td>");
+str="<td align=\"right\">" + fnext + "</td><td align=\"right\" width=20><a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+
+</tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

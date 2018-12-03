@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Installation (DiscreteWavelets Toolbox)</title>
+<link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<td valign="baseline" align="right">
+	<a href="../releasenotes.html">
+	<img src="../../images/b_prev.gif" border="0" align="bottom" alt="Introduction"></a>&nbsp;&nbsp;&nbsp;
+	<a href="whatsnew.html">
+	<img src="../../images/b_next.gif" border="0" align="bottom" alt="What's New?"></a></td></tr></table>
+<!--END OF HEADER-->
+
+<h1 class="title"><a name="exampleindex"></a>Installation</h1>
+<hr>
+<p>
+<table border="0" cellpadding="4" cellspacing="0" class="pagenavtable">
+<tr><th>On this page &#8230;</th></tr>
+<tr><td><p><a href="installation.html#package">Installing DiscreteWavelets</a></p>
+<p><a href="installation.html#image">Adding New Image Files to the Package</a></p>
+<p><a href="installation.html#sounds">Adding New Sound Files to the Package</a></p>
+<p><a href="installation.html#data">Adding New Data Files to the Package</a></p>
+</td></tr></table>
+
+<a name="package"></a>
+<h3 class="title">Installing DiscreteWavelets</h3>
+<p>
+The following steps will allow you to install <tt>DiscreteWavelets</tt>:
+<ol>
+	<li> Download <tt>DiscreteWaveletsPackage60.zip</tt> from the website <a href="http://www.stthomas.edu/wavelets">
+		http://www.stthomas.edu/wavelets</a>.
+	<li> The zip file contains a single folder called <tt>DiscreteWavelets</tt>.  Place this folder anywhere you like on 
+		your computer, but <b>do not</b> rename it.  Make note of the folder location.
+	<li> Open Matlab R2007b and under File, choose Set Path  &#8230;
+	<li> Click the button Add with SubFolders  &#8230; and enter the location of the <tt>DiscreteWavelets</tt> folder.
+	<li> Click on Save and Close.
+	<li> In the Matlab command window, issue the command <tt>rehash</tt> and then <tt>startup</tt>.  This will load the global variables
+		used by the package.
+	<li> You are all set - you should be able to run demos or use any function in the package.
+</ol>
+
+<a href="#top_of_page"><img src="../../images/doc_to_top_up.gif"  border=0></a>
+<a href="#top_of_page">Back to Top</a>
+
+<a name="images"></a>
+<h3 class="title">Adding New Image Files to the Package</h3>
+<p>
+To add new images to the package:
+
+<ol>
+	<li> In the Matlab command window, type <tt>startup</tt> and make note of the value of <tt>DWIMAGESPATH</tt>
+	<li> Go to this folder and open the folder <tt>GrayScale</tt> (<tt>Color</tt>) if you wish to add grayscale (color) images.
+	<li> Place a copy of the image in the appropriate directory.  You should also add a thumbnail of the image as well.  The naming convention for the 		thumbnail is <tt>image_small.png</tt> where the added image is named <tt>image.png</tt>.  You may use any format supported by the Matlab 			function <tt>imread</tt>.
+	<li> Open the text file <tt>Images.txt</tt> with a text editor.  Add a line of the form <tt>image.png;r(r_small);c(c_small);i(i_small)</tt> for each 		new image you have added.  Here the image has dimensions r x c and the thumbnail has dimensions r_small  x c_small.  A total of <tt>i</tt> 		iterations of the discrete wavelet transformation can be performed on <tt>image.png</tt> and <tt>i_small</tt> iterations can be performed on 		<tt>image_small.png.</tt>
+	<li> Save and close the file.  In the Matlab command window, issue the command <tt>ImageList()</tt>.  The added image files(s) should show up in the 		output table. 
+</ol>
+
+<a href="#top_of_page"><img src="../../images/doc_to_top_up.gif"  border=0></a>
+<a href="#top_of_page">Back to Top</a>
+
+<a name="sounds"></a>
+<h3 class="title">Adding New Sound Files to the Package</h3>
+<p>
+To add new sounds to the package:
+
+<ol>
+	<li> In the Matlab command window, type <tt>startup</tt> and make note of the value of <tt>DWSOUNDSSPATH</tt>
+	<li> Go to this folder and place a copy of the sound file(s) in it.  You may use either the <tt>.wav</tt> or the <tt>.au</tt> sound file format.
+	<li> Open the text file <tt>Sounds.txt</tt> with a text editor.  Add a line of the form <tt>audio.wav;TYPE;len;channel;srate;size</tt> for each new 		sound file you have added.  Here, the first element of the list is the file name, <tt>TYPE</tt> is the type of audio file ("WAVE", for 			example), <tt>len</tt> is the length of the audio clip in seconds, <tt>channel</tt> is the number of channels, <tt>srate</tt> is the sampling 		rate, and <tt>size</tt> is the number of samples in the file. 
+	<li> Save and close the file.  In the Matlab command window, issue the command <tt>SoundList()</tt>.  The added sound file(s) should show up in the 		output table. 
+</ol>
+
+<a href="#top_of_page"><img src="../../images/doc_to_top_up.gif"  border=0></a>
+<a href="#top_of_page">Back to Top</a>
+
+<a name="data"></a>
+<h3 class="title">Adding New Data Files to the Package</h3>
+<p>
+To add new data files to the package:
+
+<ol>
+	<li> In the Matlab command window, type <tt>startup</tt> and make note of the value of <tt>DWDATAPATH</tt>
+	<li> Go to this folder and place a copy of the data file(s) in it.  
+	<li> Open the text file <tt>Data.txt</tt> with a text editor.  Add a line of the form  Add a line of the form <tt>data.txt;size;comment;</tt> for 		each new data file you have added.  Here, the first element of the list is the file name, <tt>size</tt> is the the number of samples in the 		file, and <tt>comment</tt> is a comment about the data in the file. 
+	<li> Save and close the file.  In the Matlab command window, issue the command <tt>DataList()</tt>.  The added data file(s) should show up in the 		output table. 
+</ol>
+
+<a href="#top_of_page"><img src="../../images/doc_to_top_up.gif"  border=0></a>
+<a href="#top_of_page">Back to Top</a>
+
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+<td align="left" width="20"><a href="../releasenotes.html"><img src="../../images/b_prev.gif" border="0" align="bottom" alt="Introduction"></a>&nbsp;</td>
+<td align="left">Release Notes</td>
+<td>&nbsp;</td>
+<td align="right">What's New?</td>
+<td align="right" width="20">
+	<a href="whatsnew.html"><img src="../../images/b_next.gif" border="0" align="bottom" alt="What's New?"></a>
+</td></tr>
+</table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+</p>
+<!--END OF FOOTER-->

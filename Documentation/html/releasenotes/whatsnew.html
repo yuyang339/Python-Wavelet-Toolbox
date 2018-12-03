@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>What's New? (DiscreteWavelets Toolbox)</title>
+<link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<td valign="baseline" align="right">
+	<a href="installation.html"><img src="../../images/b_prev.gif" border="0" align="bottom" alt="Installation"></a>
+	&nbsp;&nbsp;&nbsp;
+	<a href="version.html"><img src="../../images/b_next.gif" border="0" align="bottom" alt="Version/Compatibility"></a>
+</td></tr></table>
+<!--END OF HEADER-->
+
+<h1 class="title">What's New?</h1>
+<hr>
+<p>
+This toolbox, <tt>DiscreteWavelets</tt> Version 1.0, represents the first port of the Mathematica DiscreteWavelets package to Matlab.  So in essence,
+everything here is new!   For those of you who have used the Mathematica package, the following list gives changes/additions made in/to Version 5.2 to 
+obtain the most current Version 6.0.
+</p>
+<p>
+<h3 class="title">Revision of ImageNames Function</h3>
+The <tt>ImageNames</tt> function no longer allows the user the option of displaying thumbnails of the images available for use with the <tt>DiscreteWavelets</tt>.  The new functions <tt>ShowThumbnails</tt> can be used to display thumbnails.
+</p><p>
+<h3 class="title">Addition of ShowThumbnails Function</h3>
+The function <tt>ShowThumbnails</tt> allows the user to display all grayscale image and/or color images that are available with the 
+<tt>DiscreteWavelets</tt> Toolbox.
+</p><p>
+<h3 class="title">Revision of HuffmanTree Function</h3>  
+The <tt>HuffmanTree</tt> function has been overhauled and is now much more efficient at displaying Huffman codes.  The user now has control of size, color,  and fonts for nodes.
+</p><p>
+<h3 class="title">Revision of WaveletVectorPlay Function</h3>
+The <tt>WaveletVectorPlay</tt> function has been rewritten so that the output is organized in a more logical manner.
+</p><p>
+<h3 class="title">Addition of New Functions for De-Noising Applications</h3>
+The following functions are now available for use in  de-noising applications:
+</p><p>
+<h4 class="title">NoiseEstimate</h4>
+This function takes an input vector or matrix and an orthogonal wavelet filter and returns an estimate of the noise level contained in the input.
+<h4 class="title">SureShrink</h4>
+This function takes an input vector or matrix, an orthogonal wavelet filter, and the number of iterations of the discrete wavelet transformation to be performed, and uses the SureShrink method (see Section 9.3) to return a de-noised version of the input.
+<h4 class="title">TestSparseness</h4>
+This function can be used to test an input vector or matrix for sparseness (see Section 9.3 of the text) and returns the proper tolerance value.
+<h4 class="title">UniversalThreshold</h4>
+This function computes the Universal Threshold tolerance for use in the VisuShrink method (see Section 9.2).
+<h4 class="title">WaveletShrinkage</h4>
+This function takes an input vector or matrix, an orthogonal wavelet filter, a tolerance, and the number of iterations of the discrete wavelet transformation to be performed, and returns a de-noised version of the input.
+</p><p>
+<h3 class="title">Addition of Make3D and Split3D Functions (Matlab)</h3>
+To facilitate work with color images, the functions <tt>Make3D</tt> and <tt>Split3D</tt> have been added to the toolbox.  <tt>Make3D</tt> takes three
+r x c matrices, presumably R,G,B or Y,Cb,Cr channels, and creates a 3-D array that can be used for plotting.  The function <tt>Split3D</tt> returns
+three r x c matrices from a 3-D array input.
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+<td align="left" width="20"><a href="installation.html"><img src="../../images/b_prev.gif" border="0" align="bottom" alt="Installation"></a>&nbsp;</td>
+<td align="left">Installation</td>
+<td>&nbsp;</td>
+<td align="right">Version/Compatibility</td><td align="right" width="20"><a href="version.html"><img src="../../images/b_next.gif" border="0" align="bottom" 
+alt="Version/Compatibility"></a></td></tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

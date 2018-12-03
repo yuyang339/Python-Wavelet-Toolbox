@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+t="DonohoSure";
+document.write("<title>" + t + ":: Functions (DiscreteWavelets Toolbox)</title>");
+</script><link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<script language="JavaScript">
+fprev="Daub";
+fprevlink="../../html/Filters/"+fprev;
+fnext="Entropy";
+fnextlink="../../html/Measurements/"+fnext;
+str="<td valign=\"baseline\" align=\"right\"><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0  align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</tr></table>
+<!--END OF HEADER-->
+
+<h1 class="reftitle">DonohoSure</h1>
+<!-- SYNCHTO: f16-6011.html -->
+<p>SureShrink tolerance value</p>
+<h2>Syntax</h2>
+<p class="synopsis">
+<pre class="programlisting">
+	lambda = DonohoSure(v)<br>
+</pre>
+</p>
+<h2>Description</h2>
+<p>
+<tt>lambda=DonohoSure(v)</tt> takes as input a matrix or vector <tt>v</tt> and returns the value <tt>lambda</tt> that is to be used with the
+<tt>ShrinkageFunction</tt> to perform denoising via the Wavelet Shrinkage method (See Chapter 9).
+</p>
+<p>
+The M-File is based on the function <tt>ValSUREThresh.m</tt> from the Wavelab Toolbox created by David Donoho, Iain Johnstone, et. al., at Stanford University.  More information is available online at <a href="http:///www-stat.stanford.edu/~wavelab/Wavelab_850/members.html">WaveLab850</a>. 
+<a name="DonohoSureExample"></a>
+<h2>Example</h2>
+<p>
+Add noise to sin(x) and then compute its wavelet transformation.
+</p>
+<pre class="programlisting">
+x=0:.001:.999; 
+v=sin(2*pi*x)+.15*rand(1,1000); %create the noisy curve
+plot(v); %Plot the graph
+wt=WT1D(v,Coif(1),3); %Compute three iterations of the wavelet transformation
+</pre>
+<p>
+<img src="../../images/DonohoSureFig1.gif" width=70% height=70%></img>
+<p></p>
+Now compute the value to use for SureShrink:
+<pre class="programlisting">
+lambda=DonohoSure(wt) %Compute the SureShrink tolerance
+</pre>
+The result is 
+<pre class="programlisting">
+lambda =
+
+    0.2711
+</pre>
+<h2>See Also</h2>
+<p>
+<a href="ShrinkageFunction.html"><tt>ShrinkageFunction</tt></a>, 
+<a href="TestSparseness.html"><tt>TestSparseness</tt></a>,
+<a href="NoiseEstimate.html"><tt>NoiseEstimate</tt></a>,
+<a href="UniversalThreshold.html"><tt>UniversalThreshold</tt></a>,
+<a href="SureShrink.html"><tt>SureShrink</tt></a>,
+<a href="WaveletShrinkage.html"><tt>WaveletShrinkage</tt></a>
+</p>
+</p><p>
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+
+<script language="JavaScript">
+fprev="Daub";
+fprevlink="../../html/Filters/"+fprev;
+
+fnext="Entropy";
+fnextlink="../../html/Measurements/"+fnext;
+
+str="<td align=\"left\" width=20><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0 align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;</td><td align=\"left\">" + fprev + "</td>";
+document.write(str);
+document.write("<td>&nbsp;</td>");
+str="<td align=\"right\">" + fnext + "</td><td align=\"right\" width=20><a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+
+</tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

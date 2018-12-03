@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+t="Heavisine";
+document.write("<title>" + t + ":: Functions (DiscreteWavelets Toolbox)</title>");
+</script><link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<script language="JavaScript">
+fprev="Haar";
+fprevlink="../../html/Filters/"+fprev;
+fnext="HistogramEQ";
+fnextlink="../../html/ImageProcessing/"+fnext;
+str="<td valign=\"baseline\" align=\"right\"><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0  align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</tr></table>
+<!--END OF HEADER-->
+
+<h1 class="reftitle">Heavisine</h1>
+<!-- SYNCHTO: f16-6011.html -->
+<p>Heavisine function</p>
+<h2>Syntax</h2>
+<p class="synopsis">
+<pre class="programlisting">
+	y = Heavisine(t)<br>
+</pre>
+</p>
+<h2>Description</h2>
+<p>
+<tt>y = Heavisine(t)</tt> takes a vector <tt>t</tt> and returns the values of the Heavisine function <tt>4*sin(4*pi*t)-sign(t-.3)-sign(.72-t)</tt>
+for all elements in <tt>t</tt>.
+</p>
+<h2>Remarks</h2>
+<p>
+The Heavisine function was introduced by David Donoho, et. al. for use in testing wavelet-based denoising methods.
+</p>
+<p>
+<a name="HeavisineExample"></a>
+<h2>Example</h2>
+<p>
+Plot the Heavisine function.
+</p>
+<pre class="programlisting">
+t=0:.0001:1; %Create a vector of evaluation points
+plot(t,Heavisine(t));
+title('The Heavisine function');
+</pre>
+<img src="../../images/HeavisineFig1.gif"></img>
+<h2>See Also</h2>
+<p>
+<a href="SureShrink.html"><tt>SureShrink</tt></a>,
+<a href="WaveletShrinkage.html"><tt>WaveletShrinkage</tt></a>
+</p>
+</p><p>
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+
+<script language="JavaScript">
+fprev="Haar";
+fprevlink="../../html/Filters/"+fprev;
+
+fnext="HistogramEQ";
+fnextlink="../../html/ImageProcessing/"+fnext;
+
+str="<td align=\"left\" width=20><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0 align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;</td><td align=\"left\">" + fprev + "</td>";
+document.write(str);
+document.write("<td>&nbsp;</td>");
+str="<td align=\"right\">" + fnext + "</td><td align=\"right\" width=20><a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+
+</tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

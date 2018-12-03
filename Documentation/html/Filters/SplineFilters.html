@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+t="SplineFilters";
+document.write("<title>" + t + ":: Functions (DiscreteWavelets Toolbox)</title>");
+</script><link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<script language="JavaScript">
+fprev="Sn";
+fprevlink="../../html/Fourier/"+fprev;
+fnext="Split3D";
+fnextlink="../../html/Miscellaneous/"+fnext;
+str="<td valign=\"baseline\" align=\"right\"><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0  align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</tr></table>
+<!--END OF HEADER-->
+
+<h1 class="reftitle">SplineFilters</h1>
+<!-- SYNCHTO: f16-6011.html -->
+<p>Biorthogonal spline filter pair</p>
+<h2>Syntax</h2>
+<p class="synopsis">
+<pre class="programlisting">
+	[h,ht] = SplineFilters(n,nt)<br>
+</pre>
+</p>
+<h2>Description</h2>
+<p>
+<tt>SplineFilters(n,nt)</tt> returns the (n,nt) biorthogonal spline filter pair.
+</p>
+<h2>Remarks</h2>
+<p>
+<tt>n</tt> and <tt>nt</tt> must be either both even or both odd.
+</p>
+<p>
+The filters are symmetric.  If <tt>n</tt> and <tt>nt</tt> are odd, then the filters are symmetric about 
+<tt>h<sub>0</sub></tt> and <tt>ht<sub>0</sub></tt>.  If <tt>n</tt> and <tt>nt</tt> are even, then the filters
+satisfy <tt>h<sub>k</sub> = h<sub>1-k</sub></tt> and <tt>ht<sub>k</sub> = ht<sub>1-k</sub></tt>.
+</p>
+<a name="SplineFiltersExample"></a>
+<h2>Example</h2>
+<p>
+The command
+</p>
+<pre class="programlisting">
+[h,ht]=SplineFilters(2,2)
+</pre>
+<p>
+results in the <tt>(5,3)</tt> biorthogonal spline filter pair
+<pre class="programlisting">
+h = 
+   -0.1768
+    0.3536
+    1.0607
+    0.3536
+   -0.1768
+
+ht = 
+    0.3536
+    0.7071
+    0.3536
+</pre>
+</p>
+<p>
+The command
+</p>
+<pre class="programlisting">
+[h,ht]=SplineFilters(3,3)
+</pre>
+<p>
+results in the <tt>(8,4)</tt> biorthogonal spline filter pair
+<pre class="programlisting">
+h = 
+    0.0663
+   -0.1989
+   -0.1547
+    0.9944
+    0.9944
+   -0.1547
+   -0.1989
+    0.0663
+ht = 
+    0.1768
+    0.5303
+    0.5303
+    0.1768
+</pre>
+</p>
+<h2>See Also</h2>
+<p>
+<a href="../../html/Transformations/BWT1D1.html"><tt>BWT1D1</tt></a>, 
+<a href="../../html/Transformations/BWT1D.html"><tt>BWT1D</tt></a>, 
+<a href="../../html/Transformations/BWT2D1.html"><tt>BWT2D1</tt></a>, 
+<a href="../../html/Transformations/BWT2D.html"><tt>BWT2D</tt></a>, 
+<a href="SplineFilters.html"><tt>CDF97</tt></a>, 
+<a href="LeGall.html"><tt>LeGall</tt></a>
+</p>
+</p><p>
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+
+<script language="JavaScript">
+fprev="Sn";
+fprevlink="../../html/Fourier/"+fprev;
+
+fnext="Split3D";
+fnextlink="../../html/Miscellaneous/"+fnext;
+
+str="<td align=\"left\" width=20><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0 align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;</td><td align=\"left\">" + fprev + "</td>";
+document.write(str);
+document.write("<td>&nbsp;</td>");
+str="<td align=\"right\">" + fnext + "</td><td align=\"right\" width=20><a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+
+</tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+t="ImageNames";
+document.write("<title>" + t + ":: Functions (DiscreteWavelets Toolbox)</title>");
+</script>
+<link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<script language="JavaScript">
+fprev="ImageList";
+fprevlink=""+fprev;
+fnext="ImagePlot";
+fnextlink=""+fnext;
+str="<td valign=\"baseline\" align=\"right\"><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0  align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</td></tr></table>
+<!--END OF HEADER-->
+
+<h1 class="reftitle">ImageNames</h1>
+<!-- SYNCHTO: f16-6011.html -->
+<p>Image file names</p>
+<h2>Syntax</h2>
+<p class="synopsis">
+<tt>[g,c] = ImageNames()</tt><br>
+<tt>g = ImageNames('ImageType','Grayscale')</tt><br>
+<tt>c = ImageNames('ImageType','Color')</tt><br>
+</p>
+<h2>Description</h2>
+<p>
+<tt>[g,c] = ImageNames()</tt> returns the absolute paths of each image file included in the <tt>DiscreteWavelets</tt> Toolbox.
+</p>
+<p>
+<p>
+<tt>[g.c] = ImageRead(f,options)</tt> allows the user to set two parameters.  See Optional Arguments for more details.
+</p>
+<h2>Optional Arguments</h2>
+<p>
+There are two optional arguments that can be set for <tt>ImageNames</tt>.  The order of the parameters does not matter in the function call, but
+you must follow the standard convention <tt>'Option'</tt>, <tt>'Value'</tt> when invoking the parameters.
+</p>
+<h3>ImageType</h3>
+<p>
+The default output for <tt>ImageNames</tt> is two cell arrays.  The first holds absolute path names for all grayscale images included in the toolbox while the second contains absolute pathnames for all color images included in the toolbox.  The <tt>'ImageType'</tt> option can be set to restrict output to
+only <tt>'GrayScale'</tt> or <tt>'Color'</tt>.
+</p>
+<p>
+The command <tt>g=ImageNames('ImageType','GrayScale')</tt> gives only paths to grayscale images.
+</p>
+<p>
+The command <tt>c=ImageNames('ImageType','Color')</tt> gives only paths to color images.
+</p>
+<h3>ListThumbnails</h3>
+<p>
+All images included with the <tt>DiscreteWavelets</tt> Toolbox come in two sizes.  <tt>ImageNames</tt>, by default, gives path names to the large images
+in the set.  If you want to obtain pathnames for the smaller (thumbnail) images, set the option <tt>'ListThumbnails'</tt> to <tt>'True'</tt> (default is
+<tt>'False'</tt>).
+</p>
+<h2>Remarks</h2>
+<p>
+You can use <tt>ImageNames</tt> to easily access image files included with the toolbox.  It doesn't matter where you initially placed the DiscreteWavelets
+folder - as long as you did not rename it, <tt>ImageNames</tt> will find its location and return absolute path names to the image files.
+</p>
+<p>
+You can add your own image files to the <tt>DiscreteWavelets</tt> Toolbox.  Click <a href="../installation.html#images">here</a> for more
+information.
+</p>
+<a name="ImageNamesExample">
+<h2>Examples</h2>
+<h3>Example 1</h3>
+Get absolute paths and file names for all grayscale images included with the toolbox.
+<pre class="programlisting">
+%Load all grayscale image files that come with the toolbox in cell array gry
+gry=ImageNames('ImageType','GrayScale');
+file = gry{1} %Shows the name of the first image file
+</pre>
+
+<p>produces (on my computer)</p>
+
+<pre class="programlisting">
+C:\DiscreteWaveletsText\DiscreteWaveletsMatlab\Images\GrayScale\benches.png
+</pre>
+
+<h3>Example 2</h3>
+Get absolute paths and file names for all thumbnail color images included with the toolbox.
+<pre class="programlisting">
+%Load all color thumbnail image files that come with the toolbox in cell array clr
+clr=ImageNames('ListThumbnails','True','ImageType','Color');
+file = clr{1} %Shows the name of the first image file
+</pre>
+
+<p>produces (on my computer)</p>
+
+<pre class="programlisting">
+file =
+
+C:\DiscreteWaveletsText\DiscreteWaveletsMatlab\Images\Color\bridge_small.png</pre>
+<h2>See Also</h2>
+<p>
+<a href="ImageList.html"><tt>ImageList</tt></a>,
+<a href="ImageNames.html"><tt>ImageRead</tt></a>,
+<a href="ImagePlot.html"><tt>ImagePlot</tt></a>
+<a href="ShowThumbnails.html"><tt>ShowThumbnails</tt></a>
+</p><p>
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+<script language="JavaScript">
+fprev="ImageList";
+fprevlink=""+fprev;
+
+fnext="ImagePlot";
+fnextlink=""+fnext;
+
+str="<td align=\"left\" width=20><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0 align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;</td><td align=\"left\">" + fprev + "</td>";
+document.write(str);
+document.write("<td>&nbsp;</td>");
+str="<td align=\"right\">" + fnext + "</td><td align=\"right\" width=20><a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+t="LeftIWT";
+document.write("<title>" + t + ":: Functions (DiscreteWavelets Toolbox)</title>");
+</script><link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<script language="JavaScript">
+fprev="LeftWT";
+fprevlink=""+fprev;
+fnext="LeGall";
+fnextlink="../../html/Filters/"+fnext;
+str="<td valign=\"baseline\" align=\"right\"><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0  align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</tr></table>
+<!--END OF HEADER-->
+
+<h1 class="reftitle">LeftIWT</h1>
+<!-- SYNCHTO: f16-6011.html -->
+<p>The computation W^T A, where W is an orthogonal wavelet matrix</p>
+<h2>Syntax</h2>
+<p class="synopsis">
+<pre class="programlisting">
+	B = LeftIWT(A,h)<br>
+</pre>
+</p>
+<h2>Description</h2>
+<p>
+<tt>B = LeftIWT(A)</tt> returns the produce <tt>W^T A</tt> where <tt>W</tt> is an orthogonal wavelet matrix constructed
+from filter <tt>h</tt>.
+</p>
+<h2>Remarks</h2>
+<p>
+The dimensions of <tt>A</tt> must be even integers.  The filter <tt>h</tt> must be of even length.
+</p>
+<p>
+<tt>LeftIWT</tt> is the inverse of <tt>LeftWT</tt>.
+</p>
+<a name="LeftIWTExample"></a>
+<h2>Example</h2>
+<p>
+Here we compute <tt>W^TA</tt> for a grayscale image.
+</p>
+<pre class="programlisting">
+gry=ImageNames('ImageType','GrayScale'); %Get file names of grayscale images included with the package
+A=ImageRead(gry{11}); %Read one of the images.
+</pre>
+<p>
+<img src="../../images/LeftWTFig1.gif" height="60%" width="60%" alt=""></img>
+</p>
+<p>
+Now compute <tt>WA</tt> and plot the result.
+</p>
+<pre class="programlisting">
+B=LeftWT(A,Daub(4)); %Compute WA
+ImagePlot(B,'LinearScaling','LeftWT'); %Plot the resulting image
+</pre>
+<p>
+The result is 
+<p>
+<img src="../../images/LeftWTFig2.gif" height="60%" width="60%" alt=""></img>
+</p>
+<p>
+Now apply <tt>LeftIHWT</tt> and plot the result.
+</p>
+<pre class="programlisting">
+C=LeftIWT(B,Daub(4)); %Compute W^TC
+ImagePlot(C) %Plot the image
+</pre>
+<p>
+<img src="../../images/LeftWTFig1.gif" height="60%" width="60%" alt=""></img>
+</p>
+<h2>See Also</h2>
+<p>
+<a href="LeftWT.html"><tt>LeftWT</tt></a>, 
+<a href="RightWT.html"><tt>RightWT</tt></a>, 
+<a href="WT2D1.html"><tt>WT2D1</tt></a>, 
+<a href="../../html/Graphics/WaveletDensityPlot.html"><tt>WaveletDensityPlot</tt></a>
+</p>
+</p><p>
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+
+<script language="JavaScript">
+fprev="LeftWT";
+fprevlink=""+fprev;
+
+fnext="LeGall";
+fnextlink="../../html/Filters/"+fnext;
+
+str="<td align=\"left\" width=20><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0 align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;</td><td align=\"left\">" + fprev + "</td>";
+document.write(str);
+document.write("<td>&nbsp;</td>");
+str="<td align=\"right\">" + fnext + "</td><td align=\"right\" width=20><a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+
+</tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

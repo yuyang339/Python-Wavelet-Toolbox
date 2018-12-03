@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+t="Entropy";
+document.write("<title>" + t + ":: Functions (DiscreteWavelets Toolbox)</title>");
+</script><link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<script language="JavaScript">
+fprev="DonohoSure";
+fprevlink="../../html/Denoising/"+fprev;
+fnext="FiniteFourier";
+fnextlink="../../html/Fourier/"+fnext;
+str="<td valign=\"baseline\" align=\"right\"><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0  align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</tr></table>
+<!--END OF HEADER-->
+
+<h1 class="reftitle">Entropy</h1>
+<!-- SYNCHTO: f16-6011.html -->
+<p>Entropy of a matrix or vector</p>
+<h2>Syntax</h2>
+<p class="synopsis">
+<pre class="programlisting">
+	y = Entropy(v)<br>
+</pre>
+</p>
+<h2>Description</h2>
+<p>
+<tt>y=Entropy(v)</tt> takes as input a matrix or vector <tt>v</tt> and returns the entropy of the input.
+</p>
+<h2>Remarks</h2>
+<p>
+The entropy is computed by forming a vector of relative frequencies <tt>f</tt> of the distinct values of <tt>v</tt> and then dotting <tt>f</tt>
+with <tt>log2(1/f)</tt>.  See Section 3.3 of the book for more details.
+</p>
+<a name="EntropyExample"></a>
+<h2>Example</h2>
+<p>
+The entropy of a constant vector is 0
+</p>
+<pre class="programlisting">
+v=ones(64); %Constant vector
+e=Entropy(v) %Compute the entropy
+</pre>
+<p>
+<pre class="programlisting">
+e =
+
+     0
+</pre>
+<p>
+The entropy of an <tt>n</tt>-vector whose elements are distinct is <tt>log2(n)</tt>
+</p>
+<pre class="programlisting">
+v=1:64; %Construct a vector of distinct elements
+e=Entropy(v) %Compute the entropy
+</pre>
+<p>
+<pre class="programlisting">
+e =
+
+     6
+</pre>
+Other vectors of length 64 have entropies in the interval [0,6]
+<pre class="programlisting">
+v=round(10*rand(1,64)); %Construct a vector
+e=Entropy(v) %Find the entropy
+</pre>
+<p>
+<pre class="programlisting">
+e =
+
+    3.3160
+</pre>
+<h2>See Also</h2>
+<p>
+<a href="CE.html"><tt>CE</tt></a>, 
+<a href="nCE.html"><tt>nCE</tt></a>
+<a href="Comp.html"><tt>Comp</tt></a>, 
+<a href="MakeHuffmanCodes.html"><tt>MakeHuffmanCodes</tt></a>
+</p>
+</p><p>
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+
+<script language="JavaScript">
+fprev="DonohoSure";
+fprevlink="../../html/Denoising/"+fprev;
+
+fnext="FiniteFourier";
+fnextlink="../../html/Fourier/"+fnext;
+
+str="<td align=\"left\" width=20><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0 align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;</td><td align=\"left\">" + fprev + "</td>";
+document.write(str);
+document.write("<td>&nbsp;</td>");
+str="<td align=\"right\">" + fnext + "</td><td align=\"right\" width=20><a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+
+</tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

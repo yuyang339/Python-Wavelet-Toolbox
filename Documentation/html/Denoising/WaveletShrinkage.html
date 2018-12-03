@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+t="WaveletShrinkage";
+document.write("<title>" + t + ":: Functions (DiscreteWavelets Toolbox)</title>");
+</script><link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<script language="JavaScript">
+fprev="WaveletMatrixToList";
+fprevlink="../../html/Miscellaneous/"+fprev;
+fnext="WT1D1";
+fnextlink="../../html/Transformations/"+fnext;
+str="<td valign=\"baseline\" align=\"right\"><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0  align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</tr></table>
+<!--END OF HEADER-->
+
+<h1 class="reftitle">WaveletShrinkage</h1>
+<!-- SYNCHTO: f16-6011.html -->
+<p>Wavelet shrinkage method for vector or matrix denoising</p>
+<h2>Syntax</h2>
+<p class="synopsis">
+<pre class="programlisting">
+	y = WaveletShrinkage(v,h,its,lambda)<br>
+</pre>
+</p>
+<h2>Description</h2>
+<p>
+<tt>y = WaveletShrinkage(v,h,its,lambda)</tt> takes as input a (presumably noisy) vector or matrix <tt>v</tt>, an orthogonal filter <tt>h</tt>, and a number of iterations <tt>its</tt>, and a tolerance (or list of tolerances) <tt>lambda</tt> and uses wavelet shrinkage to return a denoised 
+estimate <tt>y</tt> of <tt>v</tt>.
+</p>
+<h2>Remarks</h2>
+<p>
+The length or dimensions of <tt>v</tt> must be divisible by <tt>2^its</tt>.
+</p>
+<p>
+The orthogonal filter <tt>h</tt> must be of even length.
+</p>
+<p>
+The number of iterations <tt>its</tt> must be a positive integer.
+</p>
+<p>
+<p>
+<tt>WaveletShrinkage</tt> first computes <tt>its</tt> iterations of the wavelet transformation formed using <tt>h</tt> and then uses the first iteration
+(highpass portion) to estimate the noise level.  The last argument <tt>lambda</tt> can be a single positive number or a vector (of positive elements) of length <tt>its</tt>.  If <tt>lambda</tt> is a vector, <tt>lambda(k)</tt> is used in conjunction with the <tt>ShrinkageFunction</tt> to denoise highpass portion <tt>k</tt>.  If <tt>lambda</tt> is a positive number, it is used with <tt>ShrinkageFunction</tt> to denoise all highpass portions of <tt>v</tt>.
+An inverse transformation is perform and the result is returned as <tt>y</tt>.
+</p>
+<p>
+For more information on the wavelet shrinkage method, please see Section 9.1 of the book.
+</p>
+<a name="WaveletShrinkageExample"></a>
+<h2>Example</h2>
+<p>
+Apply WaveletShrinkage to denoise a noisy vector.  Use the universal threshold for the tolerance <tt>lambda</tt>.
+</p>
+<pre class="programlisting">
+x=0:.0001:.9999; %Evaluation points
+u=Heavisine(x) %Create a vector of Heavisine values
+plot(x,u); %Plot the original signal
+title('Heavisine vector');
+noise=randn(1,10000); %Create white noise
+sigma=.2; %Set a noise level
+v=u+sigma*noise; %Create the noisy vector
+figure
+plot(v);
+title('Noisy Heavisine vector');
+</pre>
+<img src="../../images/WaveletShrinkageFig1.gif"></img>
+<img src="../../images/WaveletShrinkageFig2.gif"></img>
+<p>
+Now apply <tt>WaveletShrinkage</tt> with the Coiflet 6-term filter to denoise <tt>v</tt>.  Apply three iterations of the wavelet transformation.
+</p>
+<pre class="programlisting">
+lambda=UniversalThreshold(v,Coif(1),3);
+z=WaveletShrinkage(v,Coif(1),3,lambda);
+plot(x,z);
+title('Denoised Heavisine vector');
+</pre>
+<img src="../../images/WaveletShrinkageFig3.gif"></img>
+<h2>See Also</h2>
+<p>
+<a href="DonohoSure.html"><tt>DonohoSure</tt></a>,
+<a href="NoiseEstimate.html"><tt>NoiseEstimate</tt></a>,
+<a href="SureShrink.html"><tt>SureShrink</tt></a>
+<a href="TestSparseness.html"><tt>TestSparseness</tt></a>,
+<a href="UniversalThreshold.html"><tt>UniversalThreshold</tt></a>
+</p>
+</p><p>
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+
+<script language="JavaScript">
+fprev="WaveletMatrixToList";
+fprevlink="../../html/Miscellaneous/"+fprev;
+
+fnext="WT1D1";
+fnextlink="../../html/Transformations/"+fnext;
+
+str="<td align=\"left\" width=20><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0 align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;</td><td align=\"left\">" + fprev + "</td>";
+document.write(str);
+document.write("<td>&nbsp;</td>");
+str="<td align=\"right\">" + fnext + "</td><td align=\"right\" width=20><a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+
+</tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

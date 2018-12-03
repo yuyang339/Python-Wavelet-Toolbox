@@ -1,0 +1,124 @@
+ <!DOCTYPE html  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html xmlns:mwsh="http://www.mathworks.com/namespace/mcode/v1/syntaxhighlight.dtd">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Naive Edge Detection</title>
+      <meta name="generator" content="MATLAB2007b">
+      <meta name="date" content="2007-12-29">
+      <meta name="m-file" content="naiveedgedetction">
+      <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="header">
+	<div class="left"><a href="matlab:edit naiveedgedetection">Open naiveedgedetection.m in the Editor</a></div>
+      <div class="right"><a href="matlab:echodemo naiveedgedetection">Run in the Command Window</a></div>
+</div>
+<div class="content">
+
+<h1>Naive Edge Detection with Discrete Wavelet Transformations</h1>
+<introduction>
+<p>
+	Discrete wavelet transformations provide an easy way to perform naive edge detection in digital images.  Our task
+	is to identify boundaries in a given image where large changes in pixel intensities have occurred.
+</p>
+<p>
+<strong>Text Reference:</strong> Section 6.4
+</introduction>
+
+<h2>Contents</h2>
+<div>
+<ul>
+	<li><a href="#1">Import a Digital Image</a></li>
+      <li><a href="#2">Compute the Discrete Wavelet Transformation</a></li>
+      <li><a href="#3">Replace the Lowpass Portion with a Matrix of Zeros</a></li>
+      <li><a href="#4">Compute the Inverse Discrete Wavelet Transformation</a></li>
+</ul>
+</div>
+
+<h2>Import a Digital Image<a name="1"></a></h2>
+<p>
+We begin by importing a digital image. We will use one of the images that comes, courtesy of Radka Tezaur, with the
+<tt>DiscreteWavelets</tt> Toolbox.  The command <tt>ShowThumbnails</tt> can be used to see what choices are available.
+</p>
+<pre class="codeinput">
+ShowThumbnails(<span class="string">'ImageType'</span>,<span class="string">'GrayScale'</span>);
+</pre>
+<img vspace="5" hspace="5" src="ShowThumbnails.png"> 
+<p>
+Let's use Gray 6.  The code below reads this image from disk and plots it.
+</p>
+<pre class="codeinput">
+<span class="comment">% ImageNames gives the absolute path to all included image files.</span>
+gry=ImageNames(<span class="string">'ImageType'</span>,<span class="string">'GrayScale'</span>);
+
+<span class="comment">% Use ImageRead to read the image and store it in matrix A.</span>
+A=ImageRead(gry{6});
+
+<span class="comment">% Use ImagePlot to plot the image.</span>
+ImagePlot(A);
+title(<span class="string">'A Clown'</span>);
+</pre>
+
+<img vspace="5" hspace="5" src="NaiveEdgeDetectionFig1.png"> 
+
+<h2>Compute the Discrete Wavelet Transformation<a name="2"></a></h2>
+<p>
+We will use the discrete Haar wavelet transformation for this demo.   We next compute two iterations
+of the HWT and plot the result.
+</p>
+<pre class="codeinput">
+<span class="comment">% Compute the HWT and store in matrix B.</span>
+B=HWT2D(A,2);
+ 
+<span class="comment">% Plot the HWT.</span>
+WaveletDensityPlot(B,2,<span class="string">'DivideLinesColor'</span>,[1 0 0],<span class="string">'DivideLinesThickness'</span>,[2 2])
+title(<span class="string">'Haar Wavelet Transformation - 2 Iterations'</span>);
+</pre>
+<img vspace="5" hspace="5" src="NaiveEdgeDetectionFig2.png"> 
+
+<h2>Replace the Lowpass Portion with a Matrix of Zeros<a name="3"></a></h2>
+<p>
+We next replace the lowpass portion of the transformation with a matrix of zeros.
+</p>
+<pre class="codeinput">
+<span class="comment">% Grab the dimensions of A and form an appropriately sized zero matrix.</span>
+[r c]=size(A);
+Z=zeros(r/4,c/4);
+
+<span class="comment">% Replace the upper left corner of B with Z and plot the result.</span>
+B=PutCorner(B,Z);
+WaveletDensityPlot(B,2,<span class="string">'DivideLinesColor'</span>,[1 0 0],<span class="string">'DivideLinesThickness'</span>,[2 2])
+title(<span class="string">'Modified Transformation'</span>);
+</pre>
+
+<img vspace="5" hspace="5" src="NaiveEdgeDetectionFig3.png"> 
+
+<h2>Compute the Inverse Discrete Wavelet Transformation<a name="4"></a></h2>
+<p>
+The final step in the process is to compute two iterations of the inverse HWT on the modified transformation now housed
+in <tt>B</tt>.
+</p>
+<pre class="codeinput">
+<span class="comment">% Compute the inverse transformation.</span>
+Edges=IHWT2D(B,2);
+
+ImagePlot(Edges);
+title(<span class="string">'The Edges in the Original Image'</span>);
+</pre>
+
+<img vspace="5" hspace="5" src="NaiveEdgeDetectionFig4.png"> 
+
+<p>
+You can get perhaps a better look at the edges if you plot the negative of <tt>Edges</tt>.
+</p>
+<pre class="codeinput">
+<span class="comment">% Plot the negative of Edges.</span>
+ImagePlot(255-Edges);
+title(<span class="string">'The Edges in the Original Image'</span>);
+</pre>
+
+<img vspace="5" hspace="5" src="NaiveEdgeDetectionFig5.png"> 
+
+</div>
+</body>
+</html>

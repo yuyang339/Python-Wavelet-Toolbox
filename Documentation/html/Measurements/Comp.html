@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+t="Comp";
+document.write("<title>" + t + ":: Functions (DiscreteWavelets Toolbox)</title>");
+</script><link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<script language="JavaScript">
+fprev="Coif";
+fprevlink="../../html/Filters/"+fprev;
+fnext="Cs";
+fnextlink="../../html/Fourier/"+fnext;
+str="<td valign=\"baseline\" align=\"right\"><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0  align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</tr></table>
+<!--END OF HEADER-->
+
+<h1 class="reftitle">Comp</h1>
+<!-- SYNCHTO: f16-6011.html -->
+<p>Matrix/vector compression</p>
+<h2>Syntax</h2>
+<p class="synopsis">
+<pre class="programlisting">
+	y = Comp(v,k)<br>
+</pre>
+</p>
+<h2>Description</h2>
+<p>
+<tt>y=Comp(v,k)</tt> takes as input a matrix or vector <tt>v</tt> and an integer <tt>k</tt> and returns a matrix or vector (depending on <tt>v</tt>) where
+the largest <tt>k</tt> elements of <tt>v</tt> in absolute value have been retained and all other elements are converted to 0.
+</p>
+<a name="CompExample"></a>
+<h2>Example</h2>
+<p>
+Create an 8x8 matrix of random nonnegative integers less than or equal to 10.  Then compress all but the three largest values.
+</p>
+<pre class="programlisting">
+A=round(10*rand(8,8)) %Create the matrix
+B=Comp(A,3) %Compress the matrix
+</pre>
+<p>
+results in
+<pre class="programlisting">
+A =
+
+     9     5     2     7     5     8     2     9
+     3     8     8     7    10     9     3     6
+     8     9     3     5     1     1     1     4
+     8     1     5     1     4     4     1     5
+     4     6     2     2     1     3     9     4
+     6     5     6     9    10     8     6     1
+     1     0     3     2     0     4     5     2
+     1     3     7     8     8     9     1     1
+
+B =
+
+     9     0     0     0     0     0     0     9
+     0     0     0     0    10     9     0     0
+     0     9     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     9     0
+     0     0     0     9    10     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     9     0     0
+
+</pre>
+<p>
+Note that there are actually 8 elements that are either 9 or 10 - the <tt>Comp</tt> function retains all of them.
+</p>
+<h2>See Also</h2>
+<p>
+<a href="CE.html"><tt>CE</tt></a>, 
+<a href="nCE.html"><tt>nCE</tt></a>
+</p>
+</p><p>
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+
+<script language="JavaScript">
+fprev="Coif";
+fprevlink="../../html/Filters/"+fprev;
+
+fnext="Cs";
+fnextlink="../../html/Fourier/"+fnext;
+
+str="<td align=\"left\" width=20><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0 align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;</td><td align=\"left\">" + fprev + "</td>";
+document.write(str);
+document.write("<td>&nbsp;</td>");
+str="<td align=\"right\">" + fnext + "</td><td align=\"right\" width=20><a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+
+</tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

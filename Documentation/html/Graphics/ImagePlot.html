@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+t="ImagePlot";
+document.write("<title>" + t + ":: Functions (DiscreteWavelets Toolbox)</title>");
+</script>
+<link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<script language="JavaScript">
+fprev="ImageNames";
+fprevlink=""+fprev;
+fnext="ImageRead";
+fnextlink=""+fnext;
+str="<td valign=\"baseline\" align=\"right\"><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0  align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</td></tr></table>
+<!--END OF HEADER-->
+
+<h1 class="reftitle">ImagePlot</h1>
+<!-- SYNCHTO: f16-6011.html -->
+<p>Plot a digital image</p>
+<h2>Syntax</h2>
+<p class="synopsis">
+<tt>ImagePlot(A)</tt><br>
+<tt>ImagePlot(A,options)</tt><br>
+</p>
+<h2>Description</h2>
+<p>
+<tt>ImagePlot(A)</tt> takes either a matrix (grayscale) or a 3-dimensional array (color) and plots it.
+</p>
+<p>
+<tt>ImagePlot(A,options)</tt> allows the user to set three parameters.  See Optional Arguments for more details.
+</p>
+<h2>Optional Arguments</h2>
+<p>
+There are four optional arguments that can be set for <tt>ImagePlot</tt>.  The order of the parameters does not matter in the function call, but
+you must follow the standard convention <tt>'Option'</tt>, <tt>'Value'</tt> when invoking the parameters.
+</p>
+<h3>LinearScaling</h3>
+<p>
+In order to better view the plotted image, it is sometimes desirable to scale it.  We can do this prior to calling <tt>ImagePlot</tt> by using either
+<tt>GammaCorrection</tt> or <tt>HistogramEQ</tt>.  Another scaling option is available with <tt>ImagePlot</tt>.  Setting <tt>'LinearScaling'</tt> to
+<tt>'True'</tt> (the default is <tt>'False'</tt>) linearly maps the interval <tt>[min(A),max(A)]</tt> to the interval <tt>[0,255]</tt> and rounds the 
+results.  
+</p>
+<p>
+<tt>'LinearScaling'</tt> can also be used to facilitate viewing of images resulting from <tt>LeftHWT</tt>, <tt>LeftWT</tt>, <tt>RightHWT</tt>, and
+<tt>RightWT</tt>.  
+</p>
+<p>
+Setting <tt>'LinearScaling'</tt> to <tt>'LeftWT'</tt> causes the function to do the following to <tt>A</tt>:
+<ul>
+<li> Compute the absolute value of elements in the bottom half of <tt>A</tt>
+<li> Map the minimum and maximum in this submatrix to 0 and 255, respectively.
+</ul>
+Setting  <tt>'LinearScaling'</tt> to <tt>'RightWT'</tt> causes the function to do the following to <tt>A</tt>:
+<ul>
+<li> Compute the absolute value of elements in the right half of <tt>A</tt>
+<li> Map the minimum and maximum in this submatrix to 0 and 255, respectively.
+</ul>
+</p>
+<h3>ChannelColor</h3>
+<p>
+In many cases, we wish to plot say the red channel of a color image.  In this case, it is desirable to display the image with red intensities.  Any 
+matrix can be plotted in any color using the <tt>'ChannelColor'</tt> option.  The value that follows this option must be a 3-vector that represents an
+RGB color.  
+</p>
+<p>
+For example, the command <tt>ImagePlot(A,'ChannelColor',[1 0 0])</tt> plots the matrix <tt>A</tt> using red intensities.
+</p>
+<h3>Title</h3>
+<p>
+A plot title can be added using the <tt>'Title'</tt> option.  For example, <tt>ImagePlot(A,'Title','Here is a Picture')</tt> adds a title to the image
+plot.
+</p>
+<h3>Magnification</h3>
+<p>
+Magnification can be set to make the output image size smaller or larger.  The default value is 1 and if set, the value must be a positive number.
+</p>
+<a name="ImagePlotExample">
+<h2>Examples</h2>
+<h3>Example 1</h3>
+Plot an image with title.
+<pre class="programlisting">
+%Load all grayscale image files that come with the toolbox in cell array gry
+gry=ImageNames('ImageType','GrayScale');
+file = gry{7}; %Shows the name of the data file
+A=ImageRead(file); %Load the image into matrix A
+ImagePlot(A,'Title','A Dog'); %Plot the image
+</pre>
+<center>
+<img src="../../images/ImagePlotFig1.gif" alt="Not Found"></img>
+</center>
+<h3>Example 2</h3>
+Read a color image and plot the image and the three color channels.
+<pre class="programlisting">
+%Load all color images included with the toolbox
+clr=ImageNames('ImageType','Color');
+file = clr{4}; %Shows the name of the data file
+A=ImageRead(file); %Load the image into 3-d array A
+ImagePlot(A); %Plot the image
+[R,G,B]=Split3D(A); %Split 3-D array into three matrices
+figure
+ImagePlot(R,'ChannelColor',[1 0 0]); %Plot the red channel
+figure
+ImagePlot(G,'ChannelColor',[0 1 0]); %Plot the green channel
+figure
+ImagePlot(B,'ChannelColor',[0 0 1]); %Plot the blue channel
+</pre>
+<img src="../../images/ImagePlotFig2.gif" height=40% width=40% alt="Not Found"></img>
+<img src="../../images/ImagePlotFig3.gif" height=40% width=40% alt="Not Found"></img><br>
+<img src="../../images/ImagePlotFig4.gif" height=40% width=40% alt="Not Found"></img>
+<img src="../../images/ImagePlotFig5.gif" height=40% width=40% alt="Not Found"></img>
+<h2>See Also</h2>
+<p>
+<a href="ImageList.html"><tt>ImageList</tt></a>,
+<a href="ImageNames.html"><tt>ImageNames</tt></a>,
+<a href="ImagePlot.html"><tt>ImagePlot</tt></a>
+<a href="ShowThumbnails.html"><tt>ShowThumbnails</tt></a>
+</p><p>
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+<script language="JavaScript">
+fprev="ImageNames";
+fprevlink=""+fprev;
+
+fnext="ImageRead";
+fnextlink=""+fnext;
+
+str="<td align=\"left\" width=20><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0 align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;</td><td align=\"left\">" + fprev + "</td>";
+document.write(str);
+document.write("<td>&nbsp;</td>");
+str="<td align=\"right\">" + fnext + "</td><td align=\"right\" width=20><a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

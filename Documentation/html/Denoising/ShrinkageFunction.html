@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+t="ShrinkageFunction";
+document.write("<title>" + t + ":: Functions (DiscreteWavelets Toolbox)</title>");
+</script><link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<script language="JavaScript">
+fprev="ShowThumbnails";
+fprevlink="../../html/Graphics/"+fprev;
+fnext="Sn";
+fnextlink="../../html/Fourier/"+fnext;
+str="<td valign=\"baseline\" align=\"right\"><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0  align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</tr></table>
+<!--END OF HEADER-->
+
+<h1 class="reftitle">ShrinkageFunction</h1>
+<!-- SYNCHTO: f16-6011.html -->
+<p>Wavelet shrinkage function for denoising</p>
+<h2>Syntax</h2>
+<p class="synopsis">
+<pre class="programlisting">
+	y = ShrinkageFunction(t,lambda)<br>
+</pre>
+</p>
+<h2>Description</h2>
+<p>
+<tt>y = ShrinkageFunction(t,lambda)</tt> creates the piecewise linear function used to perform wavelet shrinkage.
+</p>
+<h2>Remarks</h2>
+<p>
+The value <tt>lambda</tt> must be a positive number.
+</p>
+<p>
+<tt>ShrinkageFunction</tt> is piecewise linear with the following pieces:
+<dl>
+<dd> 
+<table>
+	<tr><td><tt>t+lambda</tt>,</td><td> if <tt>t < -lambda</tt></td></tr>
+	<tr><td><tt>0</tt>,</td><td><tt>-lambda < x < lambda</tt>.</td></tr>
+	<tr><td><tt>t-lambda</tt>,</td><td>if <tt>t > lambda</tt></td></tr>
+</table>
+</dd>
+</dl>
+</p>
+<p>
+<tt>ShrinkageFunction(t,lambda)</tt> converts <tt>t</tt> to zero if <tt>|t|<lambda</tt> or moves it <tt>lambda</tt> units closer to the <tt>t</tt>-axis
+otherwise.
+</p>
+<a name="ShrinkageFunctionExample"></a>
+<h2>Examples</h2>
+<h3>Example 1</h3>
+<p>
+Apply shrinkage to a vector.  The commands
+</p>
+<pre class="programlisting">
+v=[ -3 2.1 1.8 -4 5 1 .5 -.1] %Create a vector
+y=ShrinkageFunction(v,2) %Apply the shrinkage function with lambda=2
+</pre>
+<p>
+produces
+</p>
+<pre class="programlisting">
+v =
+
+   -3.0000    2.1000    1.8000   -4.0000    5.0000    1.0000    0.5000   -0.1000
+
+
+y =
+
+   -1.0000    0.1000         0   -2.0000    3.0000         0         0         0
+</pre>
+<h3>Example 2</h3>
+<p>
+Plot the shrinkage function.
+</p>
+<pre class="programlisting">
+t=-5:.001:5; %Create some evaluation points
+plot(t,ShrinkageFunction(t,2)); %Plot the shrinkage function
+title('\lambda = 2');
+</pre>
+<img src="../../images/ShrinkageFunctionFig1.gif"></img>
+<h2>See Also</h2>
+<p>
+<a href="DonohoSure.html"><tt>DonohoSure</tt></a>,
+<a href="SureShrink.html"><tt>SureShrink</tt></a>,
+<a href="UniversalThreshold.html"><tt>UniversalThreshold</tt></a>,
+<a href="WaveletShrinkage.html"><tt>WaveletShrinkage</tt></a>
+</p>
+</p><p>
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+
+<script language="JavaScript">
+fprev="ShowThumbnails";
+fprevlink="../../html/Graphics/"+fprev;
+
+fnext="Sn";
+fnextlink="../../html/Fourier/"+fnext;
+
+str="<td align=\"left\" width=20><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0 align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;</td><td align=\"left\">" + fprev + "</td>";
+document.write(str);
+document.write("<td>&nbsp;</td>");
+str="<td align=\"right\">" + fnext + "</td><td align=\"right\" width=20><a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+
+</tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

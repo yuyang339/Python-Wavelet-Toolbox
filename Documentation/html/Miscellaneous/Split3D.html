@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+t="Split3D";
+document.write("<title>" + t + ":: Functions (DiscreteWavelets Toolbox)</title>");
+</script><link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<script language="JavaScript">
+fprev="SplineFilters";
+fprevlink="../../html/Filters/"+fprev;
+fnext="SureShrink";
+fnextlink="../../html/Denoising/"+fnext;
+str="<td valign=\"baseline\" align=\"right\"><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0  align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</tr></table>
+<!--END OF HEADER-->
+
+<h1 class="reftitle">Split3D</h1>
+<!-- SYNCHTO: f16-6011.html -->
+<p>Split a 3-D array into three matrices</p>
+<h2>Syntax</h2>
+<p class="synopsis">
+<pre class="programlisting">
+	[R,G,B] = Split3D(A)
+</pre>
+</p>
+<h2>Description</h2>
+<p>
+<tt>[R,G,B] = Split3D(A)</tt> takes as input a three-dimensional array <tt>A</tt> and returns <tt>R=A(:,:,1)</tt>, <tt>G=A(:,:,2)</tt>,
+and <tt>B=A(:,:,3)</tt>.
+</p>
+<h2>Remarks</h2>
+<p>
+<tt>[R,G,B]=Split3D(A)</tt> is used in the <tt>DiscreteWavelets</tt> Toolbox to take a 3-D array that is typically what is used to display color images
+in Matlab and split it into three color channels for processing.
+</p>
+<a name="Split3DExample"></a>
+<h2>Example</h2>
+Read a color image, split it using <tt>Split3D</tt>, and plot the image and the three color channels.
+<pre class="programlisting">
+%Load all color images included with the toolbox
+clr=ImageNames('ImageType','Color');
+file = clr{4}; %Shows the name of the data file
+A=ImageRead(file); %Load the image into 3-d array A
+ImagePlot(A); %Plot the image
+[R,G,B]=Split3D(A); %Split 3-D array into three matrices
+figure
+ImagePlot(R,'ChannelColor',[1 0 0]); %Plot the red channel
+figure
+ImagePlot(G,'ChannelColor',[0 1 0]); %Plot the green channel
+figure
+ImagePlot(B,'ChannelColor',[0 0 1]); %Plot the blue channel
+</pre>
+<img src="../../images/ImagePlotFig2.gif" height=40% width=40% alt="Not Found"></img>
+<img src="../../images/ImagePlotFig3.gif" height=40% width=40% alt="Not Found"></img><br>
+<img src="../../images/ImagePlotFig4.gif" height=40% width=40% alt="Not Found"></img>
+<img src="../../images/ImagePlotFig5.gif" height=40% width=40% alt="Not Found"></img>
+<h2>See Also</h2>
+<p>
+<a href="Make3D.html"><tt>Make3D</tt></a>
+</p>
+</p><p>
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+
+<script language="JavaScript">
+fprev="SplineFilters";
+fprevlink="../../html/Filters/"+fprev;
+
+fnext="SureShrink";
+fnextlink="../../html/Denoising/"+fnext;
+
+str="<td align=\"left\" width=20><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0 align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;</td><td align=\"left\">" + fprev + "</td>";
+document.write(str);
+document.write("<td>&nbsp;</td>");
+str="<td align=\"right\">" + fnext + "</td><td align=\"right\" width=20><a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+
+</tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

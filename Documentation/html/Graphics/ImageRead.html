@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+t="ImageRead";
+document.write("<title>" + t + ":: Functions (DiscreteWavelets Toolbox)</title>");
+</script>
+<link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<script language="JavaScript">
+fprev="ImagePlot";
+fprevlink=""+fprev;
+fnext="IWT1D1";
+fnextlink="../../html/Transformations/"+fnext;
+str="<td valign=\"baseline\" align=\"right\"><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0  align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</td></tr></table>
+<!--END OF HEADER-->
+
+<h1 class="reftitle">ImageRead</h1>
+<!-- SYNCHTO: f16-6011.html -->
+<p>Import a digital image</p>
+<h2>Syntax</h2>
+<p class="synopsis">
+<tt>A = ImageRead(f)</tt><br>
+<tt>A = ImageRead(f,options)</tt><br>
+</p>
+<h2>Description</h2>
+<p>
+<tt>A = ImageRead(f)</tt> reads the contents of a file <tt>f</tt> into <tt>A</tt>.  If the image is grayscale, then <tt>A</tt> is a matrix.
+If the image is color, then <tt>A</tt> is a 3-dimensional array with <tt>A(:,:,1)</tt>, <tt>A(:,:,2)</tt>, <tt>A(:,:,3)</tt> holding the red, green, and
+blue portions of the image, respectively.
+</p>
+<p>
+<tt>A = ImageRead(f,options)</tt> allows the user to set two parameters.  See Optional Arguments for more details.
+</p>
+<h2>Optional Arguments</h2>
+<p>
+There are two optional arguments that can be set for <tt>ImageRead</tt>.  The order of the parameters does not matter in the function call, but
+you must follow the standard convention <tt>'Option'</tt>, <tt>'Value'</tt> when invoking the parameters.
+</p>
+<h3>PrintInfo</h3>
+<p>
+The option <tt>'PrintInfo'</tt> can be set to <tt>'True'</tt> (default is <tt>'False'</tt>) to instruct the function to print information about the
+image.  In particular, if the option is set, the function prints the dimensions of the image, whether the image was read as grayscale or color, and the
+maximum number of iterations of a wavelet transformation that can be performed on the image.
+</p>
+<h3>PowersOfTwo</h3>
+<p>
+The <tt>'PowersOfTwo'</tt> can be set to any nonnegative integer <tt>k</tt>.  If set, the function removes the minimum number of rows from the bottom and
+columns from the right so that the dimensions of the resulting matrix is divisible by <tt>2^k</tt>.
+</p>
+<h2>Remarks</h2>
+<p>
+The input <tt>f</tt> can be a file on disk or it can be a URL of an image.  
+</p>
+<a name="ImageReadExample">
+<h2>Examples</h2>
+<h3>Example 1</h3>
+Read and plot an image.
+<pre class="programlisting">
+%Load all grayscale image files that come with the toolbox in cell array gry
+gry=ImageNames('ImageType','GrayScale');
+file = gry{7}; %Shows the name of the data file
+A=ImageRead(file); %Load the image into matrix A
+ImagePlot(A); %Plot the image
+</pre>
+<center>
+<img src="../../images/ImageReadFig1.gif" alt="Not Found"></img>
+</center>
+<h3>Example 2</h3>
+Read an image and resize it so that five iterations of a wavelet transform can be performed on the resulting image. The commands 
+<pre class="programlisting">
+%Load all color image files that come with the toolbox in cell array clr
+clr=ImageNames('ImageType','Color','ListThumbnails','True');
+file = clr{1} %Shows the name of the data file
+%Load the image into matrix A and resize it so that we can perform 5 iterations
+A=ImageRead(file,'PrintInfo','True','PowersOfTwo',5);
+ImagePlot(A); %Plot the image
+</pre>
+produces
+<pre class="programlisting">
+Chopping 16 columns off the right and 0 rows off the bottom of the image.
+
+The dimensions of the image are 160 x 224 and the file was processed as a color image.
+
+A total of 5 iterations of a wavelet transform can be performed on the image.
+</pre>
+<center>
+<img src="../../images/ImageReadFig2.gif" alt="Not Found"></img>
+</center>
+<h3>Example 3</h3>
+Read an image from the internet and plot.  The commands
+<pre class="programlisting">
+%Get an image from the internet
+A=ImageRead('http://cam.mathlab.stthomas.edu/wavelets/CoverLarge.jpg','PrintInfo','True','PowersOfTwo',2);
+ImagePlot(A); %Plot the image
+</pre>
+produces
+<pre class="programlisting">
+Chopping 0 columns off the right and 1 rows off the bottom of the image.
+
+The dimensions of the image are 452 x 300 and the file was processed as a color image.
+
+A total of 2 iterations of a wavelet transform can be performed on the image.
+</pre>
+<center>
+<img src="../../images/ImageReadFig3.gif" alt="Not Found"></img>
+</center>
+<h2>See Also</h2>
+<p>
+<a href="ImageList.html"><tt>ImageList</tt></a>,
+<a href="ImageNames.html"><tt>ImageNames</tt></a>,
+<a href="ImagePlot.html"><tt>ImagePlot</tt></a>
+<a href="ShowThumbnails.html"><tt>ShowThumbnails</tt></a>
+</p><p>
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+<script language="JavaScript">
+fprev="ImagePlot";
+fprevlink=""+fprev;
+
+fnext="IWT1D1";
+fnextlink="../../html/Transformations/"+fnext;
+
+str="<td align=\"left\" width=20><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0 align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;</td><td align=\"left\">" + fprev + "</td>";
+document.write(str);
+document.write("<td>&nbsp;</td>");
+str="<td align=\"right\">" + fnext + "</td><td align=\"right\" width=20><a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

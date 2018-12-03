@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+t="nCE";
+document.write("<title>" + t + ":: Functions (DiscreteWavelets Toolbox)</title>");
+</script><link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<script language="JavaScript">
+fprev="MSE";
+fprevlink=""+fprev;
+fnext="NoiseEstimate";
+fnextlink="../../html/Denoising/"+fnext;
+str="<td valign=\"baseline\" align=\"right\"><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0  align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</tr></table>
+<!--END OF HEADER-->
+
+<h1 class="reftitle">nCE</h1>
+<!-- SYNCHTO: f16-6011.html -->
+<p>Select a number of elements from a cumulative energy vector</p>
+<h2>Syntax</h2>
+<p class="synopsis">
+<pre class="programlisting">
+	n = nCE(v,p)<br>
+</pre>
+</p>
+<h2>Description</h2>
+<p>
+<tt>n=nCE(v,p)</tt> takes as input vector <tt>v</tt> and a number <tt>p</tt> and returns the number of elements in <tt>v</tt> that
+are less than or equal to <tt>p</tt>.
+</p>
+<h2>Remarks</h2>
+<p>
+The elements of <tt>v</tt> and <tt>p</tt> must be in the interval [0,1].
+</p>
+<p>
+The value <tt>n</tt> returned by <tt>nCE</tt> can be used with the <tt>Comp</tt> function to perform naive compression.
+</p>
+<a name="nCEExample"></a>
+<h2>Example</h2>
+<p>
+Create a vector and plot it and its cumulative energy.  The commands 
+</p>
+<pre class="programlisting">
+x=0:.001:.999; %Sample points
+v=sin(2*pi*x)+.15*rand(1,1000); %Create a noisy vector
+y=CE(v); %Compute the cumulative energy
+plot(y); %Plot the cumulative energy
+n=nCE(y,.6); %Find the number of elements that comprise 60% of the energy in v
+str=sprintf('The %i largest elements in v comprise 60%% of the energy in v.',n);
+disp(str);
+</pre>
+<p>
+produces
+</p>
+<img src="../../images/nCEFig1.gif">
+<pre class="programlisting">
+The 318 largest elements in v comprise 60% of the energy in v.
+</pre>
+<h2>See Also</h2>
+<p>
+<a href="Comp.html"><tt>Comp</tt></a>, 
+<a href="CE.html"><tt>CE</tt></a>
+</p>
+</p><p>
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+
+<script language="JavaScript">
+fprev="MSE";
+fprevlink=""+fprev;
+
+fnext="NoiseEstimate";
+fnextlink="../../html/Denoising/"+fnext;
+
+str="<td align=\"left\" width=20><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0 align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;</td><td align=\"left\">" + fprev + "</td>";
+document.write(str);
+document.write("<td>&nbsp;</td>");
+str="<td align=\"right\">" + fnext + "</td><td align=\"right\" width=20><a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+
+</tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

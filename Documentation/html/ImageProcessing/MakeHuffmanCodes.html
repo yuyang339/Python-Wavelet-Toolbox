@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+t="MakeHuffmanCodes";
+document.write("<title>" + t + ":: Functions (DiscreteWavelets Toolbox)</title>");
+</script><link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<script language="JavaScript">
+fprev="Make3D";
+fprevlink="../../html/Miscellaneous/"+fprev;
+fnext="MaxIterations";
+fnextlink="../../html/Miscellaneous/"+fnext;
+str="<td valign=\"baseline\" align=\"right\"><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0  align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</tr></table>
+<!--END OF HEADER-->
+
+<h1 class="reftitle">MakeHuffmanCodes</h1>
+<!-- SYNCHTO: f16-6011.html -->
+<p>Create Huffman codes</p>
+<h2>Syntax</h2>
+<p class="synopsis">
+<pre class="programlisting">
+	[uniq,freq,codes] = MakeHuffmanCodes(v)<br>
+	[uniq,freq,codes,origlen] = MakeHuffmanCodes(v)<br>
+	[uniq,freq,codes,origlen,newlen] = MakeHuffmanCodes(v)<br>
+</pre>
+</p>
+<h2>Description</h2>
+<p>
+<tt>[uniq,freq,codes] = MakeHuffmanCodes(v)</tt> takes as input a vector or matrix, a character string, or a cell array whose elements are 
+characters and returns:
+<dl>
+	<dd><tt>uniq</tt> - a vector (if input elements are integers) or a cell array (if input elements are characters) of the unique elements 
+		of <tt>v</tt>
+	</dd>
+	<p></p>
+	<dd><tt>freq</tt> - a vector whose elements are the relative frequencies of the elements in <tt>uniq</tt>.
+	</dd>
+	<p></p>
+	<dd><tt>codes</tt> - a cell array whose elements are the Huffman codes for the elements in <tt>uniq</tt>.
+	</dd>
+</dl>
+</p>
+<p>
+<tt>[uniq,freq,codes,origlen] = MakeHuffmanCodes(v)</tt> also returns the bitstream length of the original input <tt>v</tt>.
+</p>
+<tt>[uniq,freq,codes,origlen,newlen] = MakeHuffmanCodes(v)</tt> also returns the bitstreatm length of the input build with <tt>codes</tt>.
+</p>
+<h2>Remarks</h2>
+<p>
+If <tt>v</tt> is a vector or matrix, the elements must be nonnegative integers.
+</p>
+<p>
+This code is based on the function written by <a href="http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=227&objectType=File">
+<tt>huffman5</tt></a> written by Sean Danaher, University of Northumbria, Newcastle UK.
+<p>
+See Section 3.4 for more information on creating Huffman codes.
+</p>
+<a name="MakeHuffmanCodesExample"></a>
+<h2>Examples</h2>
+<h3>Example 1</h3>
+<p>
+Find the Huffman codes for the string <i>pitterpattertatter</i>.
+</p>
+<pre class="programlisting">
+str='pitterpattertatter'; %Create the string
+[uniq,freq,codes,origlen,newlen]=MakeHuffmanCodes(str) %Create the Huffman codes
+</pre>
+The output is 
+<pre class="programlisting">
+uniq = 
+
+    'a'
+    'e'
+    'i'
+    'p'
+    'r'
+    't'
+
+
+freq =
+
+    0.1111
+    0.1667
+    0.0556
+    0.1111
+    0.1667
+    0.3889
+
+
+codes = 
+
+    '0011'
+    '010'
+    '0010'
+    '000'
+    '011'
+    '1'
+
+
+origlen =
+
+   144
+
+
+newlen =
+
+    43
+</pre>
+<p>
+We can use <tt>HuffmanTree</tt> to plot the Huffman tree for <i>pitterpattertatter</i>.
+</p>
+<pre class="programlisting">
+HuffmanTree(uniq,freq,codes);
+</pre>
+<img src="../../images/MakeHuffmanCodesFig1.gif" alt="Not Found"></img>
+<h3>Example 2</h3>
+Load an image <tt>A</tt> and compute its Haar wavelet transformation <tt>B</tt>.  Compute the encoded bitstream length for both <tt>A</tt> and <tt>B</tt>.
+<pre class="programlisting">
+gry=ImageNames('ImageType','GrayScale','ListThumbnails','True'); %Get file names for included images.  Use a thumbnail
+A=ImageRead(gry{1}); %Load a thumbnail image
+ImagePlot(A); %Plot the image
+[u,f,c,old,new]=MakeHuffmanCodes(A); %Create the Huffman codes for A
+str=sprintf('The length of the Huffman coded stream for A is %i.',new);
+disp(str);
+B=HWT2D(A,3); %Compute three iterations of the Haar wavelet transform
+figure;
+WaveletDensityPlot(B,3,'DivideLinesThickness',[2 2 2]); %Plot the wavelet transforma
+[u,f,c,old,new]=MakeHuffmanCodes(round(B-min(min(B)))); %Compute the Huffman codes - make sure the input is nonnegative integers.
+str=sprintf('The length of the Huffman coded stream for B is %i.',new);
+disp(str);
+</pre>
+<img src="../../images/MakeHuffmanCodesFig2.gif" width=45% height=45% alt="Not Found"></img>
+<img src="../../images/MakeHuffmanCodesFig3.gif" width=45% height=45% alt="Not Found"></img>
+<pre>
+The length of the Huffman coded stream for A is 302526.
+The length of the Huffman coded stream for B is 219277.
+</pre>
+<h2>See Also</h2>
+<p>
+<a href="../../html/Graphics/HuffmanTree.html"><tt>HuffmanTree</tt></a>,
+<a href="../../html/Measurements/Entropy.html"><tt>Entropy</tt></a>
+</p>
+</p><p>
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+
+<script language="JavaScript">
+fprev="Make3D";
+fprevlink="../../html/Miscellaneous/"+fprev;
+
+fnext="MaxIterations";
+fnextlink="../../html/Miscellaneous/"+fnext;
+
+str="<td align=\"left\" width=20><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0 align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;</td><td align=\"left\">" + fprev + "</td>";
+document.write(str);
+document.write("<td>&nbsp;</td>");
+str="<td align=\"right\">" + fnext + "</td><td align=\"right\" width=20><a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+
+</tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

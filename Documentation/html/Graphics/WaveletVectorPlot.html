@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+t="ImagePlot";
+document.write("<title>" + t + ":: Functions (DiscreteWavelets Toolbox)</title>");
+</script>
+<link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<script language="JavaScript">
+fprev="WaveletVectorPlay";
+fprevlink="../../html/Audio/"+fprev;
+fnext="WaveletVectorToList";
+fnextlink="../../html/Miscellaneous/"+fnext;
+str="<td valign=\"baseline\" align=\"right\"><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0  align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</td></tr></table>
+<!--END OF HEADER-->
+
+<h1 class="reftitle">WaveletVectorPlot</h1>
+<!-- SYNCHTO: f16-6011.html -->
+<p>Plot a one-dimensional wavelet transfomration</p>
+<h2>Syntax</h2>
+<p class="synopsis">
+<tt>WaveletVectorPlot(wt,its)</tt><br>
+<tt>WaveletVectorPlot(wt,its,options)</tt><br>
+</p>
+<h2>Description</h2>
+<p>
+<tt>WaveletVectorPlot(wt,its)</tt> takes a vector <tt>wt</tt>, presumably obtained by computing the wavelet transformation of some vector, 
+and a number of iterations <tt>its</tt>, and plots <tt>wt</tt> with each portion of the transformation separated by grid lines and
+illustrated with a different color.
+</p>
+<p>
+<tt>WaveletVectorPlot(wt,its,options)</tt> allows the user to set several parameters.  See Optional Arguments for more details.
+</p>
+<h2>Optional Arguments</h2>
+<p>
+There are eight optional arguments that can be set for <tt>WaveletVectorPlot</tt>.  The order of the parameters does not matter in the function call, but
+you must follow the standard convention <tt>'Option'</tt>, <tt>'Value'</tt> when invoking the parameters.
+</p>
+<h3>Region</h3>
+<p>
+<tt>'Region'</tt> can be set to either <tt>'All'</tt> (default), <tt>'LowPass'</tt>, or <tt>'HighPass'</tt>.  In the last case, the routine looks for the value of <tt>'Iteration'</tt> (see below) and then plots the selected portion of <tt>wt</tt>.
+</p>
+<h3>Iteration</h3>
+<p>
+<tt>'Iteration'</tt> can be set to <tt>'All'</tt> (default) or any positive integer <tt>1,2,...,its</tt>.  This value is used if 
+<tt>'Region'</tt> has been set to <tt>'HighPass'</tt> to plot that particular region.  If <tt>'Region'</tt> is set to <tt>'All'</tt> and 
+<tt>'Iteration'</tt> is set to <tt>i</tt>, then the routine plots the lowpass portion and highpass portions <tt>k=i,...,its</tt>.
+</p>
+<h3>DivideLines</h3>
+<p>
+<tt>'DivideLines'</tt> can be set to <tt>'True'</tt> (default) or <tt>'False'</tt> in order to show or hide, respectively, gridlines dividing the 
+different portions of the transformation.
+</p>
+<h3>DivideLinesColor</h3>
+<p>
+<tt>'DivideLinesColor'</tt> is a length three vector whose entries are in the interval [0,1] that serves as the color of the gridlines.  The default
+color of <tt>'DivideLinesColor'</tt> is <tt>[.3 .3 .3]</tt> (dark gray).
+</p>
+<h3>DivideLinesThickness</h3>
+<p>
+<tt>'DivideLinesThickness'</tt> can be set to a nonnegative integer (default is 1) that tells the routine how thick to make the gridlines that separate
+the different portions of the transformation.
+</p>
+<h3>UseColors</h3>
+<p>
+The <tt>'UseColors'</tt> parameter is set to either <tt>'True'</tt> (default) to show the different portions of the transformation with different color.  Setting the parameter to <tt>'False'</tt> to use the default color of blue for the entire plot.
+</p>
+<h3>ColorList</h3>
+<p>
+If <tt>'UseColors'</tt> has been set to <tt>'True'</tt>, the function looks for values in <tt>'ColorList'</tt>.  This input must be an <tt>n x 3</tt> matrix whose entries are numbers in the interval <tt>[0,1]</tt>.  If <tt>n < its+1</tt>, then the <tt>n x 3</tt> matrix is augmented with enough rows so that the number of rows is <tt>>=its+1</tt>.  In this way, the routine has enough colors to plot each portion of the transformation.  A default color list (6 colors) is provided with the routine.
+</p>
+<h3>Title</h3>
+<p>
+A plot title can be added using the <tt>'Title'</tt> option.  For example, <tt>WaveletVectorPlot(wt,its,'Title','Here is a Picture')</tt> adds a title to the plot.
+</p>
+<a name="WaveletVectorPlotExample">
+<h2>Examples</h2>
+<p>
+First, we create a vector and compute four iterations of its wavelet transformation.  Different examples will illustrate the different parameters
+that can be set with <tt>WaveletVectorPlot</tt>.
+</p>
+<pre class="programlisting">
+snd=AudioNames(); %Get all audio files included with the toolbox
+v=wavread(snd{2}); %Read an audio file
+v=ChopVector(v,4); %Make sure the length is divisible by 16
+plot(v); %Plot the vector
+wt=WT1D(v,Daub(6),4); %Compute four iterations of the transformation
+</pre>
+<img src="../../images/WaveletVectorPlotFig0.gif" alt="Not Found"></img>
+<h3>Example 1</h3>
+Plot the transformation with a title.
+<pre class="programlisting">
+WaveletVectorPlot(wt,4,'Title','Four Iterations Using Daub(6)'); 
+</pre>
+<img src="../../images/WaveletVectorPlotFig1.gif" alt="Not Found"></img>
+<h3>Example 2</h3>
+<p>
+Plot only iterations 3 and 4:
+</p>
+<pre class="programlisting">
+WaveletVectorPlot(wt,4,'Region','All','Iteration',3);
+</pre>
+<img src="../../images/WaveletVectorPlotFig2.gif" alt="Not Found"></img>
+<h3>Example 3</h3>
+<p>
+Plot the highpass portion of iteration 1
+</p>
+<pre class="programlisting">
+WaveletVectorPlot(wt,4,'Region','HighPass','Iteration',1);
+</pre>
+<img src="../../images/WaveletVectorPlotFig3.gif" alt="Not Found"></img>
+<h3>Example 4</h3>
+<p>
+Change the divide lines color and thickness
+</p>
+<pre class="programlisting">
+WaveletVectorPlot(wt,4,'DivideLinesColor',[.5 .2 1],'DivideLinesThickness',3);
+</pre>
+<img src="../../images/WaveletVectorPlotFig4.gif" alt="Not Found"></img>
+<h3>Example 5</h3>
+<p>
+Provide your own colors.
+</p>
+<pre class="programlisting">
+WaveletVectorPlot(wt,4,'ColorList',[1 0 0; 0 1 0; 0 0 1; 1 0 1; 0 1 1; 1 1 0]);
+</pre>
+<img src="../../images/WaveletVectorPlotFig5.gif" alt="Not Found"></img>
+<h3>Example 6</h3>
+<p>
+Plot the lowpass portion in green and provide a title.
+</p>
+<pre class="programlisting">
+WaveletVectorPlot(wt,4,'ColorList',[0 1 0],'Region','LowPass','Title','The Lowpass Portion');
+</pre>
+<img src="../../images/WaveletVectorPlotFig6.gif" alt="Not Found"></img>
+<h2>See Also</h2>
+<p>
+<a href="../../html/Transformations/BWT1D"><tt>BWT1D</tt></a>,
+<a href="../../html/Transformations/HWT1D"><tt>HWT1D</tt></a>,
+<a href="../../html/Transformations/LWT1D"><tt>LWT1D</tt></a>,
+<a href="../../html/Transformations/WT1D"><tt>WT1D</tt></a>,
+<a href="WaveletDensityPlot.html"><tt>WaveletDensityPlot</tt></a>
+</p><p>
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+<script language="JavaScript">
+fprev="WaveletVectorPlay";
+fprevlink="../../html/Audio/"+fprev;
+
+fnext="WaveletVectorToList";
+fnextlink="../../html/Miscellaneous/"+fnext;
+
+str="<td align=\"left\" width=20><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0 align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;</td><td align=\"left\">" + fprev + "</td>";
+document.write(str);
+document.write("<td>&nbsp;</td>");
+str="<td align=\"right\">" + fnext + "</td><td align=\"right\" width=20><a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

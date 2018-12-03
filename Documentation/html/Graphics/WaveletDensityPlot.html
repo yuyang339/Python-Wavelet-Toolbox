@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+t="WaveletDensityPlot";
+document.write("<title>" + t + ":: Functions (DiscreteWavelets Toolbox)</title>");
+</script>
+<link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<script language="JavaScript">
+fprev="UniversalThreshold";
+fprevlink="../../html/Denoising/"+fprev;
+fnext="WaveletListToMatrix";
+fnextlink="../../html/Miscellaneous/"+fnext;
+str="<td valign=\"baseline\" align=\"right\"><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0  align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</td></tr></table>
+<!--END OF HEADER-->
+
+<h1 class="reftitle">WaveletDensityPlot</h1>
+<!-- SYNCHTO: f16-6011.html -->
+<p>Plot a two-dimensional wavelet transfomration</p>
+<h2>Syntax</h2>
+<p class="synopsis">
+<tt>WaveletDensityPlot(wt,its)</tt><br>
+<tt>WaveletDensityPlot(wt,its,options)</tt><br>
+</p>
+<h2>Description</h2>
+<p>
+<tt>WaveletDensityPlot(wt,its)</tt> takes either a matrix or a three-dimensional array <tt>wt</tt>, presumably obtained by computing the wavelet transformation of some matrix or three-dimensional array, respectively, and a number of iterations <tt>its</tt>, and plots <tt>wt</tt> with each portion of the transformation separated by grid lines.
+</p>
+<p>
+<tt>WaveletDensityPlot(wt,its,options)</tt> allows the user to set several parameters.  See Optional Arguments for more details.
+</p>
+<h2>Optional Arguments</h2>
+<p>
+There are seven optional arguments that can be set for <tt>WaveletVectorPlot</tt>.  The order of the parameters does not matter in the function call, but
+you must follow the standard convention <tt>'Option'</tt>, <tt>'Value'</tt> when invoking the parameters.
+</p>
+<h3>Region</h3>
+<p>
+<tt>'Region'</tt> can be set to either <tt>'All'</tt> (default), <tt>'Blur'</tt>, <tt>'Vertical'</tt>, <tt>'Horizontal'</tt>, or <tt>'Diagonal'</tt>.  
+If <tt>'Region'</tt> is set to <tt>'Blur'</tt>, the routine plots the lowpass portion of the transform.  For the other non-default cases, the routine looks for the value of <tt>'Iteration'</tt> (see below) and then plots the selected portion of <tt>wt</tt>.
+</p>
+<h3>Iteration</h3>
+<p>
+<tt>'Iteration'</tt> can be set to <tt>'All'</tt> (default) or any positive integer <tt>1,2,...,its</tt>.  This value is used if 
+<tt>'Region'</tt> has been set to <tt>'Blur'</tt>, <tt>'Vertical'</tt>, <tt>'Horizontal'</tt>, or <tt>'Diagonal'</tt> to plot that particular region.  If <tt>'Region'</tt> is set to <tt>'All'</tt> and <tt>'Iteration'</tt> is set to <tt>i</tt>, then the routine plots the lowpass portion and highpass portions <tt>k=i,...,its</tt>.
+</p>
+<h3>DivideLines</h3>
+<p>
+<tt>'DivideLines'</tt> can be set to <tt>'True'</tt> (default) or <tt>'False'</tt> in order to show or hide, respectively, gridlines dividing the 
+different portions of the transformation.
+</p>
+<h3>DivideLinesColor</h3>
+<p>
+<tt>'DivideLinesColor'</tt> is a length three vector whose entries are in the interval [0,1] that serves as the color of the gridlines.  The default
+color of <tt>'DivideLinesColor'</tt> is <tt>[1 1 1]</tt> (white).
+</p>
+<h3>DivideLinesThickness</h3>
+<p>
+<tt>'DivideLinesThickness'</tt> can be set to either a nonnegative integer <tt>p</tt> (default is 1) or a vector <tt>p</tt> of length <tt>its</tt>.  In the former case, all divide lines are drawn at thickness <tt>p</tt>.  In the latter case, the divide lines for iteration <tt>i</tt> are set to thickness 
+<tt>p(i)</tt>, where <tt>i=1,2,...,its</tt>.
+</p>
+<h3>Title</h3>
+<p>
+A plot title can be added using the <tt>'Title'</tt> option.  For example, <tt>WaveletDensityPlot(wt,its,'Title','Here is a Picture')</tt> adds a title to the plot.
+</p>
+<h3>Magnification</h3>
+<p>
+Magnification can be set to make the output image size smaller or larger.  The default value is 1 and if set, the value must be a positive number.
+</p>
+<h2>Remarks</h2>
+<p>
+<tt>WaveletDensityPlot</tt> can plot color transformations.  The input <tt>wt</tt> must be a three-dimensional array with depth three.  It is assumed
+that <tt>wt(:,:,1)</tt>, <tt>wt(:,:,2)</tt>, and <tt>wt(:,:,3)</tt> hold the red, green, and blue portions of the transformations, respectively.
+</p>
+<a name="WaveletDensityPlotExample">
+<h2>Grayscale Examples</h2>
+<p>
+First, we read an image and compute three iterations of its wavelet transformation.  Different examples will illustrate the different parameters
+that can be set with <tt>WaveletDensityPlot</tt>.
+</p>
+<pre class="programlisting">
+gry=ImageNames('ImageType','GrayScale'); %Get all grayscale image files included with the toolbox
+A=ImageRead(gry{17}); %Read an image file
+ImagePlot(A); %Plot the image file
+[h,ht]=CDF97(); %Use the CDF97 filter for the computations.
+wt=BWT2D(A,h,ht,3); %Compute four iterations of the transformation
+<img src="../../images/WaveletDensityPlotFig0.gif" alt="Not Found"></img>
+</pre>
+<h3>Example 1</h3>
+Plot the transformation with a title.  Note some divide lines are missing...
+<pre class="programlisting">
+WaveletDensityPlot(wt,3,'Title','Three Iterations Using CDF97()'); 
+</pre>
+<img src="../../images/WaveletDensityPlotFig1.gif" alt="Not Found"></img>
+<h3>Example 2</h3>
+<p>
+Adjust the thickness of the divide lines
+</p>
+<pre class="programlisting">
+WaveletDensityPlot(wt,3,'DivideLinesThickness',[2 2 2]);
+</pre>
+<img src="../../images/WaveletDensityPlotFig2.gif" alt="Not Found"></img>
+<h3>Example 3</h3>
+<p>
+We can change the color of the divide lines as well:
+</p>
+<pre class="programlisting">
+WaveletDensityPlot(wt,3,'DivideLinesThickness',[2 2 2],'DivideLinesColor',[1 0 0]);
+</pre>
+<img src="../../images/WaveletDensityPlotFig3.gif" alt="Not Found"></img>
+<h3>Example 4</h3>
+<p>
+Plot iterations 2 and 3
+</p>
+<pre class="programlisting">
+WaveletDensityPlot(wt,3,'Iteration',2,'DivideLinesThickness',[2 2 2]);
+</pre>
+<img src="../../images/WaveletDensityPlotFig4.gif" alt="Not Found"></img>
+<h3>Example 5</h3>
+<p>
+Plot the lowpass portion of the transformation in one plot and the vertical portion of the iteration 1 in another plot.
+</p>
+<pre class="programlisting">
+WaveletDensityPlot(wt,3,'Region','Blur');
+figure;
+WaveletDensityPlot(wt,3,'Region','Vertical','Iteration',1);
+</pre>
+<table><tr>
+<td valign="center">
+<img src="../../images/WaveletDensityPlotFig5.gif" alt="Not Found"></img>
+</td>
+<td valign="center">
+<img src="../../images/WaveletDensityPlotFig6.gif" alt="Not Found"></img>
+</td>
+</tr>
+</table>
+<h3>Example 6</h3>
+<p>
+Make the lowpass portion eight times as large so it is the same size as the original image.
+</p>
+<pre class="programlisting">
+WaveletDensityPlot(wt,3,'Region','Blur','Magnification',8);
+</pre>
+<img src="../../images/WaveletDensityPlotFig7.gif" alt="Not Found"></img>
+<h2>Color Example</h2>
+<p>
+<tt>WaveletDensityPlot</tt> also handles color images.  First, load a color image and compute 
+three iterations of a wavelet transformation.
+</p>
+<pre class="programlisting">
+clr=ImageNames('ImageType','Color'); %Find all color image file names that come with the toolbox
+A=ImageRead(clr{6}); %Load a color image
+ImagePlot(A); %Plot the image
+[R,G,B]=Split3D(A); %Separate the channels
+wtR=LWT2D(R,3); %Transform the red channel
+wtG=LWT2D(G,3); %Transform the green channel
+wtB=LWT2D(B,3); %Transform the blue channel
+wt=Make3D(wtR,wtG,wtB); %Combine the channels
+</pre>
+<img src="../../images/WaveletDensityPlotFig00.gif" alt="Not Found"></img>
+<h3>Example 7</h3>
+<p>
+Plot the wavelet transform with a title, divide lines thickness adjusted appropriately, and divide lines color set to blue
+</p>
+<pre class="programlisting">
+WaveletDensityPlot(wt,3,'Title','LeGall Wavelet Transformation',...
+	'DivideLinesThickness',[2 2 2],'DivideLinesColor',[0 0 1]);
+</pre>
+<img src="../../images/WaveletDensityPlotFig8.gif" alt="Not Found"></img>
+<h2>See Also</h2>
+<p>
+<a href="../../html/Transformations/BWT2D"><tt>BWT2D</tt></a>,
+<a href="../../html/Transformations/HWT2D"><tt>HWT2D</tt></a>,
+<a href="../../html/Transformations/LWT2D"><tt>LWT2D</tt></a>,
+<a href="../../html/Transformations/WT2D"><tt>WT2D</tt></a>,
+<a href="WaveletVectorPlot.html"><tt>WaveletVectorPlot</tt></a>
+</p><p>
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+<script language="JavaScript">
+fprev="UniversalThreshold";
+fprevlink="../../html/Denoising/"+fprev;
+
+fnext="WaveletListToMatrix";
+fnextlink="../../html/Miscellaneous/"+fnext;
+
+str="<td align=\"left\" width=20><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0 align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;</td><td align=\"left\">" + fprev + "</td>";
+document.write(str);
+document.write("<td>&nbsp;</td>");
+str="<td align=\"right\">" + fnext + "</td><td align=\"right\" width=20><a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

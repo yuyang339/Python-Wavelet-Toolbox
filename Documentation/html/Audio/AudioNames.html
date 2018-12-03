@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>AudioNames :: Functions (DiscreteWavelets Toolbox)</title>
+<link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<td valign="baseline" align="right"><a href="AudioList.html"><img src="../../images/b_prev.gif" border="0" align="bottom" alt="AudioList"></a>&nbsp;&nbsp;&nbsp;<a href="../../html/Transformations/BWT1D1.html"><img src="../../images/b_next.gif" border="0" align="bottom" alt="BWT1D1"></a></td></tr></table>
+<!--END OF HEADER-->
+
+<h1 class="reftitle">AudioNames</h1>
+<!-- SYNCHTO: f16-6011.html -->
+<p>Audio file names</p>
+<h2>Syntax</h2>
+<p class="synopsis">
+<tt>a = AudioNames()<br></tt>
+</p>
+<h2>Description</h2>
+<p>
+<tt>a = AudioNames()</tt> returns the absolute paths of each audio file included in the <tt>DiscreteWavelets</tt> Toolbox.
+</p>
+<h2>Remarks</h2>
+<p>
+You can use <tt>AudioNames</tt> to easily access audio files included with the toolbox.  It doesn't matter where you initially placed the DiscreteWavelets
+folder - as long as you did not rename it, <tt>AudioNames</tt> will find its location and return absolute path names to the audio files.
+</p>
+<a name="AudioNamesExample">
+<h2>Example</h2>
+Here's how you can use <tt>AudioNames</tt> to open and play a sound file that comes with the toolbox.  
+<p> The following commands </p> 
+<pre class="programlisting">
+a=AudioNames(); %Load all audio files that come with the toolbox in cell array a
+sndfile = a{2} %Shows the name of the audio file
+</pre>
+
+<p>produces (on my computer)</p>
+
+<pre class="programlisting">
+C:\Program Files\MATLAB\R2007b\toolbox\DiscreteWavelets\Sounds\bark.wav
+</pre>
+
+<p></p>
+Now use standard Matlab commands to load and play the file.
+</p>
+<pre class="programlisting">
+[y, Fs] = wavread(sndfile); %Read the sound file
+sound(y,Fs); %Play the sound file
+</pre>
+<p></p>
+<h2>See Also</h2>
+<p>
+<a href="AudioList.html"><tt>AudioList</tt></a>, <a href="WaveletVectorPlay.html"><tt>WaveletVetorPlay</tt></a></p>
+</p><p>
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+<td align="left" width="20"><a href="AudioList.html"><img src="../../images/b_prev.gif" border="0" align="bottom" alt="AudioList"></a>&nbsp;</td>
+<td align="left">AudioList</td>
+<td>&nbsp;</td>
+<td align="right">BWT1D1</td><td align="right" width="20"><a href="../../html/Transformations/BWT1D1.html"><img src="../../images/b_next.gif" border="0" align="bottom" 
+alt="BWT1D1"></a></td></tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

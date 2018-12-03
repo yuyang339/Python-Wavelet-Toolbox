@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+t="TestSparseness";
+document.write("<title>" + t + ":: Functions (DiscreteWavelets Toolbox)</title>");
+</script><link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<script language="JavaScript">
+fprev="SureShrink";
+fprevlink=""+fprev;
+fnext="UniversalThreshold";
+fnextlink="../../html/Denoising/"+fnext;
+str="<td valign=\"baseline\" align=\"right\"><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0  align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</tr></table>
+<!--END OF HEADER-->
+
+<h1 class="reftitle">TestSparseness</h1>
+<!-- SYNCHTO: f16-6011.html -->
+<p>Test a  vector or matrix to see if it is sparse</p>
+<h2>Syntax</h2>
+<p class="synopsis">
+<pre class="programlisting">
+	[lambda,flag] = TestSparseness(v)<br>
+	[lambda,flag] = TestSparseness(v,options)<br>
+</pre>
+</p>
+<h2>Description</h2>
+<p>
+<tt>[lambda,flag] = TestSparseness(v)</tt> takes a vector or matrix <tt>v</tt> and determines if it is sparse.  It <tt>v</tt> is deemed sparse, the function
+returns the universal threshold <tt>lambda</tt><sup><i>univ</i></sup> and <tt>flag=0</tt>.  Otherwise the function returns 
+the SureShrink threshold <tt>lambda</tt><sup><i>sure</i></sup> and <tt>flag=1</tt>.  In the latter case, <tt>lambda</tt><sup><i>sure</i></sup>
+is computed by dividing <tt>v</tt> by the noise level <tt>&sigma;</tt>.
+</p>
+<p>
+<tt>[lambda,flag] = TestSparseness(v,'PrintResult','True')</tt> returns the threshold described above and also prints whether or not the input was sparse.
+</p>
+<h2>Remarks</h2>
+<p>
+It is assumed that the input <tt>v</tt> is a highpass portion of a wavelet transformation.
+</p>
+<p>
+To test for sparseness, the function computes <tt>s=sum(v.^2)/n-1</tt> where <tt>n</tt> is the length of <tt>v</tt> (<tt>rows*cols</tt> if <tt>v</tt> is
+a matrix) and <tt>3*log2(n)/(2*sqrt(n))</tt>.  If <tt>s>u</tt>, <tt>v</tt> is deemed sparse and the routine returns the universal threshold.  Otherwise,
+the routine returns the SureShrink threshold.
+<p>
+The test for sparseness was developed by David Donoho and Iain Johnstone.  Please see Section 9.3 of the book for more information.
+</p>
+<a name="TestSparsenessExample"></a>
+<h2>Example</h2>
+<p>
+Create a noisy Heavisine vector, compute its wavelet transform, and test it for sparseness.
+</p>
+<pre class="programlisting">
+x=0:.0001:.9999; %Create some evaluation points
+v=Heavisine(x)+.25*randn(1,10000); %Create a noisy Heavisine vector
+plot(x,v);
+title('A noisy Heavisine vector');
+y=WT1D(v,Daub(6),3); %Compute three iterations of the wavelet transformation using the 
+	Daubechies 6-term orthogonal filter
+figure;
+WaveletVectorPlot(y,3,'Title','Wavelet Transform - 3 Iterations');
+wtlist=WaveletVectorToList(y,3); %Separate the various portions of the transformation
+[lambda,flag]=TestSparseness(wtlist(1).hp,'PrintResult','True')
+[lambda,flag]=TestSparseness(wtlist(2).hp,'PrintResult','True')
+[lambda,flag]=TestSparseness(wtlist(3).hp,'PrintResult','True')
+</pre>
+<p>
+produces
+<center>
+<img src="../../images/TestSparsenessFig1.gif"></img><br>
+<img src="../../images/TestSparsenessFig2.gif"></img>
+</center>
+</p>
+<pre class="programlisting">
+The input is sparse - returning the universal threshold value.
+
+lambda =
+
+    1.0177
+
+
+flag =
+
+     0
+
+The input is sparse - returning the universal threshold value.
+
+lambda =
+
+    0.9920
+
+
+flag =
+
+     0
+
+The input is sparse - returning the universal threshold value.
+
+lambda =
+
+    0.9011
+
+
+flag =
+
+     0
+</pre>
+<h2>See Also</h2>
+<p>
+<a href="DonohoSure.html"><tt>DonohoSure</tt></a>,
+<a href="NoiseEstimate.html"><tt>NoiseEstimate</tt></a>,
+<a href="SureShrink.html"><tt>SureShrink</tt></a>,
+<a href="UniversalThreshold.html"><tt>UniversalThreshold</tt></a>,
+<a href="WaveletShrinkage.html"><tt>WaveletShrinkage</tt></a>
+</p>
+</p><p>
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+
+<script language="JavaScript">
+fprev="SureShrink";
+fprevlink=""+fprev;
+
+fnext="UniversalThreshold";
+fnextlink=""+fnext;
+
+str="<td align=\"left\" width=20><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0 align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;</td><td align=\"left\">" + fprev + "</td>";
+document.write(str);
+document.write("<td>&nbsp;</td>");
+str="<td align=\"right\">" + fnext + "</td><td align=\"right\" width=20><a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+
+</tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

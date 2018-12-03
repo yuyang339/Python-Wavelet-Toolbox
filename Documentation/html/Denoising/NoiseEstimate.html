@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+t="NoiseEstimate";
+document.write("<title>" + t + ":: Functions (DiscreteWavelets Toolbox)</title>");
+</script><link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<script language="JavaScript">
+fprev="nCE";
+fprevlink="../../html/Measurements/"+fprev;
+fnext="PolySin2j";
+fnextlink="../../html/Fourier/"+fnext;
+str="<td valign=\"baseline\" align=\"right\"><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0  align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</tr></table>
+<!--END OF HEADER-->
+
+<h1 class="reftitle">NoiseEstimate</h1>
+<!-- SYNCHTO: f16-6011.html -->
+<p>Estimate the noise level of a vector or matrix</p>
+<h2>Syntax</h2>
+<p class="synopsis">
+<pre class="programlisting">
+	s = NoiseEstimate(v,h)<br>
+</pre>
+</p>
+<h2>Description</h2>
+<p>
+<tt>s=NoiseEstimate(v,h)</tt> takes as input a matrix or vector <tt>v</tt> and an orthogonal filter <tt>h</tt> and returns an estimate of the noise 
+level of <tt>v</tt>.
+</p>
+<h2>Remarks</h2>
+<p>
+<tt>NoiseEstimate(v)</tt> is computed via by first computing one iteration of the wavelet transformation <tt>wt</tt> built from <tt>h</tt>.  Then
+the level is estimated via the formula <tt>MAD(wt)/.6745</tt>.  See Section 9.2 for more details.
+</p>
+<a name="NoiseExample"></a>
+<h2>Example</h2>
+<p>
+Create a noisy sine vector and estimate the noise level.
+</p>
+<pre class="programlisting">
+x=0:.0001:.9999;
+v=sin(2*pi*x); %Create a vector of sine values
+n=randn(1,10000); %Create a noise vector
+t=.15; %Set a noise level
+y=v+t*n; %Create the noisy vector
+s=NoiseEstimate(y,Coif(1))
+</pre>
+<p>
+The estimate is 
+</p>
+<pre class="programlisting">
+s =
+
+    0.1503
+</pre>
+<h2>See Also</h2>
+<p>
+<a href="MAD.html"><tt>MAD</tt></a>
+</p>
+</p><p>
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+
+<script language="JavaScript">
+fprev="nCE";
+fprevlink="../../html/Measurements/"+fprev;
+
+fnext="PolySin2j";
+fnextlink="../../html/Fourier/"+fnext;
+
+str="<td align=\"left\" width=20><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0 align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;</td><td align=\"left\">" + fprev + "</td>";
+document.write(str);
+document.write("<td>&nbsp;</td>");
+str="<td align=\"right\">" + fnext + "</td><td align=\"right\" width=20><a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+
+</tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

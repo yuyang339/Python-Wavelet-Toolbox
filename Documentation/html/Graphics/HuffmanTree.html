@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+t="HuffmanTree";
+document.write("<title>" + t + ":: Functions (DiscreteWavelets Toolbox)</title>");
+</script><link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<script language="JavaScript">
+fprev="HistogramEQ";
+fprevlink="../../html/ImageProcessing/"+fprev;
+fnext="HWT1D1";
+fnextlink="../../html/Transformations/"+fnext;
+str="<td valign=\"baseline\" align=\"right\"><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0  align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</tr></table>
+<!--END OF HEADER-->
+
+<h1 class="reftitle">HuffmanTree</h1>
+<!-- SYNCHTO: f16-6011.html -->
+<p>Displays tree of Huffman codes</p>
+<h2>Syntax</h2>
+<p class="synopsis">
+<pre class="programlisting">
+	HuffmanTree(u,f,c)<br>
+	HuffmanTree(u,f,c,options)
+</pre>
+</p>
+<h2>Description</h2>
+<p>
+<tt>HuffmanTree(u,f,c)</tt> takes a cell array <tt>u</tt> of unique characters (or integers), a vector <tt>f</tt> that contains the relative frequencies
+for each element in <tt>u</tt>, and a cell array <tt>c</tt> that holds the Huffman codes for each of the elements in <tt>u</tt> and draws the 
+associated Huffman tree.
+</p>
+<p>
+<tt>HuffmanTree(u,f,c,options)</tt> allows several parameters to be set.  See Optional Arguments below for a detailed description of these parameters.
+</p>
+<h2>Optional Arguments</h2>
+<p>
+There are several optional arguments that can be set for <tt>HuffmanTree</tt>.  The order of the parameters does not matter in the function call, but
+you must follow the standard convention <tt>'Option'</tt>, <tt>'Value'</tt> when invoking the parameters.
+</p>
+<h3>NodeColor</h3>
+<p>
+The <tt>'NodeColor'</tt> may be set to any desired color.  Enter the color as an RGB vector of size 3.  The default color is <tt>[.698 .557 .18]</tt>.
+</p>
+<p>
+For example, to change the node color to red, issue the command <tt>HuffmanTree(u,f,c,'NodeColor',[1 0 0]);</tt>
+</p>
+<h3>NodeEdgeColor</h3>
+<p>
+The <tt>'NodeEdgeColor'</tt> may be set to any desired color.  Enter the color as an RGB vector of size 3.  The default color is <tt>[0 0 0]</tt>.
+</p>
+<p>
+For example, to change the node color to blue, issue the command <tt>HuffmanTree(u,f,c,'NodeEdgeColor',[0 0 1]);</tt>
+</p>
+<h3>NodeSize</h3>
+<p>
+This positive value sets the size of the node in pixels.  The default size is 30.
+</p>
+<p>
+For example, to set the <tt>'NodeSize'</tt> to 40, issue the command <tt>HuffmanTree(u,f,c,'NodeSize',40);</tt>
+</p>
+<h3>NodeFontSize</h3>
+<p>
+Use <tt>'NodeFontSize'</tt> to set the font size for all node labels.  The default font size is 8.
+</p>
+<p>
+For example, to set the <tt>'NodeFontSize'</tt> to 10, issue the command <tt>HuffmanTree(u,f,c,'NodeFontSize',10);</tt>
+</p>
+<h3>FontColor</h3>
+<p>
+Use the <tt>'FontColor'</tt> option to change the color of node labels.  The default font color is [.541 .118 .008].
+</p>
+<p>
+For example, to set the <tt>'FontColor'</tt> to green, issue the command <tt>HuffmanTree(u,f,c,'FontColor',[0 1 0]);</tt>
+</p>
+<h3>BranchColor</h3>
+<p>
+Use the <tt>'BranchColor'</tt> option to change the color of the lines connecting the nodes.  The default font color is [.698 .557 .18].
+</p>
+<p>
+For example, to set the <tt>'BranchColor'</tt> to black, issue the command <tt>HuffmanTree(u,f,c,'FontColor',[0 0 0]);</tt>
+</p>
+<h3>Title</h3>
+<p>
+The option <tt>'Title'</tt> can be used to add a title to the graphic.  The default is no title.
+</p>
+<p>
+For example, to add a title, issue the command <tt>HuffmanTree(u,f,c,'Title','A Tree');</tt>
+</p>
+<a name="HuffmanTreeExample"></a>
+<h2>Example</h2>
+<h3>Example 1</h3>
+Here is a basic Huffman tree for the string "mississippi"
+<pre class="programlisting">
+[u,f,c]=MakeHuffmanCodes('mississippi'); %Get the necessary input from MakeHuffmanCodes
+HuffmanTree(u,f,c);
+</pre>
+<img src="../../images/HuffmanTreeFig1.gif" alt="Not Found"></img>
+<h3>Example 2</h3>
+Here we set the color of the branches to red and all text is displayed in blue.
+<pre class="programlisting">
+[u,f,c]=MakeHuffmanCodes('mississippi'); %Get the necessary input from MakeHuffmanCodes
+HuffmanTree(u,f,c,'BranchColor',[1 0 0],'FontColor',[0 0 1]) %Create the Huffman tree
+</pre>
+<img src="../../images/HuffmanTreeFig2.gif" alt="Not Found"></img>
+<h3>Example 2</h3>
+Finally we set the node colors to yellow and make the font and nodes bigger.
+<pre class="programlisting">
+[u,f,c]=MakeHuffmanCodes('mississippi'); %Get the necessary input from MakeHuffmanCodes
+HuffmanTree(u,f,c,'NodeColor',[1 1 0],'FontSize',10,'NodeSize',40) %Create the Huffman tree
+</pre>
+<img src="../../images/HuffmanTreeFig3.gif" alt="Not Found"></img>
+<h2>See Also</h2>
+<p>
+<a href="../../html/ImageProcessing/MakeHuffmanCodes.html"><tt>MakeHuffmanCodes</tt></a>,
+<a href="../../html/Measurements/MakeHuffmanCodes.html"><tt>Entropy</tt></a>
+</p>
+</p><p>
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+
+<script language="JavaScript">
+fprev="HistogramEQ";
+fprevlink="../../html/ImageProcessing/"+fprev;
+
+fnext="HWT1D1";
+fnextlink="../../html/Transformations/"+fnext;
+
+str="<td align=\"left\" width=20><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0 align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;</td><td align=\"left\">" + fprev + "</td>";
+document.write(str);
+document.write("<td>&nbsp;</td>");
+str="<td align=\"right\">" + fnext + "</td><td align=\"right\" width=20><a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+
+</tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

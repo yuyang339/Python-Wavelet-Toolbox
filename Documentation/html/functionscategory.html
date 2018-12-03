@@ -1,0 +1,597 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Functions by Category (DiscreteWavelets Toolbox)</title>
+<link rel="stylesheet" href="docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="docscripts.js"></script>
+</head>
+
+<body><a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<td valign="baseline" align="right"><a href="examples.html"><img src="../images/b_prev.gif" border="0" align="bottom" alt="Examples"></a>&nbsp;&nbsp;&nbsp;<a href="functionsalphabetical.html"><img src="../images/b_next.gif" border="0" align="bottom" alt="Functions by Alphabetical List"></a></td></tr></table>
+
+
+<h1 class="title">Functions &#8212; By Category</h1>
+<hr>
+<table border="1">
+<tr>
+	<td><table border="0" cellpadding="5" class="categorylist">
+		<tr valign="top">
+			<td width="300"><a href="functionscategory.html#audio">Audio</a></td>
+			<td>List included audio files and their attributes, and play wavelet vector transformations.</td>
+		</tr>
+		<tr valign="top">
+			<td width="300"><a href="functionscategory.html#denoising">Denoising</a></td>
+			<td>Estimate noise, compute thresholds, test for sparseness, and perform denoising.</td>
+		</tr>
+		<tr valign="top">
+			<td width="300"><a href="functionscategory.html#filters">Filters</a></td>
+			<td>Haar filters, Daubechies filters, Coiflets, biorthogonal spline filters, CDF97, and the LeGall filter.</td>
+		</tr>
+		<tr valign="top">
+			<td width="300"><a href="functionscategory.html#fourier">Fourier Tools</a></td>
+			<td>Cosine and Sine in terms of complex exponentials, generate of finite Fourier series, and trigonometric polynomials.</td>
+		</tr>
+		<tr valign="top">
+			<td width="300"><a href="functionscategory.html#graphics">Graphics</a></td>
+			<td>Get image information; plot images, wavelet transforms, and Huffman trees.</td>
+		</tr>
+		<tr valign="top">
+			<td width="300"><a href="functionscategory.html#imageprocessing">Image Processing</a></td>
+			<td>Perform color space conversions, compress images, 
+			    and apply gamma correction and histogram equalization to images.
+				Generate Huffman codes for input strings or images.</td>
+		</tr>
+		<tr valign="top">
+			<td width="300"><a href="functionscategory.html#measurements">Measurements</a></td>
+			<td>Compute cumulative energy, entropy, mean square error, and PSNR.  Perform basic image compression.</td>
+		</tr>
+		<tr valign="top">
+			<td width="300"><a href="functionscategory.html#miscellaneous">Miscellaneous</a></td>
+			<td>Resize vectors, manipulate "corners" of matrices, get information about data files that come with the package, 
+				manipulate 3-D arrays, determine the maximum number of iterations that can be performed on a vector or 
+				matrix, manipulate wavelet transformations.</td>
+		</tr>
+		<tr valign="top">
+			<td width="300"><a href="functionscategory.html#transformations">Transformations</a></td>
+			<td>Compute one- and two-dimensional wavelet transformations.  Included are the Haar transformation,
+				orthogonal wavelet transformations, biorthogonal wavelet transformations, and transformations
+				via the lifting scheme.</td>
+		</tr>
+		</table></td>
+</tr>
+</table>
+
+<a name="audio"></a>
+<h2 class="categorytitle">Audio</h2>
+<table cellspacing="0" width="100%" border="0" cellpadding="2">
+<tr valign="top">
+	<td width="150"><a href="Audio/AudioList.html">AudioList</a></td>
+	<td>Lists all audio files included with the package and their attributes.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Audio/AudioNames.html">AudioNames</a></td>
+	<td>Creates a cell array of absolute paths and names to all audio files included with the package.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Audio/WaveletVectorPlay.html">WaveletVectorPlay</a></td>
+	<td>Plays portions of wavelet transformations of vectors.</td>
+</tr>
+</table>
+<p></p>
+<a href="#top_of_page"><img src="../images/doc_to_top_up.gif"  border=0></a>
+<a href="#top_of_page">Back to Top</a>
+<p></p>
+
+<a name="denoising"></a>
+<h2 class="categorytitle">Denoising</h2>
+<table cellspacing="0" width="100%" border="0" cellpadding="2">
+<tr valign="top">
+	<td width="150"><a href="Denoising/DonohoSure.html">DonohoSure</a></td>
+	<td>Compute the SureShrink tolerance.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Denoising/Heavisine.html">Heavisine</a></td>
+	<td>The Heavisine function.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Denoising/MAD.html">MAD</a></td>
+	<td>Calculate the Median Absolute Deviation of a vector or matrix.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Denoising/NoiseEstimate.html">NoiseEstimate</a></td>
+	<td>Estimate the noise level in a vector or matrix.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Denoising/ShrinkageFunction.html">ShrinkageFunction</a></td>
+	<td>The piecewise linear function used to quantize portions of the wavelet transform in denoising.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Denoising/SureShrink.html">SureShrink</a></td>
+	<td>Perform denoising of a vector or matrix using the SureShrink method.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Denoising/TestSparseness.html">TestSparseness</a></td>
+	<td>Test a vector or matrix to determine whether or not it is sparse.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Denoising/UniversalThreshold.html">UniversalThreshold</a></td>
+	<td>Compute the universal threshold used to perform denoising via the VisuShrink method.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Denoising/WaveletShrinkage.html">WaveletShrinkage</a></td>
+	<td>A generic function for performing denoising using wavelet shrinkage.</td>
+</tr>
+</table>
+
+<p></p>
+<a href="#top_of_page"><img src="../images/doc_to_top_up.gif"  border=0></a>
+<a href="#top_of_page">Back to Top</a>
+<p></p>
+
+<a name="filters"></a>
+<h2 class="categorytitle">Filters</h2>
+<table cellspacing="0" width="100%" border="0" cellpadding="2">
+<tr valign="top">
+	<td width="150"><a href="Filters/CDF97.html">CDF97</a></td>
+	<td>The Cohen-Daubechies-Feauveau 9/7 biorthogonal filter pair.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Filters/Coif.html">Coif</a></td>
+	<td>An orthogonal Coiflet filter.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Filters/Daub.html">Daub</a></td>
+	<td>An orthogonal Daubechies filter.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Filters/Haar.html">Haar</a></td>
+	<td>The Haar filter.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Filters/LeGall.html">LeGall</a></td>
+	<td>The biorthogonal LeGall filter pair.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Filters/SplineFilters.html">SplineFilters</a></td>
+	<td>A biorthogonal spline filter pair.</td>
+</tr>
+</table>
+<p></p>
+<a href="#top_of_page"><img src="../images/doc_to_top_up.gif"  border=0></a>
+<a href="#top_of_page">Back to Top</a>
+<p></p>
+
+<a name="fourier"></a>
+<h2 class="categorytitle">Fourier Tools</h2>
+<table cellspacing="0" width="100%" border="0" cellpadding="2">
+<tr valign="top">
+	<td width="150"><a href="Fourier/Cs.html">Cs</a></td>
+	<td>Cosine in terms of complex exponentials.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Fourier/FiniteFourier.html">FiniteFourier</a></td>
+	<td>Creates a finite Fourier series from a given input vector of coefficients.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Fourier/PolySin2j.html">PolySin2j</a></td>
+	<td>Creates the trig polynomial P(t)=sum_{k=0}^{K-1}
+	binomial(K-1+j,j)sin^(2j)(w/2).</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Fourier/Sn.html">Sn</a></td>
+	<td>Sine in terms of complex exponentials.</td>
+</tr>
+</table>
+<p></p>
+<a href="#top_of_page"><img src="../images/doc_to_top_up.gif"  border=0></a>
+<a href="#top_of_page">Back to Top</a>
+<p></p>
+
+<a name="graphics"></a>
+<h2 class="categorytitle">Graphics</h2>
+<table cellspacing="0" width="100%" border="0" cellpadding="2">
+<tr valign="top">
+	<td width="150"><a href="Graphics/HuffmanTree.html">HuffmanTree</a></td>
+	<td>Plots a tree of Huffman codes.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Graphics/ImageList.html">ImageList</a></td>
+	<td>Lists all image files included with the package and their attributes.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Graphics/ImageNames.html">ImageNames</a></td>
+	<td>Creates a cell array of absolute paths and names to all image files included with the package.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Graphics/ImagePlot.html">ImagePlot</a></td>
+	<td>Plot a grayscale or color image.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Graphics/ImageRead.html">ImageRead</a></td>
+	<td>Read an image from disk or the internet and modify it as directed.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Graphics/ShowThumbnails.html">ShowThumbnails</a></td>
+	<td>Plot thumbnail sketches of images that are inclued with the package.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Graphics/WaveletDensityPlot.html">WaveletDensityPlot</a></td>
+	<td>Plot the two-dimensional wavelet transformation.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Graphics/WaveletVectorPlot.html">WaveletVectorPlot</a></td>
+	<td>Plot the one-dimensional wavelet transformation.</td>
+</tr>
+</table>
+
+<p></p>
+<a href="#top_of_page"><img src="../images/doc_to_top_up.gif"  border=0></a>
+<a href="#top_of_page">Back to Top</a>
+<p></p>
+
+<a name="imageprocessing"></a>
+<h2 class="categorytitle">Image Processing</h2>
+<table cellspacing="0" width="100%" border="0" cellpadding="2">
+<tr valign="top">
+	<td width="150"><a href="ImageProcessing/GammaCorrection.html">GammaCorrection</a></td>
+	<td>Apply gamma correction to an image.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="ImageProcessing/HistogramEQ.html">HistogramEQ</a></td>
+	<td>Apply histogram equalization to an image.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="ImageProcessing/MakeHuffmanCodes.html">MakeHuffmanCodes</a></td>
+	<td>Create Huffman codes for an input string or image.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="ImageProcessing/RGBToYCbCr.html">RGBToYCbCr</a></td>
+	<td>Convert from RGB space to YCbCr space.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="ImageProcessing/YCbCrToRGB.html">YCbCrToRGB</a></td>
+	<td>Convert from YCbCr space to RGB space.</td>
+</tr>
+</table>
+<p></p>
+<a href="#top_of_page"><img src="../images/doc_to_top_up.gif"  border=0></a>
+<a href="#top_of_page">Back to Top</a>
+<p></p>
+
+<a name="measurements"></a>
+<h2 class="categorytitle">Measurements</h2>
+<table cellspacing="0" width="100%" border="0" cellpadding="2">
+<tr valign="top">
+	<td width="150"><a href="Measurements/CE.html">CE</a></td>
+	<td>Compute the cumulative energy vector for a vector or matrix.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Measurements/Comp.html">Comp</a></td>
+	<td>Quantize a wavelet transformation.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Measurements/Entropy.html">Entropy</a></td>
+	<td>Compute the entropy of a vector or matrix.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Measurements/MSE.html">MSE</a></td>
+	<td>Compute the mean square error of two vectors or two matrices.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Measurements/nCE.html">nCE</a></td>
+	<td>Determine the number of elements of a wavelet transformation to convert to zero by Comp.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Measurements/PSNR.html">PSNR</a></td>
+	<td>Compute the peak signal-to-noise ratio between two images.</td>
+</tr>
+</table>
+<p></p>
+<a href="#top_of_page"><img src="../images/doc_to_top_up.gif"  border=0></a>
+<a href="#top_of_page">Back to Top</a>
+<p></p>
+
+<a name="miscellaneous"></a>
+<h2 class="categorytitle">Miscellaneous Routines</h2>
+<table cellspacing="0" width="100%" border="0" cellpadding="2">
+<tr valign="top">
+	<td width="150"><a href="Miscellaneous/ChopVector.html">ChopVector</a></td>
+	<td>Remove end elements of a vector so that its length is divisible by 2^n.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Miscellaneous/DataList.html">DataList</a></td>
+	<td>Lists all data files included with the package and their attributes.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Miscellaneous/DataNames.html">DataNames</a></td>
+	<td>Creates a cell array of absolute paths and names to all data files included with the package.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Miscellaneous/GetCorner.html">GetCorner</a></td>
+	<td>Get the upper left corner of a matrix.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Miscellaneous/Make3D.html">Make3D</a></td>
+	<td>Convert three matrices to a 3-D array used for plotting.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Miscellaneous/MaxIterations.html">MaxIterations</a></td>
+	<td>Determine the largest j so that 2^j divides the dimensions (length) of a matrix (vector).</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Miscellaneous/PutCorner.html">PutCorner</a></td>
+	<td>Replace the corner of a matrix with another matrix.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Miscellaneous/Split3D.html">Split3D</a></td>
+	<td>Split a 3-D array into three two-dimensional matrices.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Miscellaneous/WaveletListToMatrix.html">WaveletListToMatrix</a></td>
+	<td>Takes a cell array holding various portions of a wavelet transform and reformats it as a matrix.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Miscellaneous/WaveletListToVector.html">WaveletListToVector</a></td>
+	<td>Takes a structure holding various portions of a wavelet transform and reformats it as a vector.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Miscellaneous/WaveletMatrixToList.html">WaveletMatrixToList</a></td>
+	<td>Reformat a wavelet transformation matrix as a structure whose elements are various parts of the transformation.</td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Miscellaneous/WaveletVectorToList.html">WaveletVectorToList</a></td>
+	<td>Reformat a wavelet transformation vector as a structure whose elements are various parts of the transformation.</td>
+</tr>
+</table>
+
+<p></p>
+<a href="#top_of_page"><img src="../images/doc_to_top_up.gif"  border=0></a>
+<a href="#top_of_page">Back to Top</a>
+<p></p>
+
+<a name="transformations"></a>
+<h2 class="categorytitle">Transformations</h2>
+
+<p>
+<table border="0" cellpadding="4" cellspacing="0" class="pagenavtable">
+<tr><th>Categories &#8230;</th></tr>
+<tr><td><p><a href="functionscategory.html#haar">Haar Transformations</a></p>
+<p><a href="functionscategory.html#orthogonal">Orthogonal Wavelet Transformations</a></p>
+<p><a href="functionscategory.html#biorthogonal">Biorthogonal Wavelet Transformations</a></p>
+<p><a href="functionscategory.html#lifting">Lifting/LeGall Wavelet Transformations</a></p>
+</td></tr></table>
+
+
+<a name="haar"></a>
+<h3 class="categorytitle">Haar Wavelet Transformations</h2>
+
+<p>
+<table cellspacing="0" width="100%" border="0" cellpadding="2">
+<tr valign="top">
+	<td width="150"><a href="Transformations/HWT1D1.html">HWT1D1</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/HWT1D.html">HWT1D</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/HWT2D1.html">HWT2D1</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/HWT2D.html">HWT2D</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/IHWT1D1.html">IHWT1D1</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/IHWT1D.html">IHWT1D</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/IHWT2D1.html">IHWT2D1</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/IHWT2D.html">IHWT2D</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/LeftHWT.html">LeftHWT</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/LeftIHWT.html">LeftIHWT</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/RightHWT.html">RightHWT</a></td>
+	<td></td>
+</tr>
+</table>
+<p></p>
+<a href="#transformations"><img src="../images/doc_to_section_up.gif"  border=0></a>
+<a href="#transformations">Back to Top of Section</a>
+&nbsp;&nbsp;&nbsp;
+<a href="#top_of_page"><img src="../images/doc_to_top_up.gif"  border=0></a>
+<a href="#top_of_page">Back to Top</a>
+<p></p>
+
+
+<a name="orthogonal"></a>
+<h3 class="categorytitle">Orthogonal Wavelet Transformations</h2>
+
+<p>
+<table cellspacing="0" width="100%" border="0" cellpadding="2">
+<tr valign="top">
+	<td width="150"><a href="Transformations/WT1D1.html">WT1D1</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/WT1D.html">WT1D</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/WT2D1.html">WT2D1</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/WT2D.html">WT2D</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/IWT1D1.html">IWT1D1</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/IWT1D.html">IWT1D</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/IWT2D1.html">IWT2D1</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/IWT2D.html">IWT2D</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/IWTht.html">IWTht</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/LeftWT.html">LeftWT</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/LeftIWT.html">LeftIWT</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/RightWT.html">RightWT</a></td>
+	<td></td>
+</tr>
+</table>
+<p></p>
+<a href="#transformations"><img src="../images/doc_to_section_up.gif"  border=0></a>
+<a href="#transformations">Back to Top of Section</a>
+&nbsp;&nbsp;&nbsp;
+<a href="#top_of_page"><img src="../images/doc_to_top_up.gif"  border=0></a>
+<a href="#top_of_page">Back to Top</a>
+<p></p>
+
+<a name="biorthogonal"></a>
+<h3 class="categorytitle">Biorthogonal Wavelet Transformations</h2>
+
+<p>
+<table cellspacing="0" width="100%" border="0" cellpadding="2">
+<tr valign="top">
+	<td width="150"><a href="Transformations/BWT1D1.html">BWT1D1</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/BWT1D.html">BWT1D</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/BWT2D1.html">BWT2D1</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/BWT2D.html">BWT2D</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/IBWT1D1.html">IBWT1D1</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/IBWT1D.html">IBWT1D</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/IBWT2D1.html">IBWT2D1</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/IBWT2D.html">IBWT2D</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/IBWTht.html">IBWTht</a></td>
+	<td></td>
+</tr>
+</table>
+<p></p>
+<a href="#transformations"><img src="../images/doc_to_section_up.gif"  border=0></a>
+<a href="#transformations">Back to Top of Section</a>
+&nbsp;&nbsp;&nbsp;
+<a href="#top_of_page"><img src="../images/doc_to_top_up.gif"  border=0></a>
+<a href="#top_of_page">Back to Top</a>
+<p></p>
+
+
+<a name="lifting"></a>
+<h3 class="categorytitle">Lifting/LeGall Wavelet Transformations</h2>
+
+<p>
+<table cellspacing="0" width="100%" border="0" cellpadding="2">
+<tr valign="top">
+	<td width="150"><a href="Transformations/LWT1D1.html">LWT1D1</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/LWT1D.html">LWT1D</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/LWT2D1.html">LWT2D1</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/LWT2D.html">LWT2D</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/ILWT1D1.html">ILWT1D1</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/ILWT1D.html">ILWT1D</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/ILWT2D1.html">ILWT2D1</a></td>
+	<td></td>
+</tr>
+<tr valign="top">
+	<td width="150"><a href="Transformations/ILWT2D.html">ILWT2D</a></td>
+	<td></td>
+</tr>
+</table>
+<p></p>
+<a href="#transformations"><img src="../images/doc_to_section_up.gif"  border=0></a>
+<a href="#transformations">Back to Top of Section</a>
+&nbsp;&nbsp;&nbsp;
+<a href="#top_of_page"><img src="../images/doc_to_top_up.gif"  border=0></a>
+<a href="#top_of_page">Back to Top</a>
+<p></p>
+
+
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+<td align="left" width="20"><a href="examples.html"><img src="../images/b_prev.gif" border="0" align="bottom" alt="Examples"></a>&nbsp;</td>
+<td align="left">Examples</td>
+<td>&nbsp;</td>
+<td align="right">Functions by Alphabetical List</td><td align="right" width="20"><a href="functionsalphabetical.html"><img src="../images/b_next.gif" border="0" align="Functions by Alphabetical List" 
+alt="Getting Started"></a></td></tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+</p>

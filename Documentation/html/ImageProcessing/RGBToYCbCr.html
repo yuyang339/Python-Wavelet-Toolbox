@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+t="RGBToYCbCr";
+document.write("<title>" + t + ":: Functions (DiscreteWavelets Toolbox)</title>");
+</script><link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<script language="JavaScript">
+fprev="PutCorner";
+fprevlink="../../html/Miscellaneous/"+fprev;
+fnext="RightHWT";
+fnextlink="../../html/Transformations/"+fnext;
+str="<td valign=\"baseline\" align=\"right\"><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0  align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</tr></table>
+<!--END OF HEADER-->
+
+<h1 class="reftitle">RGBToYCbCr</h1>
+<!-- SYNCHTO: f16-6011.html -->
+<p>Convert from RGB space to YCbCr space</p>
+<h2>Syntax</h2>
+<p class="synopsis">
+<pre class="programlisting">
+	B=RGBToYCbCr(A)<br>
+</pre>
+</p>
+<h2>Description</h2>
+<p>
+<tt>B = RGBToYCbCr(A)</tt> takes either a vector of length 3 or a three-dimensional array with depth three and converts the input to YCbCr space.<br>
+<tt>B = RGBToYCbCr(A,'DisplayMode','True')</tt> scales the conversion for display with Matlab's <tt>image</tt> or <tt>ImagePlot</tt>.
+</p>
+<h2>Remarks</h2>
+<p>
+If <tt>A</tt> is a length 3 vector, then the elements must be in the interval [0,1].
+</p>
+If <tt>A</tt> is a three-dimensional array, then its depth must be three and it is assumed that the red, green, and blue channels are
+contained in <tt>A(:,:,1)</tt>, <tt>A(:,:,2)</tt>, and <tt>A(:,:,3)</tt>, respectively.  The elements of <tt>A</tt> must be nonnegative integers
+less than or equal to 255.  In this case, <tt>A</tt> is assumed to be a three-dimensional array.
+
+</p>
+<p>
+See Section 3.2 for more information on color space conversion.
+</p>
+<a name="RGBToYCbCrExample"></a>
+<h2>Examples</h2>
+<h3>Example 1</h3>
+<p>
+Convert the RGB vectors <tt>[0 0 0]</tt> (black) and <tt>[1 1 1]</tt> (white) to YCbCr space.
+</p>
+<pre class="programlisting">
+b=[0 0 0]
+RGBToYCbCr(b)'
+w=[1 1 1]
+RGBToYCbCr(w)'
+</pre>
+<p>
+produces
+</p>
+<pre class="programlisting">
+b =
+
+     0     0     0
+
+
+ans =
+
+     0     0     0
+
+
+w =
+
+     1     1     1
+
+
+ans =
+
+    0.0039         0         0
+</pre>
+<h3>Example 2</h3>
+<p>
+Convert a color image to YCbCr space.
+</p>
+<pre>
+clr=ImageNames('ImageType','Color'); %Get names of all color images included with the toolbox
+A=ImageRead(clr{5}); %Read a color image
+ImagePlot(A); %Plot the image
+[R,G,B]=Split3D(A); %Split A into the three color channels
+figure
+ImagePlot(R,'ChannelColor',[1 0 0]); %Plot the red channel
+figure
+ImagePlot(G,'ChannelColor',[0 1 0]); %Plot the green channel
+figure
+ImagePlot(B,'ChannelColor',[0 0 1]); %Plot the blue channel
+</pre>
+<img src="../../images/RGBToYCbCrFig1.gif" width="45%" height="45%" alt="Not Found"></img>
+<img src="../../images/RGBToYCbCrFig2.gif" width="45%" height="45%" alt="Not Found"></img><br>
+<img src="../../images/RGBToYCbCrFig3.gif" width="45%" height="45%" alt="Not Found"></img>
+<img src="../../images/RGBToYCbCrFig4.gif" width="45%" height="45%" alt="Not Found"></img><br>
+<p>
+Now convert to YCbCr space and plot the resulting images
+</p>
+<pre class="programlisting">
+B=RGBToYCbCr(A,'DisplayMode','True'); %Do the color space conversion
+[Y,Cb,Cr]=Split3D(B); %Split B into the three channels
+figure
+ImagePlot(Y,'Title','Y Channel'); %Plot the Y channel
+figure
+ImagePlot(Cb,'Title','Cr Channel'); %Plot the Cr channel
+figure
+ImagePlot(Cr,'Title','Cb Channel'); %Plot the Cb channel
+</pre>
+<img src="../../images/RGBToYCbCrFig5.gif" alt="Not Found"></img>
+<img src="../../images/RGBToYCbCrFig6.gif" alt="Not Found"></img>
+<img src="../../images/RGBToYCbCrFig7.gif" alt="Not Found"></img>
+<h2>See Also</h2>
+<p>
+<a href="YCbCrToRGB.html"><tt>YCbCrToRGB</tt></a>
+</p>
+</p><p>
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+
+<script language="JavaScript">
+fprev="PutCorner";
+fprevlink="../../html/Miscellaneous/"+fprev;
+
+fnext="RightHWT";
+fnextlink="../../html/Transformations/"+fnext;
+
+str="<td align=\"left\" width=20><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0 align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;</td><td align=\"left\">" + fprev + "</td>";
+document.write(str);
+document.write("<td>&nbsp;</td>");
+str="<td align=\"right\">" + fnext + "</td><td align=\"right\" width=20><a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+
+</tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

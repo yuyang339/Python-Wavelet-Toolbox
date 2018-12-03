@@ -1,0 +1,36 @@
+<productinfo
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="optional">
+<?xml-stylesheet type="text/xsl" href="optional"?>
+
+<matlabrelease>14</matlabrelease>
+<name>DiscreteWavelets</name>
+<type>toolbox</type>
+<icon></icon>
+<help_location>Documentation</help_location>
+
+<list>
+
+<!--
+<listitem>
+<label>SpecSim Viewer (Example GUI)</label>
+<callback>specsim_viewer_example</callback>
+<icon>$docroot/techdoc/matlab_env/examples/guiicon.gif</icon>
+</listitem>
+-->
+
+<listitem>
+<label>Applications</label>
+<callback>specsim_demos_example</callback>
+<icon>$docroot/techdoc/matlab_env/examples/demoicon.gif</icon>
+</listitem>
+
+<listitem>
+<label>Web Site</label>
+<callback>web http://www.stthomas.edu/wavelets</callback>
+<icon>$docroot/techdoc/matlab_env/examples/webicon.gif</icon>
+</listitem>
+
+</list>
+
+</productinfo>

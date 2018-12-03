@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+t="YCbCrToRGB";
+document.write("<title>" + t + ":: Functions (DiscreteWavelets Toolbox)</title>");
+</script><link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<script language="JavaScript">
+fprev="WaveletVectorToList";
+fprevlink="../../html/Miscellaneous/"+fprev;
+fnext="AudioList";
+fnextlink="../../html/Audio/"+fnext;
+str="<td valign=\"baseline\" align=\"right\"><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0  align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</tr></table>
+<!--END OF HEADER-->
+
+<h1 class="reftitle">YCbCrToRGB</h1>
+<!-- SYNCHTO: f16-6011.html -->
+<p>Convert from YCbCr space to RGB space</p>
+<h2>Syntax</h2>
+<p class="synopsis">
+<pre class="programlisting">
+	A=YCbCrToRGB(B)<br>
+</pre>
+</p>
+<h2>Description</h2>
+<p>
+<tt>A = YCbCrToRGB(B)</tt> takes either a vector of length 3 or a three-dimensional array with depth three and converts the input to RGB space.<br>
+<tt>A = YCbCrToRGB(B,'DisplayMode','True')</tt> scales the conversion for display with Matlab's <tt>image</tt> or <tt>ImagePlot</tt>.  In this case,
+<tt>A</tt> is assumed to be a three-dimensional array.
+</p>
+<h2>Remarks</h2>
+<p>
+If <tt>B</tt> is a length 3 vector, then the <tt>0 <= B(1) <= 1</tt> and <tt>-.5 <= B(2),B(3) <= .5</tt>.
+</p>
+If <tt>A</tt> is a three-dimensional array, then its depth must be three and it is assumed that the red, green, and blue channels are
+contained in <tt>A(:,:,1)</tt>, <tt>A(:,:,2)</tt>, and <tt>A(:,:,3)</tt>, respectively.  The elements of <tt>A(:,:,1)</tt> must be integers <tt>y</tt>
+in the range <tt>16 <= y <= 235</tt> and the elements of <tt>A(:,:,2)</tt> and <tt>A(:,:,3)</tt> must be integers <tt>i</tt> in the range
+<tt>16 <= i <= 240</tt>.
+</p>
+<p>
+See Section 3.2 for more information on color space conversion.
+</p>
+<a name="YCbCrToRGBExample"></a>
+<h2>Examples</h2>
+<h3>Example 1</h3>
+<p>
+Convert the YCbCr vectors to RGB space.
+</p>
+<pre class="programlisting">
+v=RGBToYCbCr([1 0 0])'
+red=YCbCrToRGB(v)'
+w=RGBToYCbCr([0 0 1])'
+blue=YCbCrToRGB(w)'
+</pre>
+<p>
+produces
+</p>
+<pre class="programlisting">
+v =
+
+    0.0012   -0.0007    0.0020
+
+
+red =
+
+    1.0000    0.0000   -0.0000
+
+
+w =
+
+    0.0004    0.0020   -0.0003
+
+
+blue =
+
+    0.0000    0.0000    1.0000</pre>
+<h3>Example 2</h3>
+<p>
+Convert Y Cb Cr channels to RGB space.
+</p>
+<pre>
+clr=ImageNames('ImageType','Color'); %Get names of all color images included with the toolbox
+A=ImageRead(clr{5}); %Read a color image
+B=RGBToYCbCr(A,'DisplayMode','True'); %Convert to YCbCr space
+[Y,Cb,Cr]=Split3D(B); %Get the channels
+ImagePlot(Y,'Title','Y Channel'); %Plot the Y channel
+figure
+ImagePlot(Cb,'Title','Cr Channel'); %Plot the Cr channel
+figure
+ImagePlot(Cr,'Title','Cb Channel'); %Plot the Cb channel
+</pre>
+<img src="../../images/YCbCrToRGBFig1.gif" alt="Not Found"></img>
+<img src="../../images/YCbCrToRGBFig2.gif" alt="Not Found"></img>
+<img src="../../images/YCbCrToRGBFig3.gif" alt="Not Found"></img>
+<p>
+Now convert to YCbCr space and plot the resulting images
+</p>
+<pre class="programlisting">
+A=YCbCrToRGB(B,'DisplayMode','True'); %Do the color space conversion
+[R,G,B]=Split3D(A); %Split A into the three channels
+figure
+ImagePlot(R,'ChannelColor',[1 0 0]); %Plot the red channel
+figure
+ImagePlot(G,'ChannelColor',[0 0 1]); %Plot the green channel
+figure
+ImagePlot(R,'ChannelColor',[0 0 1]); %Plot the blue channel
+figure
+ImagePlot(A);
+</pre>
+<img src="../../images/YCbCrToRGBFig4.gif" width="45%" height="45%" alt="Not Found"></img>
+<img src="../../images/YCbCrToRGBFig5.gif" width="45%" height="45%" alt="Not Found"></img><br>
+<img src="../../images/YCbCrToRGBFig6.gif" width="45%" height="45%" alt="Not Found"></img>
+<img src="../../images/YCbCrToRGBFig7.gif" width="45%" height="45%" alt="Not Found"></img>
+<h2>See Also</h2>
+<p>
+<a href="RGBToYCbCr.html"><tt>RGBToYCbCr</tt></a>
+</p>
+</p><p>
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+
+<script language="JavaScript">
+fprev="WaveletVectorToList";
+fprevlink="../../html/Miscellaneous/"+fprev;
+
+fnext="AudioList";
+fnextlink="../../html/Audio/"+fnext;
+
+str="<td align=\"left\" width=20><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0 align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;</td><td align=\"left\">" + fprev + "</td>";
+document.write(str);
+document.write("<td>&nbsp;</td>");
+str="<td align=\"right\">" + fnext + "</td><td align=\"right\" width=20><a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+
+</tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

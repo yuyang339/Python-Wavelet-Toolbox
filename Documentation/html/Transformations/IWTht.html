@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+t="IWTht";
+document.write("<title>" + t + ":: Functions (DiscreteWavelets Toolbox)</title>");
+</script><link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<script language="JavaScript">
+fprev="IWT2D";
+fprevlink=""+fprev;
+fnext="LeftHWT";
+fnextlink=""+fnext;
+str="<td valign=\"baseline\" align=\"right\"><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0  align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</tr></table>
+<!--END OF HEADER-->
+
+<h1 class="reftitle">IWTht</h1>
+<!-- SYNCHTO: f16-6011.html -->
+<p>Auxilary function used to compute one iteration of the orthogonal inverse wavelet transformation</p>
+<h2>Syntax</h2>
+<p class="synopsis">
+<tt>y = IWTht(u,f)<br></tt>
+</p>
+<h2>Description</h2>
+<p>
+<tt>y = IWTht(u,f)</tt> is used by <tt>IWT1D1</tt> to compute the orthogonal inverse wavelet transformation.
+</p><p>
+The orthogonal inverse wavelet transformation can be written as <tt>W^T y</tt>.  If we partition <tt>W</tt> into lowpass
+and highpass portions, and then partition <tt>y</tt> into two vectors <tt>u</tt> and <tt>w</tt> each of <tt>length(y)/2</tt>,
+we have 
+</p>
+<pre class="programlisting">
+	W^T y = [ H^T | G^T ] y = H^T u + G^T w
+</pre>
+<p>
+Depending on the filter, the function <tt>IWTht</tt> computes either <tt>H^T u</tt> or <tt>G^T w</tt>.
+</p>
+<a name="IWThtExample"></a>
+<h2>Example</h2>
+<p>
+Here we compute one iteration of the one-dimensional orthogonal inverse wavelet transformation of <tt>v</tt> using
+<tt>IWTht</tt>.  This is essentially the algorithm used by <tt>IBWT1D1</tt>
+</p>
+<pre class="programlisting">
+v=1:8; %Create a vector
+h=Daub(4); %Load the Daubechies 4-term orthogonal filter
+hh=flipud(h); %Reverse the filter
+wt=WT1D1(v,h) %Compute the transformation
+g=[-1; 1; -1; 1].*h; %Build the highpass filter
+u=wt(1:length(wt)/2); w=wt(length(wt)/2+1:end) %Split the vector wt
+y=IWTht(u',hh)+IWTht(w',g); %Compute the inverse transformation
+abs(v-y') %Compare with original vector v
+</pre>
+<p>
+<h2>See Also</h2>
+<p>
+<a href="IWT1D1.html"><tt>IWT1D1</tt></a>
+</p>
+</p><p>
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+
+<script language="JavaScript">
+fprev="IWT2D";
+fprevlink=""+fprev;
+
+fnext="LeftHWT";
+fnextlink=""+fnext;
+
+str="<td align=\"left\" width=20><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0 align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;</td><td align=\"left\">" + fprev + "</td>";
+document.write(str);
+document.write("<td>&nbsp;</td>");
+str="<td align=\"right\">" + fnext + "</td><td align=\"right\" width=20><a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+
+</tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

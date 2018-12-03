@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+t="LeGall";
+document.write("<title>" + t + ":: Functions (DiscreteWavelets Toolbox)</title>");
+</script><link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<script language="JavaScript">
+fprev="LeftIWT";
+fprevlink="../../html/Transformations/"+fprev;
+fnext="LWT1D1";
+fnextlink="../../html/Transformations/"+fnext;
+str="<td valign=\"baseline\" align=\"right\"><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0  align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</tr></table>
+<!--END OF HEADER-->
+
+<h1 class="reftitle">LeGall</h1>
+<!-- SYNCHTO: f16-6011.html -->
+<p>LeGall biorthogonal filter pair</p>
+<h2>Syntax</h2>
+<p class="synopsis">
+<pre class="programlisting">
+	[h,ht] = LeGall()<br>
+</pre>
+</p>
+<h2>Description</h2>
+<p>
+<tt>LeGall()</tt> returns the LeGall biorthogonal filter pair.
+</p>
+<a name="LeGallExample"></a>
+<h2>Example</h2>
+<p>
+The command
+</p>
+<pre class="programlisting">
+[h,ht]=LeGall()
+</pre>
+<p>
+results in
+<pre class="programlisting">
+h = 
+	0.5000    1.0000    0.5000
+
+ht = 
+	-0.1250    0.2500    0.7500    0.2500   -0.1250
+</pre>
+<h2>See Also</h2>
+<p>
+<a href="../../html/Transformations/LWT1D1.html"><tt>LWT1D1</tt></a>, 
+<a href="../../html/Transformations/LWT1D.html"><tt>LWT1D</tt></a>, 
+<a href="SplineFilters.html"><tt>SplineFilters</tt></a>, 
+<a href="CDF97.html"><tt>CDF97</tt></a>
+</p>
+</p><p>
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+
+<script language="JavaScript">
+fprev="LeftIWT";
+fprevlink="../../html/Transformations/"+fprev;
+
+fnext="LWT1D1";
+fnextlink="../../html/Transformations/"+fnext;
+
+str="<td align=\"left\" width=20><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0 align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;</td><td align=\"left\">" + fprev + "</td>";
+document.write(str);
+document.write("<td>&nbsp;</td>");
+str="<td align=\"right\">" + fnext + "</td><td align=\"right\" width=20><a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+
+</tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

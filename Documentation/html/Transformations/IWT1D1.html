@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+t="IWT1D1";
+document.write("<title>" + t + ":: Functions (DiscreteWavelets Toolbox)</title>");
+</script><link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<script language="JavaScript">
+fprev="ImageRead";
+fprevlink="../../html/Graphics/"+fprev;
+fnext="IWT1D";
+fnextlink=""+fnext;
+str="<td valign=\"baseline\" align=\"right\"><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0  align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</tr></table>
+<!--END OF HEADER-->
+
+<h1 class="reftitle">IWT1D1</h1>
+<!-- SYNCHTO: f16-6011.html -->
+<p>One-dimensional orthogonal inverse wavelet transformation, one iteration</p>
+<h2>Syntax</h2>
+<p class="synopsis">
+<pre class="programlisting">
+	v = IWT1D1(wt,h)<br>
+</pre>
+</p>
+<h2>Description</h2>
+<p>
+<tt>v = IWT1D1(wt,h)</tt> returns one iteration of the one-dimensional orthogonal inverse wavelet transformation 
+of <tt>wt</tt> using orthogonal filter <tt>h</tt>.
+</p>
+<h2>Remarks</h2>
+<p>
+The length of <tt>wt</tt> must be an even integer.  The length of filter <tt>h</tt> must be an even integer.
+</p>
+<a name="IWT1D1Example"></a>
+<h2>Example</h2>
+<p>
+Here we compute one iteration of the one-dimensional orthogonal inverse wavelet transformation.
+</p>
+<pre class="programlisting">
+v=1:32; %Create a vector
+h=Daub(4); %Load an orthogonal filter
+wt=WT1D1(v,h) %Compute the transformation
+y=IWT1D1(wt,h) %Compute the transformation
+abs(y'-v) %Compare y to the original vector v
+</pre>
+<p>
+<h2>See Also</h2>
+<p>
+<a href="WT1D1.html"><tt>WT1D1</tt></a>, 
+<a href="WT1D.html"><tt>WT1D</tt></a>, 
+<a href="IWT1D.html"><tt>IWT1D</tt></a>, 
+<a href="WT2D1.html"><tt>WT2D1</tt></a>, 
+<a href="WT2D.html"><tt>WT2D</tt></a>, 
+<a href="../../html/Filters/Haar.html"><tt>Haar</tt></a>,
+<a href="../../html/Filters/Daub.html"><tt>Daub</tt></a>,
+<a href="../../html/Filters/Coif.html"><tt>Coif</tt></a>,
+<a href="../../html/Graphics/WaveletVectorPlot.html"><tt>WaveletVectorPlot</tt></a>
+</p>
+</p><p>
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+
+<script language="JavaScript">
+fprev="ImageRead";
+fprevlink="../../html/Graphics/"+fprev;
+
+fnext="IWT1D";
+fnextlink=""+fnext;
+
+str="<td align=\"left\" width=20><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0 align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;</td><td align=\"left\">" + fprev + "</td>";
+document.write(str);
+document.write("<td>&nbsp;</td>");
+str="<td align=\"right\">" + fnext + "</td><td align=\"right\" width=20><a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+
+</tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

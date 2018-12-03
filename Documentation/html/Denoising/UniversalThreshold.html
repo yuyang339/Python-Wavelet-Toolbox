@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+t="UniversalThreshold";
+document.write("<title>" + t + ":: Functions (DiscreteWavelets Toolbox)</title>");
+</script><link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<script language="JavaScript">
+fprev="TestSparseness";
+fprevlink=""+fprev;
+fnext="WaveletDensityPlot";
+fnextlink="../../html/Graphics/"+fnext;
+str="<td valign=\"baseline\" align=\"right\"><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0  align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</tr></table>
+<!--END OF HEADER-->
+
+<h1 class="reftitle">UniversalThreshold</h1>
+<!-- SYNCHTO: f16-6011.html -->
+<p>The universal threshold lambda<sup><i>univ</i></sup></p>
+<h2>Syntax</h2>
+<p class="synopsis">
+<pre class="programlisting">
+	lambda = UniversalThreshold(v,h,its)<br>
+</pre>
+</p>
+<h2>Description</h2>
+<p>
+<tt>lambda = UniversalThreshold(v,h,its)</tt> takes a vector or matrix <tt>v</tt>, an orthogonal filter <tt>h</tt>, and a number of iterations <tt>its</tt>, and returns the universal threshold tolerance <tt>lambda</tt><sup><i>univ</i></sup> that is used in wavelet shrinkage denoising methods.
+</p>
+<h2>Remarks</h2>
+<p>
+The length or dimensions of <tt>v</tt> must be divisible by <tt>2^its</tt>.
+</p>
+<p>
+The filter <tt>h</tt> must be orthogonal and of even length.
+</p>
+<p>
+The number of iterations <tt>its</tt> must be a positive integer.
+</p>
+<p>
+The universal threshold is computing by first computing the wavelet transformation of <tt>v</tt> (using filter <tt>h</tt>) and then using that
+result to estimate the noise level <tt>sigma</tt>.  The routine next determines the length <tt>n</tt> of a vector constructed by concatenating all highpass portions of the transform.  The universal threshold is <tt>sigma*sqrt(2*log(n))</tt>.
+<p>
+For more information on the universal threshold, please see Section 9.2 of the book.
+</p>
+<a name="UniversalThresholdExample"></a>
+<h2>Example</h2>
+<p>
+Find the universal threshold for a vector.  The commands
+</p>
+<pre class="programlisting">
+x=0:.001:.999; %Create a list of evaluation points
+v=sin(2*pi*x)+.15*randn(1,1000); %Construct a noisy vector
+lambda=UniversalThreshold(v,Daub(4),3) %Compute the universal threshold
+</pre>
+<p>
+produce
+</p>
+<pre class="programlisting">
+lambda =
+
+    0.5900
+</pre>
+<h2>See Also</h2>
+<p>
+<a href="DonohoSure.html"><tt>DonohoSure</tt></a>,
+<a href="SureShrink.html"><tt>SureShrink</tt></a>,
+<a href="TestSparseness.html"><tt>TestSparseness</tt></a>,
+<a href="WaveletShrinkage.html"><tt>WaveletShrinkage</tt></a>
+</p>
+</p><p>
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+
+<script language="JavaScript">
+fprev="TestSparseness";
+fprevlink=""+fprev;
+
+fnext="WaveletDensityPlot";
+fnextlink="../../html/Graphics/"+fnext;
+
+str="<td align=\"left\" width=20><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0 align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;</td><td align=\"left\">" + fprev + "</td>";
+document.write(str);
+document.write("<td>&nbsp;</td>");
+str="<td align=\"right\">" + fnext + "</td><td align=\"right\" width=20><a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+
+</tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

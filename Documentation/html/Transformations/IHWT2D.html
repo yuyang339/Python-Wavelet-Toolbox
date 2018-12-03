@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+t="IHWT2D";
+document.write("<title>" + t + ":: Functions (DiscreteWavelets Toolbox)</title>");
+</script><link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<script language="JavaScript">
+fprev="IHWT2D1";
+fprevlink=""+fprev;
+fnext="ILWT1D1";
+fnextlink=""+fnext;
+str="<td valign=\"baseline\" align=\"right\"><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0  align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</tr></table>
+<!--END OF HEADER-->
+
+<h1 class="reftitle">IHWT2D</h1>
+<!-- SYNCHTO: f16-6011.html -->
+<p>Two-dimensional Haar wavelet transformation, multiple iterations</p>
+<h2>Syntax</h2>
+<p class="synopsis">
+<pre class="programlisting">
+	A = IHWT2D(wt,its)<br>
+</pre>
+</p>
+<h2>Description</h2>
+<p>
+<tt>A = HWT2D(wt,its)</tt> returns <tt>its</tt> iterations of the two-dimensional Haar inverse wavelet transformation 
+of <tt>wt</tt>.
+</p>
+<h2>Remarks</h2>
+<p>
+The dimensions of <tt>wt</tt> must be divisible by <tt>2^its</tt>.
+</p>
+<a name="IHWT2DExample"></a>
+<h2>Example</h2>
+<p>
+Here we compute two iterations of the two-dimensional Haar inverse wavelet transformation.
+</p>
+<pre class="programlisting">
+A=rand(12,12); %Create a matrix
+wt=HWT2D(A,2) %Compute two iterations of the transformation
+B=IHWT2D(wt,2) %Compute two iterations of the inverse
+abs(B-A) %Compare B to the original matrix A
+</pre>
+<p>
+<h2>See Also</h2>
+<p>
+<a href="HWT1D.html"><tt>HWT1D</tt></a>, 
+<a href="IHWT1D1.html"><tt>IHWT1D1</tt></a>, 
+<a href="IHWT1D.html"><tt>IHWT1D</tt></a>, 
+<a href="HWT2D.html"><tt>HWT2D</tt></a>, 
+<a href="IHWT2D1.html"><tt>IHWT2D1</tt></a>, 
+<a href="../../html/Graphics/WaveletDensityPlot.html"><tt>WaveletDensityPlot</tt></a>
+</p>
+</p><p>
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+
+<script language="JavaScript">
+fprev="IHWT2D1";
+fprevlink=""+fprev;
+
+fnext="ILWT1D1";
+fnextlink=""+fnext;
+
+str="<td align=\"left\" width=20><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0 align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;</td><td align=\"left\">" + fprev + "</td>";
+document.write(str);
+document.write("<td>&nbsp;</td>");
+str="<td align=\"right\">" + fnext + "</td><td align=\"right\" width=20><a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+
+</tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Support (DiscreteWavelets Toolbox)</title>
+<link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<td valign="baseline" align="right">
+	<a href="demos.html">
+	<img src="../../images/b_prev.gif" border="0" align="bottom" alt="Copyright/Copy Permission"></a>
+	&nbsp;&nbsp;&nbsp;
+	<a href="support.html">
+	<img src="../../images/b_next.gif" border="0" align="bottom" alt="Bug Reporting"></a>
+</td>
+</tr></table>
+<!--END OF HEADER-->
+<a name="top_of_page"></a>
+<h1 class="title">Programming Conventions</h1>
+<hr>
+<p>
+Here is a list of programming conventions used to create the <tt>DiscreteWavelets</tt> Toolbox.  Hopefully, they will be
+helpful as you use the toolbox.
+<h2>Global Variables</h2>
+<p>
+The <tt>DiscreteWavelets</tt> Toolbox makes use of five global variables.  All are initialized by the m-file 
+<tt>startup.m</tt>.
+<dl>
+<dt><tt>DAUBLENGTH</tt> 
+	<dd>  this variable keeps track of the length of the current Daubechies filter (this value is
+		0 if the filter is not defined).  The <tt>Daub</tt> function calls an auxiliary function <tt>Daubfun</tt> to
+		solve the quadratic system that gives the Daubechies filter.  <tt>DAUBLENGTH</tt> is passed by <tt>Daub</tt>
+		to <tt>Daubfun</tt> to accomplish this task.
+	</dd>
+	<p></p>
+<dt><tt>COIFLENGTH</tt>
+	<dd>  this variable keeps track of the length of the current Coiflet filter (this value is
+		0 if the filter is not defined).  The <tt>Coif</tt> function calls an auxiliary function <tt>Coiffun</tt> to
+		solve the quadratic system that gives the Daubechies filter.  <tt>COIFLENGTH</tt> is passed by <tt>Coif</tt>
+		to <tt>Coiffun</tt> to accomplish this task.
+	</dd>
+	<p></p>
+<dt><tt>DWDATAPATH</tt>
+	<dd> this variable gives the path where all data files included with the <tt>DiscreteWavelets</tt> Toolbox can be
+	found.  The m-file <tt>startup.m</tt> defines this variable by searching the output of <tt>pathdef</tt> so in order
+	for the function to be successful, you must have added the path (and all subpaths) where you installed the toolbox
+	using the Matlab <tt>addpath</tt> command or via the GUI under File.
+	</dd>
+	<p></p>
+<dt><tt>DWIMAGESATH</tt>
+	<dd> this variable gives the path where all image files included with the <tt>DiscreteWavelets</tt> Toolbox can be
+	found.  The m-file <tt>startup.m</tt> defines this variable by searching the output of <tt>pathdef</tt> so in order
+	for the function to be successful, you must have added the path (and all subpaths) where you installed the toolbox
+	using the Matlab <tt>addpath</tt> command or via the GUI under File.
+	</dd>
+	<p></p>
+<dt><tt>DWSOUNDSPATH</tt>
+	<dd> this variable gives the path where all sound files included with the <tt>DiscreteWavelets</tt> Toolbox can be
+	found.  The m-file <tt>startup.m</tt> defines this variable by searching the output of <tt>pathdef</tt> so in order
+	for the function to be successful, you must have added the path (and all subpaths) where you installed the toolbox
+	using the Matlab <tt>addpath</tt> command or via the GUI under File.
+	</dd>
+	<p></p>
+</dl>
+<a href="#top_of_page"><img src="../../images/doc_to_top_up.gif"  border=0></a>
+<a href="#top_of_page">Back to Top</a>
+<h2>Function Naming</h2>
+<p>
+All functions in the <tt>DiscreteWavelets</tt> Toolbox, with the exception of <tt>nCE</tt>, start with a capital letter.
+In the case where two or more words are used to describe the function, the first letter of each word is capitalized (e.g.,
+<tt>WaveletDensityPlot</tt>).
+</p>
+<a href="#top_of_page"><img src="../../images/doc_to_top_up.gif"  border=0></a>
+<a href="#top_of_page">Back to Top</a>
+<h2>Output</h2>
+<p>
+Any function that outputs a vector (or vectors) returns the vector as a <i>column vector</i>.  Functions that need
+vectors as input will accept either row vectors or column vectors.
+</p>
+<a href="#top_of_page"><img src="../../images/doc_to_top_up.gif"  border=0></a>
+<a href="#top_of_page">Back to Top</a>
+<h2>Optional Arguments</h2>
+<p>
+Several functions in the <tt>DiscreteWavelets</tt> Toolbox can be supplied optional arguments.  These arguments must
+always be provided in <i>pairs</i>.  The convention is <tt>'Option','Value'</tt>.  In some cases, <tt>'Value'</tt> is a
+string, but in other cases, it is a scalar, vector, or matrix.  If <tt>'Value'</tt> is a string, it must be entered as 
+such (e.g., <tt>'Hello World'</tt> as opposed to <tt>Hello World</tt>).  Some functions can be provided several optional
+arguments - the order the arguments are provided does not matter (the functions parse the optional variables provided and
+replace default values with input values), but the input must follow the <tt>'Option','Value'</tt> convention.  
+</p>
+<p>
+As an example, consider the function <tt>HuffmanTree</tt>.  There are three required arguments for this function so the
+basic call is
+</p>
+<center><tt>HuffmanTree(u,f,c)</tt></center>
+<p></p>
+<p>
+There are several optional arguments.  Included in this list is <tt>'NodeSize'</tt>, <tt>'Title'</tt>, and 
+<tt>'NodeColor'</tt>.  Here are some valid calls using the optional arguments:
+</p>
+<center>
+	<tt>HuffmanTree(u,f,c,'NodeColor',[1 0 0],'NodeSize',20,'Title','A Huffman Tree');</tt><br>
+	<tt>HuffmanTree(u,f,c,'Title','A Huffman Tree','NodeSize',20);</tt><br>
+	<tt>HuffmanTree(u,f,c,'Title','A Huffman Tree','NodeSize');</tt>
+</center>
+<p></p>
+<p>
+In the last call, the routine simply ignores <tt>'NodeSize'</tt>.
+</p>
+<a href="#top_of_page"><img src="../../images/doc_to_top_up.gif"  border=0></a>
+<a href="#top_of_page">Back to Top</a>
+<h2>Error Handling</h2>
+<p>
+The <tt>DiscreteWavelets</tt> Toolbox does not utilize the Matlab <tt>error</tt> function.  Instead, the functions in the
+toolbox attempt to locate invalid arguments and return a message and an output.  In many cases, several commands are run
+as a script m-file.  If the first command is given an invalid input, then the output is designed so that subsequent 
+commands that require it will nevertheless successfully execute.  The user should be able to figure out from the messages
+the problem with the invalid argument.  No claim is made that this strategy will work with every combination of commands,
+but it does work well for common combinations of functions from the toolbox.
+</p>
+<p>
+The functions in the <tt>DiscreteWavelets</tt> Toolbox DOES NOT check if the user has provided the required inputs for a 
+function.  If the incorrect number of inputs are given, then the function will invoke the Matlab <tt>error</tt> function.
+</p>
+<a href="#top_of_page"><img src="../../images/doc_to_top_up.gif"  border=0></a>
+<a href="#top_of_page">Back to Top</a>
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+<td align="left" width="20"><a href="demos.html"><img src="../../images/b_prev.gif" border="0" align="bottom" alt="Demos"></a>&nbsp;</td>
+<td align="left">Demos</td>
+<td>&nbsp;</td>
+<td align="right">Getting Help</td><td align="right" width="20"><a href="support.html">
+	<img src="../../images/b_next.gif" border="0" align="bottom" alt="Getting Help"></a></td></tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

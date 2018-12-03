@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+t="PolySin2j";
+document.write("<title>" + t + ":: Functions (DiscreteWavelets Toolbox)</title>");
+</script><link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<script language="JavaScript">
+fprev="NoiseEstimate";
+fprevlink="../../html/Denoising/"+fprev;
+fnext="PSNR";
+fnextlink="../../html/Measurements/"+fnext;
+str="<td valign=\"baseline\" align=\"right\"><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0  align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</tr></table>
+<!--END OF HEADER-->
+
+<h1 class="reftitle">PolySin2j</h1>
+<!-- SYNCHTO: f16-6011.html -->
+<p>trigonometric polynomial P(t)=sum_{k=0}^{K-1} nchoosek(K-1+j,j)sin^(2j)(w/2)</p>
+<h2>Syntax</h2>
+<p class="synopsis">
+<pre class="programlisting">
+	c = PolySin2j(K)<br>
+</pre>
+</p>
+<h2>Description</h2>
+<p>
+<tt>c = PolySin2j(K)</tt> takes an integer <tt>K</tt> and returns a vector <tt>c</tt> of length <tt>2K+1</tt>.  The elements of <tt>c</tt> are
+the Fourier coefficients of the trigonometric polynomial
+<center>
+P(w) = sum_{k=0}^{K-1} nchoosek(K-1+j,j) sin<sup>(2j)</sup>(w/2)
+</center>
+</p>
+<h2>Remarks</h2>
+<p>
+The input <tt>K</tt> must be a positive integer.
+<p>
+The polynomial <tt>P(w)</tt> is used to compute biorthogonal spline filter pairs and the CDF97 biorthogonal filter pair.
+</p>
+<a name="PolySin2jExample"></a>
+<h2>Example</h2>
+<p>
+Plot the Fourier series for <tt>P(w)</tt> where <tt>K=4</tt>.
+</p>
+<pre class="programlisting">
+c=PolySin2j(4) %Compute the coefficients of the trig polynomial
+w=0:.001:pi; %Sample points
+plot(w,abs(FiniteFourier(w,c,-4)));
+</pre>
+<p>
+<img src="../../images/PolySin2jFig1.gif" alt="Not Found"></img>
+<p>
+The Fourier coefficients for <tt>P(w)</tt> are
+</p>
+<pre class="programlisting">
+c =
+
+   -0.3125    2.5000   -8.1875   13.0000   -8.1875    2.5000   -0.3125
+</pre>
+<h2>See Also</h2>
+<p>
+<a href="Cs.html"><tt>Cs</tt></a>, 
+<a href="Sn.html"><tt>Sn</tt></a>,
+<a href="FiniteFourier.html"><tt>FiniteFourier</tt></a>
+</p>
+</p><p>
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+
+<script language="JavaScript">
+fprev="NoiseEstimate";
+fprevlink="../../html/Denoising/"+fprev;
+
+fnext="PSNR";
+fnextlink="../../html/Measurements/"+fnext;
+
+str="<td align=\"left\" width=20><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0 align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;</td><td align=\"left\">" + fprev + "</td>";
+document.write(str);
+document.write("<td>&nbsp;</td>");
+str="<td align=\"right\">" + fnext + "</td><td align=\"right\" width=20><a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+
+</tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

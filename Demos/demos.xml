@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.1.6.9 $  $Date: 2007/06/18 22:22:55 $ -->
+<demos>
+<name>DiscreteWavelets</name>
+<type>toolbox</type>
+<icon>$toolbox/matlab/icons/matlabicon.gif</icon>
+<description isCdata="no">
+	<p>
+	The DiscreteWavelets Toolbox allows users to experiment with discrete wavelet
+	transformations and use them in applications such as data/image compression, image edge detection,
+	and signal/image denoising.  The material in the DiscreteWavelets Toolbox and demos below serves as 
+	a supplement the text <i>Discrete Wavelet Transformations - An Elementary Approach with Applications</i>,
+	(John J Wiley &amp; Sons, 2008), by Patrick J. Van Fleet.
+	</p>	
+</description>
+<website>
+	<a href="http://www.stthomas.edu/wavelets">Discrete Wavelets Web Site</a>
+</website>
+
+<demosection>
+<label>Edge Detection</label>
+	<demoitem>
+      	<label>Naive Edge Detection</label>
+            <type>M-file</type>
+            <source>naiveedgedetection</source>
+		<file>html/naiveedgedetection.html</file>
+	</demoitem>
+      <demoitem>
+      	<label>Thresholding in Edge Detection</label>
+            <type>M-file</type>
+            <source>thresholdingedgedetection</source>
+		<file>html/thresholdingedgedetection.html</file>
+	</demoitem>
+</demosection>
+<demosection>
+<label>Image Compression</label>
+	<demoitem>
+      	<label>GrayScale Image Compression</label>
+	      <type>M-file</type>
+            <source>grayscalecompression</source>
+		<file>html/grayscalecompression.html</file>
+	</demoitem>
+	<demoitem>
+      	<label>Color Image Compression</label>
+	      <type>M-file</type>
+            <source>colorcompression</source>
+		<file>html/colorcompression.html</file>
+   	</demoitem>
+</demosection>
+
+<demosection>
+<label>Denoising</label>
+   	<demoitem>
+      	<label>Signal Denoising</label>
+	      <type>M-file</type>
+            <source>signaldenoising</source>
+		<file>html/signaldenoising.html</file>
+	</demoitem>
+	<demoitem>
+	      <label>Audio Denoising</label>
+	      <type>M-file</type>
+            <source>audiodenoising</source>
+		<file>html/audiodenoising.html</file>
+	</demoitem>
+	<demoitem>
+	      <label>Image Denoising</label>
+	      <type>M-file</type>
+            <source>imagedenoising</source>
+		<file>html/imagedenoising.html</file>
+   	</demoitem>
+</demosection>
+</demos>

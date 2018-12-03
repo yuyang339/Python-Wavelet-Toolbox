@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+t="LWT1D";
+document.write("<title>" + t + ":: Functions (DiscreteWavelets Toolbox)</title>");
+</script><link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<script language="JavaScript">
+fprev="LWT1D1";
+fprevlink=""+fprev;
+fnext="LWT2D1";
+fnextlink=""+fnext;
+str="<td valign=\"baseline\" align=\"right\"><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0  align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</tr></table>
+<!--END OF HEADER-->
+
+<h1 class="reftitle">LWT1D</h1>
+<!-- SYNCHTO: f16-6011.html -->
+<p>One-dimensional biorthogonal LeGall wavelet transformation, multiple iterations</p>
+<h2>Syntax</h2>
+<p class="synopsis">
+<pre class="programlisting">
+	wt = LWT1D(v,its)<br>
+	wt = LWT1D(v,its,options)<br>
+</pre>
+</p>
+<h2>Description</h2>
+<p>
+<tt>wt = LWT1D(v,its)</tt> returns <tt>its</tt> iterations of the one-dimensional biorthogonal LeGall wavelet transformation of <tt>v</tt>.
+</p><p>
+<tt>wt = LWT1D(v,its,'IntegerMap','True')</tt> returns <tt>its</tt> iterations of the one-dimensional biorthogonal LeGall wavelet transformation 
+of <tt>v</tt>.  Here it is assumed that the components of <tt>v</tt> are integer-valued and as a result, the values of
+<tt>wt</tt> are integer-valued as well (see Section 12.3 of the text).
+</p>
+<h2>Remarks</h2>
+<p>
+The length of <tt>v</tt> must be divisible by <tt>2^its</tt>.
+</p>
+<a name="LWT1DExample"></a>
+<h2>Example</h2>
+<p>
+Here we compute three iterations of the one-dimensional biorthogonal LeGall wavelet transformation.
+</p>
+<pre class="programlisting">
+v=1:32; %Create a vector
+wt=LWT1D(v,3) %Compute the transformation
+</pre>
+<p>
+Here is the same example with the 'IntegerMap' option set to 'True'.
+</p>
+<pre class="programlisting">
+v=1:32; %Create a vector
+wt=LWT1D(v,3,'IntegerMap','True') %Compute the transformation
+</pre>
+<h2>See Also</h2>
+<p>
+<a href="LWT1D1.html"><tt>LWT1D1</tt></a>, 
+<a href="ILWT1D1.html"><tt>ILWT1D1</tt></a>, 
+<a href="ILWT1D.html"><tt>ILWT1D</tt></a>, 
+<a href="LWT2D1.html"><tt>LWT2D1</tt></a>, 
+<a href="LWT2D.html"><tt>LWT2D</tt></a>, 
+<a href="../../html/Graphics/WaveletVectorPlot.html"><tt>WaveletVectorPlot</tt></a>
+</p>
+</p><p>
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+
+<script language="JavaScript">
+fprev="LWT1D1";
+fprevlink=""+fprev;
+
+fnext="LWT2D1";
+fnextlink=""+fnext;
+
+str="<td align=\"left\" width=20><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0 align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;</td><td align=\"left\">" + fprev + "</td>";
+document.write(str);
+document.write("<td>&nbsp;</td>");
+str="<td align=\"right\">" + fnext + "</td><td align=\"right\" width=20><a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+
+</tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

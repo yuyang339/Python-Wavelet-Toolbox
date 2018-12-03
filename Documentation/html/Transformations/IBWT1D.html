@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+t="IBWT1D";
+document.write("<title>" + t + ":: Functions (DiscreteWavelets Toolbox)</title>");
+</script>
+<link rel="stylesheet" href="../docstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.52.2">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script language="JavaScript" src="../docscripts.js"></script>
+</head>
+
+<body>
+<!--HEADER-->
+<a name="top_of_page"></a>
+<p style="font-size:1px;">&nbsp;</p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr><td valign="baseline"><b>DiscreteWavelets Toolbox</b></td>
+<script language="JavaScript">
+fprev="IBWT1D1";
+fprevlink=""+fprev;
+fnext="IBWT2D1";
+fnextlink=""+fnext;
+str="<td valign=\"baseline\" align=\"right\"><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0  align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+</tr></table>
+<!--END OF HEADER-->
+
+<h1 class="reftitle">IBWT1D</h1>
+<!-- SYNCHTO: f16-6011.html -->
+<p>One-dimensional biorthogonal inverse wavelet transformation, multiple iterations</p>
+<h2>Syntax</h2>
+<p class="synopsis">
+<pre class="programlisting">
+	v = IBWT1D(wt,h,ht,its)<br>
+	v = IBWT1D(wt,h,ht,its,options)<br>
+</pre>
+</p>
+<h2>Description</h2>
+<p>
+<tt>v = IBWT1D(wt,h,ht,its)</tt> returns <tt>its</tt> iterations of the one-dimensional biorthogonal inverse wavelet transformation of <tt>wt</tt> using
+symmetric biorthogonal filters <tt>h</tt> and <tt>ht</tt>.
+</p><p>
+<tt>v = IBWT1D(wt,h,ht,its,'Boundary','Reflective')</tt> returns <tt>its</tt> iterations of the one-dimensional biorthogonal inverse 
+wavelet transformation of <tt>v</tt> using symmetric biorthogonal filters <tt>h</tt> and <tt>ht</tt>, but exploits the fact that the filters are symmetric to produce
+a transformation that better handles edge effects.  See Section 11.3 in the text for more details.
+</p>
+<h2>Remarks</h2>
+<p>
+The length of <tt>wt</tt> must be divisible by <tt>2^its</tt>.
+</p>
+<p>You must supply the routine with a symmetric pair of biorthogonal filters.  That is, in the case when the lengths of both <tt>h</tt>
+and <tt>ht</tt> are odd, then the filters must be symmetric about h<sub>0</sub> and ht<sub>0</sub>.  In the case when the lengths are even, then 
+the filters should satisfy h<sub>k</sub> = h<sub>1-k</sub> and ht<sub>k</sub> = ht<sub>1-k</sub>.
+</p>
+<a name="IBWT1DExample"></a>
+<h2>Example</h2>
+<p>
+Here we compute 3 iterations of the one-dimensional biorthogonal wavelet transformation and then use <tt>IBWT1D</tt> to obtain the original vector <tt>v</tt>.
+</p>
+<pre class="programlisting">
+v=1:32; %Create a vector make sure its length is divisible by 2^3.
+[h,ht]=SplineFilters(2,2); %Load the (5,3) spline filter pair
+wt=BWT1D(v,h,ht,3) %Compute the transformation
+y=IBWT1D(wt,h,ht,3) %Compute the inverse transformation
+abs(v'-y) %Compare y to the original vector v
+</pre>
+<p>
+Here is the same example but utilizes the boundary conditions (see Section 11.3 of the text).
+</p>
+<pre class="programlisting">
+v=1:32; %Create a vector make sure its length is divisible by 2^3.
+[h,ht]=SplineFilters(2,2); %Load the (5,3) spline filter pair
+wt=BWT1D(v,h,ht,3,'Boundary','Reflective') %Compute the transformation
+y=IBWT1D(wt,h,ht,3,'Boundary','Reflective') %Compute the inverse transformation
+abs(v'-y) %Compare y to the original vector v
+</pre>
+<p>
+<h2>See Also</h2>
+<p>
+<a href="BWT1D.html"><tt>BWT1D</tt></a>, 
+<a href="IBWT1D1.html"><tt>IBWT1D1</tt></a>, 
+<a href="BWT2D1.html"><tt>BWT2D1</tt></a>, 
+<a href="BWT2D.html"><tt>BWT2D</tt></a>, 
+<a href="IBWT2D1.html"><tt>IBWT2D1</tt></a>, 
+<a href="IBWT2D.html"><tt>IBWT2D</tt></a>, 
+<a href="../../html/Filters/SplineFilters.html"><tt>SplineFilters</tt></a>, 
+<a href="../../html/Filters/CDF97.html"><tt>CDF97</tt></a>, 
+<a href="../../html/Filters/LeGall.html"><tt>LeGall</tt></a>, 
+<a href="../../html/Graphics/WaveletVectorPlot.html"><tt>WaveletVectorPlot</tt></a>
+</p>
+</p><p>
+<br>
+<!--FOOTER-->
+<p></p>
+<table class="nav" summary="Navigation aid" border="0" width="100%" cellpadding="0" cellspacing="0"><tr valign="top">
+<script language="JavaScript">
+fprev="IBWT1D1";
+fprevlink=""+fprev;
+
+fnext="IBWT2D1";
+fnextlink=""+fnext;
+
+str="<td align=\"left\" width=20><a href=\"" + fprevlink + ".html\"><img src=\"../../images/b_prev.gif\" border=0 align=\"bottom\" alt=\"" + fprev + "\"></a>&nbsp;</td><td align=\"left\">" + fprev + "</td>";
+document.write(str);
+document.write("<td>&nbsp;</td>");
+str="<td align=\"right\">" + fnext + "</td><td align=\"right\" width=20><a href=\"" + fnextlink + ".html\"><img src=\"../../images/b_next.gif\" border=0 align=\"bottom\" alt=\"" + fnext + "\"></a></td>";
+document.write(str);
+</script>
+
+</tr></table><br>
+<p class="copy">&copy; 2007-2008 Patrick Van Fleet
+<!--END OF FOOTER-->
+</p>

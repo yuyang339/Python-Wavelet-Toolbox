@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<!-- $Revision: 1.1.6.1.40.1 $ $Date: 2007/08/02 17:20:57 $ -->
+
+<toc version="1.0">
+
+<tocitem target="html/toppage.html">DiscreteWavelets Toolbox
+
+<tocitem target="html/gettingstarted.html" image="$toolbox/matlab/icons/greencircleicon.gif">
+	Getting Started
+	<tocitem target="html/starthere/introduction.html">
+		Introduction
+	</tocitem>
+	<tocitem target="html/examples.html">
+		Examples
+	</tocitem>
+	<tocitem target="html/demos.html">
+		Demos
+	</tocitem>
+	<tocitem target="html/starthere/conventions.html">
+		Programming Conventions
+	</tocitem>
+	<tocitem target="html/starthere/support.html">
+		Getting Help
+	</tocitem>
+</tocitem>
+
+<tocitem target="html/examples.html" image="$toolbox/matlab/icons/demoicon.gif">
+	Examples
+</tocitem>
+
+<tocitem target="html/functionscategory.html" image="$toolbox/matlab/icons/reficon.gif">
+	Functions - By Category
+</tocitem>
+
+<tocitem target="html/functionsalphabetical.html" image="$toolbox/matlab/icons/reficon.gif">
+	Functions - By Alphabetical List
+</tocitem>
+
+<tocitem target="html/releasenotes.html" image="$toolbox/matlab/icons/pageicon.gif">
+	Release Notes
+	<tocitem target="html/releasenotes/installation.html">
+		Installation
+		<tocitem target="html/releasenotes/installation.html#package">
+			Installing the Package
+		</tocitem>
+		<tocitem target="html/releasenotes/installation.html#images">
+			Installing New Image Files
+		</tocitem>
+		<tocitem target="html/releasenotes/installation.html#sounds">
+			Installing New Sound Files
+		</tocitem>
+		<tocitem target="html/releasenotes/installation.html#data">
+			Installing New Data Files
+		</tocitem>
+	</tocitem>    
+	<tocitem target="html/releasenotes/whatsnew.html">
+		What's New?
+	</tocitem>    
+	<tocitem target="html/releasenotes/version.html">
+		Version/Compatibility
+	</tocitem>    
+	<tocitem target="html/releasenotes/disclaimer.html">
+		Disclaimer
+	</tocitem>    
+	<tocitem target="html/releasenotes/copyrights.html">
+		Copyrights/Copy Permission
+	</tocitem>    
+	<tocitem target="html/releasenotes/support.html">
+		Support
+	</tocitem>    
+	<tocitem target="html/releasenotes/bugreporting.html">
+		Bug Reporting
+	</tocitem>    
+	<tocitem target="html/releasenotes/knownbugs.html">
+		Known Bugs
+	</tocitem>    
+</tocitem>
+
+
+<tocitem target="http://www.stthomas.edu/wavelets/" 
+	image="$toolbox/matlab/icons/webicon.gif">
+	DiscreteWavelets Web Site
+</tocitem>
+
+</tocitem>
+</toc>
